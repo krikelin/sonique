@@ -13,7 +13,7 @@ App::uses('AppModel', 'Model');
  * @property CourseClass $CourseClass
  */
 class User extends AppModel {
-
+	public $displayField = 'username';
 /**
  * Validation rules
  *

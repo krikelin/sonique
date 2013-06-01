@@ -8,6 +8,7 @@
 			<th><?php echo $this->Paginator->sort('user_id'); ?></th>
 			<th><?php echo $this->Paginator->sort('duration'); ?></th>
 			<th><?php echo $this->Paginator->sort('token'); ?></th>
+			<th><?php echo $this->Paginator->sort('hall_id'); ?></th>
 			<th class="actions"><?php echo __('Actions'); ?></th>
 	</tr>
 	<?php foreach ($lessions as $lession): ?>
@@ -22,6 +23,9 @@
 		</td>
 		<td><?php echo h($lession['Lession']['duration']); ?>&nbsp;</td>
 		<td><?php echo h($lession['Lession']['token']); ?>&nbsp;</td>
+		<td>
+			<?php echo $this->Html->link($lession['Hall']['title'], array('controller' => 'halls', 'action' => 'view', $lession['Hall']['id'])); ?>
+		</td>
 		<td class="actions">
 			<?php echo $this->Html->link(__('View'), array('action' => 'view', $lession['Lession']['id'])); ?>
 			<?php echo $this->Html->link(__('Edit'), array('action' => 'edit', $lession['Lession']['id'])); ?>
@@ -52,5 +56,7 @@
 		<li><?php echo $this->Html->link(__('New Course'), array('controller' => 'courses', 'action' => 'add')); ?> </li>
 		<li><?php echo $this->Html->link(__('List Users'), array('controller' => 'users', 'action' => 'index')); ?> </li>
 		<li><?php echo $this->Html->link(__('New User'), array('controller' => 'users', 'action' => 'add')); ?> </li>
+		<li><?php echo $this->Html->link(__('List Halls'), array('controller' => 'halls', 'action' => 'index')); ?> </li>
+		<li><?php echo $this->Html->link(__('New Hall'), array('controller' => 'halls', 'action' => 'add')); ?> </li>
 	</ul>
 </div>

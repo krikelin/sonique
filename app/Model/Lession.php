@@ -5,6 +5,7 @@ App::uses('AppModel', 'Model');
  *
  * @property Course $Course
  * @property User $User
+ * @property Hall $Hall
  */
 class Lession extends AppModel {
 
@@ -64,6 +65,26 @@ class Lession extends AppModel {
 				//'on' => 'create', // Limit validation to 'create' or 'update' operations
 			),
 		),
+		'hall_id' => array(
+			'numeric' => array(
+				'rule' => array('numeric'),
+				//'message' => 'Your custom message here',
+				//'allowEmpty' => false,
+				//'required' => false,
+				//'last' => false, // Stop validation after this rule
+				//'on' => 'create', // Limit validation to 'create' or 'update' operations
+			),
+		),
+		'tutor_id' => array(
+			'numeric' => array(
+				'rule' => array('numeric'),
+				//'message' => 'Your custom message here',
+				//'allowEmpty' => false,
+				//'required' => false,
+				//'last' => false, // Stop validation after this rule
+				//'on' => 'create', // Limit validation to 'create' or 'update' operations
+			),
+		),
 	);
 
 	//The Associations below have been created with all possible keys, those that are not needed can be removed
@@ -84,6 +105,17 @@ class Lession extends AppModel {
 		'User' => array(
 			'className' => 'User',
 			'foreignKey' => 'user_id',
+			'conditions' => '',
+			'fields' => '',
+			'order' => ''
+		),
+		'Tutor' => array(
+			'className' => 'User',
+			'foreignKey' => 'tutor_id'
+		),
+		'Hall' => array(
+			'className' => 'Hall',
+			'foreignKey' => 'hall_id',
 			'conditions' => '',
 			'fields' => '',
 			'order' => ''

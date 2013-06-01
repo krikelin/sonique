@@ -17,6 +17,7 @@ class LessionFixture extends CakeTestFixture {
 		'user_id' => array('type' => 'integer', 'null' => false, 'default' => null),
 		'duration' => array('type' => 'integer', 'null' => false, 'default' => null),
 		'token' => array('type' => 'integer', 'null' => false, 'default' => null),
+		'hall_id' => array('type' => 'integer', 'null' => false, 'default' => '1'),
 		'indexes' => array(
 			'PRIMARY' => array('column' => 'id', 'unique' => 1)
 		),
@@ -31,11 +32,12 @@ class LessionFixture extends CakeTestFixture {
 	public $records = array(
 		array(
 			'id' => 1,
-			'time' => '2013-06-01 11:07:02',
+			'time' => '2013-06-01 12:31:48',
 			'course_id' => 1,
 			'user_id' => 1,
 			'duration' => 1,
-			'token' => 1
+			'token' => 1,
+			'hall_id' => 1
 		),
 	);
 

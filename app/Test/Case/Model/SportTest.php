@@ -1,11 +1,11 @@
 <?php
-App::uses('Lession', 'Model');
+App::uses('Sport', 'Model');
 
 /**
- * Lession Test Case
+ * Sport Test Case
  *
  */
-class LessionTest extends CakeTestCase {
+class SportTest extends CakeTestCase {
 
 /**
  * Fixtures
@@ -13,9 +13,7 @@ class LessionTest extends CakeTestCase {
  * @var array
  */
 	public $fixtures = array(
-		'app.lession',
-		'app.course',
-		'app.course_class',
+		'app.sport',
 		'app.user',
 		'app.artist',
 		'app.record',
@@ -26,10 +24,11 @@ class LessionTest extends CakeTestCase {
 		'app.company',
 		'app.submission',
 		'app.submission_status',
+		'app.course_class',
+		'app.course',
 		'app.course_class_user',
 		'app.doctrine_version',
-		'app.doctrine',
-		'app.hall'
+		'app.doctrine'
 	);
 
 /**
@@ -39,7 +38,7 @@ class LessionTest extends CakeTestCase {
  */
 	public function setUp() {
 		parent::setUp();
-		$this->Lession = ClassRegistry::init('Lession');
+		$this->Sport = ClassRegistry::init('Sport');
 	}
 
 /**
@@ -48,7 +47,7 @@ class LessionTest extends CakeTestCase {
  * @return void
  */
 	public function tearDown() {
-		unset($this->Lession);
+		unset($this->Sport);
 
 		parent::tearDown();
 	}

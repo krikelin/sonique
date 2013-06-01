@@ -14,7 +14,23 @@ class CourseTest extends CakeTestCase {
  */
 	public $fixtures = array(
 		'app.course',
-		'app.course_class'
+		'app.course_type',
+		'app.course_class',
+		'app.user',
+		'app.artist',
+		'app.record',
+		'app.song',
+		'app.airplay',
+		'app.station',
+		'app.station_type',
+		'app.company',
+		'app.submission',
+		'app.submission_status',
+		'app.course_class_user',
+		'app.doctrine_version',
+		'app.doctrine',
+		'app.lession',
+		'app.hall'
 	);
 
 /**

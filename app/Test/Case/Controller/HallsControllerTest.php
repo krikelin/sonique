@@ -1,11 +1,11 @@
 <?php
-App::uses('LessionsController', 'Controller');
+App::uses('HallsController', 'Controller');
 
 /**
- * LessionsController Test Case
+ * HallsController Test Case
  *
  */
-class LessionsControllerTest extends ControllerTestCase {
+class HallsControllerTest extends ControllerTestCase {
 
 /**
  * Fixtures
@@ -13,6 +13,7 @@ class LessionsControllerTest extends ControllerTestCase {
  * @var array
  */
 	public $fixtures = array(
+		'app.hall',
 		'app.lession',
 		'app.course',
 		'app.course_class',
@@ -28,8 +29,7 @@ class LessionsControllerTest extends ControllerTestCase {
 		'app.submission_status',
 		'app.course_class_user',
 		'app.doctrine_version',
-		'app.doctrine',
-		'app.hall'
+		'app.doctrine'
 	);
 
 /**

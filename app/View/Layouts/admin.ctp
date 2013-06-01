@@ -48,9 +48,13 @@ $cakeDescription = __d('cake_dev', 'CakePHP: the rapid development php framework
 			<div class="span12 menu">
 				<ul>
 					<li>[<a href="<?php echo Router::Url('/')?>">Home</a>]</li>
-					<li>[<a href="<?php echo Router::Url('/songs')?>">Songs</a>]</li>
-					<li>[<a href="<?php echo Router::Url('/submissions')?>">Submissions</a>]</li>
-					<li>[<a href="<?php echo Router::Url('/submissions')?>">Airplays</a>]</li>
+					<li>[<a href="<?php echo Router::Url('/admin/songs')?>">Songs</a>]</li>
+					<li>[<a href="<?php echo Router::Url('/admin/submissions')?>">Submissions</a>]</li>
+					<li>[<a href="<?php echo Router::Url('/admin/users')?>">Users</a>]</li>
+					<li>[<a href="<?php echo Router::Url('/admin/lessions')?>">Lessions</a>]</li>
+					<li>[<a href="<?php echo Router::Url('/admin/courses')?>">Courses</a>]</li>
+					<li>[<a href="<?php echo Router::Url('/admin/course_classes')?>">Classes</a>]</li>
+					<li>[<a href="<?php echo Router::Url('/admin/halls')?>">Bungalows</a>]</li>
 				</ul>
 			</div>
 		</div>
