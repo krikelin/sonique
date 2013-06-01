@@ -136,10 +136,35 @@ class LessionsController extends AppController {
  */
 	public function admin_add() {
 		if ($this->request->is('post')) {
+			$repeat = 1;
+			$interval = 7;
+			if(isset($this->request->data['Lession']['repeat'])) {
+				$repeat = $this->request->data['Lession']['repeat'];
+				unset($this->request->data['Lession']['repeat']);
+			}
+			if(isset($this->request->data['Lession']['interval'])) {
+				$interval = $this->request->data['Lession']['interval'];
+				unset($this->request->data['Lession']['interval']);
+			}
+			
 			$this->Lession->create();
 			if ($this->Lession->save($this->request->data)) {
 				$this->Session->setFlash(__('The lession has been saved'));
+				
+				// Repeat for every week
+				for($i = 0; $i < $repeat-1; $i++) {
+					$date =  $this->request->data['Lession']['time'];
+					$date = $this->Lession->deconstruct('time', $date);
+					$date = strtotime( $date);
+
+					$date += 60 * 60 * 23 * $interval; // add one week
+					$time =  array('year' => date('Y', $date), 'month' => date('m', $date), 'day' => date('d', $date), 'hour' => date('H', $date), 'min' => date('i', $date), 'meridian' => date('A', $date));
+					
+					$this->request->data['Lession']['time'] = $time;	
+					$this->Lession->save($this->request->data);
+				}
 				$this->redirect(array('action' => 'index'));
+
 			} else {
 				$this->Session->setFlash(__('The lession could not be saved. Please, try again.'));
 			}
