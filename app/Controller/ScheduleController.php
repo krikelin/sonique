@@ -5,11 +5,11 @@ class ScheduleController extends AppController {
 	public function beforeFilter() {
 		parent::beforeFilter();
 		$this->layout = 'schedule';
+		$this->week = ltrim(date('W'), '0');
 	}
 	public function users($id) {
 
-		$week = ltrim(date('W'), '0');
-		$sql = "SELECT * FROM lessions INNER JOIN users AS tutors ON tutors.id = lessions.tutor_id INNER JOIN halls ON halls.id = lessions.hall_id INNER JOIN courses ON courses.id = lessions.course_id WHERE user_id = ".$id." AND  lessions.time BETWEEN ('".date('Y')."-01-01' + INTERVAL " . ($week-1) . " WEEK) AND ('".date('Y')."-01-01' + INTERVAL " . ($week + 1) . " WEEK) ORDER BY time ASC";
+		$sql = "SELECT * FROM lessions INNER JOIN users AS tutors ON tutors.id = lessions.tutor_id INNER JOIN halls ON halls.id = lessions.hall_id INNER JOIN courses ON courses.id = lessions.course_id WHERE user_id = ".$id." AND  lessions.time BETWEEN ('".date('Y')."-01-01' + INTERVAL " . ($this->week-1) . " WEEK) AND ('".date('Y')."-01-01' + INTERVAL " . ($this->week + 1) . " WEEK) ORDER BY time ASC";
 
 		$result = $this->Lession->query($sql);
 		$weekdays = array(array(), array(), array(), array(), array(), array(), array());
