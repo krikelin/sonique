@@ -4,8 +4,9 @@ App::uses('AppModel', 'Model');
  * Lession Model
  *
  * @property Course $Course
- * @property User $User
+ * @property CourseClass $CourseClass
  * @property Hall $Hall
+ * @property Tutor $Tutor
  */
 class Lession extends AppModel {
 
@@ -35,7 +36,7 @@ class Lession extends AppModel {
 				//'on' => 'create', // Limit validation to 'create' or 'update' operations
 			),
 		),
-		'user_id' => array(
+		'course_class_id' => array(
 			'numeric' => array(
 				'rule' => array('numeric'),
 				//'message' => 'Your custom message here',
@@ -102,20 +103,23 @@ class Lession extends AppModel {
 			'fields' => '',
 			'order' => ''
 		),
-		'User' => array(
-			'className' => 'User',
-			'foreignKey' => 'user_id',
+		'CourseClass' => array(
+			'className' => 'CourseClass',
+			'foreignKey' => 'course_class_id',
+			'conditions' => '',
+			'fields' => '',
+			'order' => ''
+		),
+		'Hall' => array(
+			'className' => 'Hall',
+			'foreignKey' => 'hall_id',
 			'conditions' => '',
 			'fields' => '',
 			'order' => ''
 		),
 		'Tutor' => array(
 			'className' => 'User',
-			'foreignKey' => 'tutor_id'
-		),
-		'Hall' => array(
-			'className' => 'Hall',
-			'foreignKey' => 'hall_id',
+			'foreignKey' => 'tutor_id',
 			'conditions' => '',
 			'fields' => '',
 			'order' => ''

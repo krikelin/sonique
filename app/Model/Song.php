@@ -6,10 +6,10 @@ App::uses('AppModel', 'Model');
  * @property Artist $Artist
  * @property User $User
  * @property Record $Record
+ * @property SongState $SongState
  */
 class Song extends AppModel {
-	public $displayField = 'title';
-	
+
 /**
  * Validation rules
  *
@@ -81,8 +81,16 @@ class Song extends AppModel {
 		'Record' => array(
 			'className' => 'Record',
 			'foreignKey' => 'song_id',
-			'dependent' => true
-		)
+			'dependent' => false,
+			'conditions' => '',
+			'fields' => '',
+			'order' => '',
+			'limit' => '',
+			'offset' => '',
+			'exclusive' => '',
+			'finderQuery' => '',
+			'counterQuery' => ''
+		),
 	);
 
 }

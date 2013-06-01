@@ -17,13 +17,35 @@ class ScheduleController extends AppController {
 	}
 	public function users($id) {
 
-		$sql = "SELECT * FROM lessions INNER JOIN users AS tutors ON tutors.id = lessions.tutor_id INNER JOIN halls ON halls.id = lessions.hall_id INNER JOIN courses ON courses.id = lessions.course_id WHERE user_id = ".$id." AND  lessions.time BETWEEN ('".$this->year."-01-01' + INTERVAL " . ($this->week-1) . " WEEK - INTERVAL  1 DAY) AND ('".$this->year."-01-01' + INTERVAL " . ($this->week-1) . " WEEK + INTERVAL 5  DAY) AND (lessions.user_id = ".$id." OR lessions.tutor_id = ".$id.") ORDER BY time ASC";
+		$sql = "SELECT * FROM lessions INNER JOIN users INNER JOIN users AS tutors ON tutors.id = lessions.tutor_id INNER JOIN halls ON halls.id = lessions.hall_id INNER JOIN courses ON courses.id = lessions.course_id INNER JOIN course_class ON course_class.id = lessions.course_class_id INNER JOIN course_class_users ON  course_class_users.user_id = users.id OR lessions.tutor_id = ".$id." WHERE lessions.time BETWEEN ('".$this->year."-01-01' + INTERVAL " . ($this->week-1) . " WEEK - INTERVAL  1 DAY) AND ('".$this->year."-01-01' + INTERVAL " . ($this->week-1) . " WEEK + INTERVAL 6  DAY) AND (course_class_users.user_id = ".$id." OR lessions.tutor_id = ".$id.") GROUP BY lessions.id ORDER BY time ASC";
+
+		$result = $this->Lession->query($sql);
+		//die($sql);
+		$weekdays = array(array(), array(), array(), array(), array(), array(), array());
+		foreach($result as $les) {
+			$weekday = ltrim(date('N', strtotime($les['lessions']['time'])), '0')-1;
+			print $weekday;
+		//	debug($weekday);
+			$weekdays[$weekday][] = ($les);
+		
+		}
+		$year = $this->year;
+		$week = $this->week;
+		
+		$this->set(compact('weekdays', 'year', 'week'));
+		$this->render('users');
+
+	}
+	public function courses($id) {
+
+		$sql = "SELECT * FROM lessions INNER JOIN users INNER JOIN users AS tutors ON tutors.id = lessions.tutor_id INNER JOIN halls ON halls.id = lessions.hall_id INNER JOIN courses ON courses.id = lessions.course_id INNER JOIN course_class ON course_class.id = lessions.course_class_id INNER JOIN course_class_users ON  course_class_users.user_id = users.id OR lessions.tutor_id = ".$id." WHERE lessions.time BETWEEN ('".$this->year."-01-01' + INTERVAL " . ($this->week-1) . " WEEK - INTERVAL  1 DAY) AND ('".$this->year."-01-01' + INTERVAL " . ($this->week-1) . " WEEK + INTERVAL 6  DAY) AND (course_class.id = ".$id.") GROUP BY lessions.id ORDER BY time ASC";
 
 		$result = $this->Lession->query($sql);
 
 		$weekdays = array(array(), array(), array(), array(), array(), array(), array());
 		foreach($result as $les) {
-			$weekday = ltrim(date('w', strtotime($les['lessions']['time'])), '0')-1;
+			$weekday = ltrim(date('N', strtotime($les['lessions']['time'])), '0')-1;
+			print $weekday;
 		//	debug($weekday);
 			$weekdays[$weekday][] = ($les);
 		

@@ -8,6 +8,8 @@
 			<th><?php echo $this->Paginator->sort('isrc'); ?></th>
 			<th><?php echo $this->Paginator->sort('user_id'); ?></th>
 			<th><?php echo $this->Paginator->sort('artist_id'); ?></th>
+			<th><?php echo $this->Paginator->sort('youtube_url'); ?></th>
+			<th><?php echo $this->Paginator->sort('plays'); ?></th>
 			<th class="actions"><?php echo __('Actions'); ?></th>
 	</tr>
 	<?php foreach ($records as $record): ?>
@@ -24,6 +26,8 @@
 		<td>
 			<?php echo $this->Html->link($record['Artist']['title'], array('controller' => 'artists', 'action' => 'view', $record['Artist']['id'])); ?>
 		</td>
+		<td><?php echo h($record['Record']['youtube_url']); ?>&nbsp;</td>
+		<td><?php echo h($record['Record']['plays']); ?>&nbsp;</td>
 		<td class="actions">
 			<?php echo $this->Html->link(__('View'), array('action' => 'view', $record['Record']['id'])); ?>
 			<?php echo $this->Html->link(__('Edit'), array('action' => 'edit', $record['Record']['id'])); ?>
@@ -58,6 +62,8 @@
 		<li><?php echo $this->Html->link(__('New Artist'), array('controller' => 'artists', 'action' => 'add')); ?> </li>
 		<li><?php echo $this->Html->link(__('List Airplays'), array('controller' => 'airplays', 'action' => 'index')); ?> </li>
 		<li><?php echo $this->Html->link(__('New Airplay'), array('controller' => 'airplays', 'action' => 'add')); ?> </li>
+		<li><?php echo $this->Html->link(__('List Record States'), array('controller' => 'record_states', 'action' => 'index')); ?> </li>
+		<li><?php echo $this->Html->link(__('New Record State'), array('controller' => 'record_states', 'action' => 'add')); ?> </li>
 		<li><?php echo $this->Html->link(__('List Submissions'), array('controller' => 'submissions', 'action' => 'index')); ?> </li>
 		<li><?php echo $this->Html->link(__('New Submission'), array('controller' => 'submissions', 'action' => 'add')); ?> </li>
 	</ul>

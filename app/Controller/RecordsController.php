@@ -6,7 +6,7 @@ App::uses('AppController', 'Controller');
  * @property Record $Record
  */
 class RecordsController extends AppController {
-	public $components = array('Auth');
+
 /**
  * index method
  *
@@ -14,7 +14,6 @@ class RecordsController extends AppController {
  */
 	public function index() {
 		$this->Record->recursive = 0;
-		$this->Record->conditions = array('Record.user_id' => $this->Auth->user('id'));
 		$this->set('records', $this->paginate());
 	}
 

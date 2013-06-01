@@ -48,9 +48,10 @@ class LessionsController extends AppController {
 			}
 		}
 		$courses = $this->Lession->Course->find('list');
-		$users = $this->Lession->User->find('list');
+		$courseClasses = $this->Lession->CourseClass->find('list');
 		$halls = $this->Lession->Hall->find('list');
-		$this->set(compact('courses', 'users', 'halls'));
+		$tutors = $this->Lession->Tutor->find('list');
+		$this->set(compact('courses', 'courseClasses', 'halls', 'tutors'));
 	}
 
 /**
@@ -76,10 +77,10 @@ class LessionsController extends AppController {
 			$this->request->data = $this->Lession->find('first', $options);
 		}
 		$courses = $this->Lession->Course->find('list');
-		$users = $this->Lession->User->find('list');
-		$tutors = $this->Lession->Tutor->find('list');
+		$courseClasses = $this->Lession->CourseClass->find('list');
 		$halls = $this->Lession->Hall->find('list');
-		$this->set(compact('courses', 'users', 'halls', 'tutors'));
+		$tutors = $this->Lession->Tutor->find('list');
+		$this->set(compact('courses', 'courseClasses', 'halls', 'tutors'));
 	}
 
 /**
@@ -111,7 +112,7 @@ class LessionsController extends AppController {
  */
 	public function admin_index() {
 		$this->Lession->recursive = 0;
-		$this->Lession->order = array('time DESC');
+		$this->Lession->order = array('Lession.time DESC');
 		$this->set('lessions', $this->paginate());
 	}
 
@@ -129,11 +130,7 @@ class LessionsController extends AppController {
 		$options = array('conditions' => array('Lession.' . $this->Lession->primaryKey => $id));
 		$this->set('lession', $this->Lession->find('first', $options));
 	}
-	public function admin_deleteall($serie) {
-		$this->Lession->deleteAll(array('token' => $serie));
-		$this->Session->setFlash(__('Lession seie deleted'));
-		$this->redirect(array('action' => 'index'));
-	}
+
 /**
  * admin_add method
  *
@@ -145,7 +142,7 @@ class LessionsController extends AppController {
 			$interval = 7;
 			if(isset($this->request->data['Lession']['repeat'])) {
 				$repeat = (int)$this->request->data['Lession']['repeat'];
-				
+
 				unset($this->request->data['Lession']['repeat']);
 			}
 			if(isset($this->request->data['Lession']['interval'])) {
@@ -153,7 +150,7 @@ class LessionsController extends AppController {
 				unset($this->request->data['Lession']['interval']);
 			}
 
-			
+
 			$this->Lession->create();
 			if ($this->Lession->save($this->request->data)) {
 				$this->Session->setFlash(__('The lession has been saved'));
@@ -163,8 +160,8 @@ class LessionsController extends AppController {
 				// Repeat for every week
 				for($i = 0; $i < (int)($repeat)-1; $i++) {
 				//	print $i."<br/>";
-					
-					
+
+
 					//print $date." +".$interval * $i . " DAYS<br/>";
 					$time = strtotime( $date." +".$interval * ($i + 1) . " DAYS");
 					//print $time;
@@ -176,7 +173,7 @@ class LessionsController extends AppController {
 					$this->Lession->create();
 					$this->Lession->save($this->request->data);
 					print $this->Lession->id."<br/>";
-					
+
 				}
 			//	die("C");
 				$this->redirect(array('action' => 'index'));
@@ -186,10 +183,10 @@ class LessionsController extends AppController {
 			}
 		}
 		$courses = $this->Lession->Course->find('list');
-		$users = $this->Lession->User->find('list');
+		$course_classes = $this->Lession->CourseClass->find('list');
 		$tutors = $this->Lession->Tutor->find('list');
 		$halls = $this->Lession->Hall->find('list');
-		$this->set(compact('courses', 'users', 'halls', 'tutors'));
+		$this->set(compact('courses', 'course_classes', 'halls', 'tutors'));
 	}
 
 /**
@@ -215,10 +212,10 @@ class LessionsController extends AppController {
 			$this->request->data = $this->Lession->find('first', $options);
 		}
 		$courses = $this->Lession->Course->find('list');
-		$users = $this->Lession->User->find('list');
-		$tutors = $this->Lession->Tutor->find('list');
+		$courseClasses = $this->Lession->CourseClass->find('list');
 		$halls = $this->Lession->Hall->find('list');
-		$this->set(compact('courses', 'users', 'halls', 'tutors'));
+		$tutors = $this->Lession->Tutor->find('list');
+		$this->set(compact('courses', 'courseClasses', 'halls', 'tutors'));
 	}
 
 /**
@@ -238,6 +235,12 @@ class LessionsController extends AppController {
 			$this->Session->setFlash(__('Lession deleted'));
 			$this->redirect(array('action' => 'index'));
 		}
+		$this->Session->setFlash(__('Lession was not deleted'));
+		$this->redirect(array('action' => 'index'));
+	}
+	public function admin_deleteall($id = null) {
+		$this->Lession->id = $id;
+		$this->Lession->deleteAll(array('token' => $id));
 		$this->Session->setFlash(__('Lession was not deleted'));
 		$this->redirect(array('action' => 'index'));
 	}

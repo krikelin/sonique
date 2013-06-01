@@ -40,6 +40,17 @@ $cakeDescription = __d('cake_dev', 'CakePHP: the rapid development php framework
 </head>
 <body>
 	<div class="container"  id="content">
+		<?php
+		$menu = array(
+			'Log in' => '/users/login'
+		);
+	
+		$menu = array(
+			'Home' => '/',
+			'Songs' => '/songs',
+			'Submissions' => '/submissions',
+			'Log Out' => '/users/logout'
+		);?>
 		<div class="row">
 			<div class="span12 header">
 			</div>
@@ -47,10 +58,12 @@ $cakeDescription = __d('cake_dev', 'CakePHP: the rapid development php framework
 		<div class="row">
 			<div class="span12 menu">
 				<ul>
-					<li>[<a href="<?php echo Router::Url('/')?>">Home</a>]</li>
-					<li>[<a href="<?php echo Router::Url('/songs')?>">Songs</a>]</li>
-					<li>[<a href="<?php echo Router::Url('/submissions')?>">Submissions</a>]</li>
-					<li>[<a href="<?php echo Router::Url('/submissions')?>">Airplays</a>]</li>
+					<?php foreach($menu as $key => $val):?>
+					<li><?php echo $this->Html->link($key, $val)?></li> 
+					<?php endforeach;?>
+				</ul>
+				<ul style="float: right">
+					<li>Qi: <?php echo $user['qi']?></li>
 				</ul>
 			</div>
 		</div>

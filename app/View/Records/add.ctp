@@ -8,6 +8,8 @@
 		echo $this->Form->input('isrc');
 		echo $this->Form->input('user_id');
 		echo $this->Form->input('artist_id');
+		echo $this->Form->input('youtube_url');
+		echo $this->Form->input('plays');
 	?>
 	</fieldset>
 <?php echo $this->Form->end(__('Submit')); ?>
@@ -25,6 +27,8 @@
 		<li><?php echo $this->Html->link(__('New Artist'), array('controller' => 'artists', 'action' => 'add')); ?> </li>
 		<li><?php echo $this->Html->link(__('List Airplays'), array('controller' => 'airplays', 'action' => 'index')); ?> </li>
 		<li><?php echo $this->Html->link(__('New Airplay'), array('controller' => 'airplays', 'action' => 'add')); ?> </li>
+		<li><?php echo $this->Html->link(__('List Record States'), array('controller' => 'record_states', 'action' => 'index')); ?> </li>
+		<li><?php echo $this->Html->link(__('New Record State'), array('controller' => 'record_states', 'action' => 'add')); ?> </li>
 		<li><?php echo $this->Html->link(__('List Submissions'), array('controller' => 'submissions', 'action' => 'index')); ?> </li>
 		<li><?php echo $this->Html->link(__('New Submission'), array('controller' => 'submissions', 'action' => 'add')); ?> </li>
 	</ul>

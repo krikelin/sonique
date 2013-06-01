@@ -49,7 +49,8 @@ class CourseClassesController extends AppController {
 		}
 		$courses = $this->CourseClass->Course->find('list');
 		$users = $this->CourseClass->User->find('list');
-		$this->set(compact('courses', 'users'));
+		$users = $this->CourseClass->User->find('list');
+		$this->set(compact('courses', 'users', 'users'));
 	}
 
 /**
@@ -76,7 +77,8 @@ class CourseClassesController extends AppController {
 		}
 		$courses = $this->CourseClass->Course->find('list');
 		$users = $this->CourseClass->User->find('list');
-		$this->set(compact('courses', 'users'));
+		$users = $this->CourseClass->User->find('list');
+		$this->set(compact('courses', 'users', 'users'));
 	}
 
 /**
@@ -143,7 +145,8 @@ class CourseClassesController extends AppController {
 		}
 		$courses = $this->CourseClass->Course->find('list');
 		$users = $this->CourseClass->User->find('list');
-		$this->set(compact('courses', 'users'));
+		$users = $this->CourseClass->User->find('list');
+		$this->set(compact('courses', 'users', 'users'));
 	}
 
 /**
@@ -170,7 +173,8 @@ class CourseClassesController extends AppController {
 		}
 		$courses = $this->CourseClass->Course->find('list');
 		$users = $this->CourseClass->User->find('list');
-		$this->set(compact('courses', 'users'));
+		$users = $this->CourseClass->User->find('list');
+		$this->set(compact('courses', 'users', 'users'));
 	}
 
 /**

@@ -17,6 +17,8 @@ class RecordFixture extends CakeTestFixture {
 		'isrc' => array('type' => 'string', 'null' => false, 'default' => null, 'collate' => 'utf8_general_ci', 'charset' => 'utf8'),
 		'user_id' => array('type' => 'integer', 'null' => false, 'default' => null),
 		'artist_id' => array('type' => 'integer', 'null' => false, 'default' => null),
+		'youtube_url' => array('type' => 'string', 'null' => true, 'default' => null, 'collate' => 'utf8_general_ci', 'charset' => 'utf8'),
+		'plays' => array('type' => 'integer', 'null' => false, 'default' => '0'),
 		'indexes' => array(
 			'PRIMARY' => array('column' => 'id', 'unique' => 1)
 		),
@@ -35,7 +37,9 @@ class RecordFixture extends CakeTestFixture {
 			'version' => 'Lorem ipsum dolor sit amet',
 			'isrc' => 'Lorem ipsum dolor sit amet',
 			'user_id' => 1,
-			'artist_id' => 1
+			'artist_id' => 1,
+			'youtube_url' => 'Lorem ipsum dolor sit amet',
+			'plays' => 1
 		),
 	);
 

@@ -14,6 +14,12 @@ App::uses('AppModel', 'Model');
  */
 class User extends AppModel {
 	public $displayField = 'username';
+	public function beforeSave($options = array()) {
+        if (isset($this->data[$this->alias]['password'])) {
+            $this->data[$this->alias]['password'] = AuthComponent::password($this->data[$this->alias]['password']);
+        }
+        return true;
+    }
 /**
  * Validation rules
  *
@@ -60,6 +66,11 @@ class User extends AppModel {
 				//'on' => 'create', // Limit validation to 'create' or 'update' operations
 			),
 		),
+		'qi' => array(
+			'float' => array(
+				'rule' => array('float')
+			)
+		)
 	);
 
 	//The Associations below have been created with all possible keys, those that are not needed can be removed
@@ -82,6 +93,10 @@ class User extends AppModel {
 			'exclusive' => '',
 			'finderQuery' => '',
 			'counterQuery' => ''
+		),
+		'Qi' => array(
+			'className' => 'Qi',
+			'foreignKey' => 'user_id'
 		),
 		'CourseClass' => array(
 			'className' => 'CourseClass',

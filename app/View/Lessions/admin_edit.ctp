@@ -5,12 +5,11 @@
 	<?php
 		echo $this->Form->input('id');
 		echo $this->Form->input('time');
-		echo $this->Form->input('course_id');
-		echo $this->Form->input('user_id');
+		echo $this->Form->input('course_class_id', array('type' => 'select', 'options' => $course_classes));
 		echo $this->Form->input('duration');
 		echo $this->Form->input('token');
 		echo $this->Form->input('hall_id');
-		echo $this->Form->input('tutor_id');
+		echo $this->Form->input('tutor_id', array('type' => 'select', 'options' => $tutors));
 	?>
 	</fieldset>
 <?php echo $this->Form->end(__('Submit')); ?>

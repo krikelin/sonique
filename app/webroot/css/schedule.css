@@ -13,7 +13,7 @@ body {
 .day {
 	border: 1px solid black;
 	overflow: hidden;
-	box-shadow:inset 0px 4px 5px rgba(0, 0, 0, .2);
+	box-shadow:inset 0px 4px 5px rgba(0, 0, 0, .05);
 }
 .lession{
 
@@ -22,13 +22,15 @@ body {
 			background: white;
 			position: absolute;
 			overflow: hidden;
-			box-shadow: 0px 2px 12px rgba(0, 0, 0, .2);
-		}
-.day {
-	background: gray;
+			box-shadow: 0px 2px 12px rgba(0, 0, 0, .1);
+			font-size: 9px;
 }
 
+.day {
+	background: #eeeeee;
+}
 
+/*
 .lession {
 	box-sizing: border-box;
 	padding: 3px;
@@ -39,5 +41,5 @@ body {
 			box-shadow: 0px 2px 12px rgba(0, 0, 0, .05);
 		}
 .day {
-	background: white;
-}
+	background: rgba(0, 0, 0, .01);
+}*/

@@ -18,7 +18,7 @@
 		</dd>
 		<dt><?php echo __('User'); ?></dt>
 		<dd>
-			<?php echo $this->Html->link($song['User']['id'], array('controller' => 'users', 'action' => 'view', $song['User']['id'])); ?>
+			<?php echo $this->Html->link($song['User']['username'], array('controller' => 'users', 'action' => 'view', $song['User']['id'])); ?>
 			&nbsp;
 		</dd>
 		<dt><?php echo __('Created'); ?></dt>
@@ -59,6 +59,8 @@
 		<th><?php echo __('Isrc'); ?></th>
 		<th><?php echo __('User Id'); ?></th>
 		<th><?php echo __('Artist Id'); ?></th>
+		<th><?php echo __('Youtube Url'); ?></th>
+		<th><?php echo __('Plays'); ?></th>
 		<th class="actions"><?php echo __('Actions'); ?></th>
 	</tr>
 	<?php
@@ -71,6 +73,8 @@
 			<td><?php echo $record['isrc']; ?></td>
 			<td><?php echo $record['user_id']; ?></td>
 			<td><?php echo $record['artist_id']; ?></td>
+			<td><?php echo $record['youtube_url']; ?></td>
+			<td><?php echo $record['plays']; ?></td>
 			<td class="actions">
 				<?php echo $this->Html->link(__('View'), array('controller' => 'records', 'action' => 'view', $record['id'])); ?>
 				<?php echo $this->Html->link(__('Edit'), array('controller' => 'records', 'action' => 'edit', $record['id'])); ?>

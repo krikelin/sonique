@@ -5,6 +5,8 @@ App::uses('AppModel', 'Model');
  *
  * @property Course $Course
  * @property User $User
+ * @property Lession $Lession
+ * @property User $User
  */
 class CourseClass extends AppModel {
 
@@ -96,4 +98,50 @@ class CourseClass extends AppModel {
 			'order' => ''
 		)
 	);
+
+/**
+ * hasMany associations
+ *
+ * @var array
+ */
+	public $hasMany = array(
+		'Lession' => array(
+			'className' => 'Lession',
+			'foreignKey' => 'course_class_id',
+			'dependent' => false,
+			'conditions' => '',
+			'fields' => '',
+			'order' => '',
+			'limit' => '',
+			'offset' => '',
+			'exclusive' => '',
+			'finderQuery' => '',
+			'counterQuery' => ''
+		)
+	);
+
+
+/**
+ * hasAndBelongsToMany associations
+ *
+ * @var array
+ */
+	public $hasAndBelongsToMany = array(
+		'User' => array(
+			'className' => 'User',
+			'joinTable' => 'course_class_users',
+			'foreignKey' => 'course_class_id',
+			'associationForeignKey' => 'user_id',
+			'unique' => 'keepExisting',
+			'conditions' => '',
+			'fields' => '',
+			'order' => '',
+			'limit' => '',
+			'offset' => '',
+			'finderQuery' => '',
+			'deleteQuery' => '',
+			'insertQuery' => ''
+		)
+	);
+
 }

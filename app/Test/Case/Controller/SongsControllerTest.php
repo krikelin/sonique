@@ -16,12 +16,23 @@ class SongsControllerTest extends ControllerTestCase {
 		'app.song',
 		'app.artist',
 		'app.user',
+		'app.course_class',
+		'app.course',
+		'app.course_type',
+		'app.course_class_user',
+		'app.mark',
+		'app.lession',
+		'app.hall',
+		'app.doctrine_version',
+		'app.doctrine',
 		'app.record',
 		'app.airplay',
 		'app.station',
 		'app.station_type',
 		'app.company',
-		'app.submission'
+		'app.submission',
+		'app.submission_status',
+		'app.record_state'
 	);
 
 /**

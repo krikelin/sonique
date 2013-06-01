@@ -25,7 +25,7 @@ class CourseClassFixture extends CakeTestFixture {
 		'title' => array('type' => 'string', 'null' => false, 'default' => null, 'collate' => 'utf8_general_ci', 'charset' => 'utf8'),
 		'user_id' => array('type' => 'integer', 'null' => false, 'default' => null),
 		'indexes' => array(
-			
+			'PRIMARY' => array('column' => 'id', 'unique' => 1)
 		),
 		'tableParameters' => array('charset' => 'utf8', 'collate' => 'utf8_general_ci', 'engine' => 'InnoDB')
 	);
@@ -39,8 +39,8 @@ class CourseClassFixture extends CakeTestFixture {
 		array(
 			'id' => 1,
 			'course_id' => 1,
-			'start_time' => '2013-06-01 10:38:01',
-			'end_time' => '2013-06-01 10:38:01',
+			'start_time' => '2013-06-01 22:09:50',
+			'end_time' => '2013-06-01 22:09:50',
 			'title' => 'Lorem ipsum dolor sit amet',
 			'user_id' => 1
 		),

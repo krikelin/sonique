@@ -34,8 +34,8 @@ class SongFixture extends CakeTestFixture {
 			'title' => 'Lorem ipsum dolor sit amet',
 			'artist_id' => 1,
 			'user_id' => 1,
-			'created' => '2013-06-01 00:17:47',
-			'updated' => '2013-06-01 00:17:47'
+			'created' => '2013-06-01 21:45:00',
+			'updated' => '2013-06-01 21:45:00'
 		),
 	);
 

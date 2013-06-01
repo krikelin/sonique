@@ -15,6 +15,8 @@ class CourseClassesControllerTest extends ControllerTestCase {
 	public $fixtures = array(
 		'app.course_class',
 		'app.course',
+		'app.course_type',
+		'app.course_class_user',
 		'app.user',
 		'app.artist',
 		'app.record',
@@ -24,7 +26,14 @@ class CourseClassesControllerTest extends ControllerTestCase {
 		'app.station_type',
 		'app.company',
 		'app.submission',
-		'app.submission_status'
+		'app.submission_status',
+		'app.record_state',
+		'app.qi',
+		'app.doctrine_version',
+		'app.doctrine',
+		'app.mark',
+		'app.lession',
+		'app.hall'
 	);
 
 /**

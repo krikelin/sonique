@@ -6,7 +6,7 @@ App::uses('AppController', 'Controller');
  * @property Song $Song
  */
 class SongsController extends AppController {
-	public $components = array('Auth');
+
 /**
  * index method
  *

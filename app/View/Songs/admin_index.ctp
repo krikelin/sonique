@@ -18,7 +18,7 @@
 			<?php echo $this->Html->link($song['Artist']['title'], array('controller' => 'artists', 'action' => 'view', $song['Artist']['id'])); ?>
 		</td>
 		<td>
-			<?php echo $this->Html->link($song['User']['id'], array('controller' => 'users', 'action' => 'view', $song['User']['id'])); ?>
+			<?php echo $this->Html->link($song['User']['username'], array('controller' => 'users', 'action' => 'view', $song['User']['id'])); ?>
 		</td>
 		<td><?php echo h($song['Song']['created']); ?>&nbsp;</td>
 		<td><?php echo h($song['Song']['updated']); ?>&nbsp;</td>

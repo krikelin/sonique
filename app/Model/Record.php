@@ -7,14 +7,11 @@ App::uses('AppModel', 'Model');
  * @property User $User
  * @property Artist $Artist
  * @property Airplay $Airplay
+ * @property RecordState $RecordState
  * @property Submission $Submission
  */
 class Record extends AppModel {
 	public $displayField = 'isrc';
-	/*public $virtualFields = array(
-	    'title' => 'CONCAT(Song.title, " - ", Record.version)'
-	);*/
-
 /**
  * Validation rules
  *
@@ -71,6 +68,16 @@ class Record extends AppModel {
 				//'on' => 'create', // Limit validation to 'create' or 'update' operations
 			),
 		),
+		'plays' => array(
+			'numeric' => array(
+				'rule' => array('numeric'),
+				//'message' => 'Your custom message here',
+				//'allowEmpty' => false,
+				//'required' => false,
+				//'last' => false, // Stop validation after this rule
+				//'on' => 'create', // Limit validation to 'create' or 'update' operations
+			),
+		),
 	);
 
 	//The Associations below have been created with all possible keys, those that are not needed can be removed
@@ -104,7 +111,6 @@ class Record extends AppModel {
 		)
 	);
 
-
 /**
  * hasMany associations
  *
@@ -113,6 +119,19 @@ class Record extends AppModel {
 	public $hasMany = array(
 		'Airplay' => array(
 			'className' => 'Airplay',
+			'foreignKey' => 'record_id',
+			'dependent' => false,
+			'conditions' => '',
+			'fields' => '',
+			'order' => '',
+			'limit' => '',
+			'offset' => '',
+			'exclusive' => '',
+			'finderQuery' => '',
+			'counterQuery' => ''
+		),
+		'RecordState' => array(
+			'className' => 'RecordState',
 			'foreignKey' => 'record_id',
 			'dependent' => false,
 			'conditions' => '',
