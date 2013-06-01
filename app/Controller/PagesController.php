@@ -44,6 +44,7 @@ class PagesController extends AppController {
  * @var array
  */
 	public $uses = array();
+	public $components = array('Auth');
 
 /**
  * Displays a view
@@ -70,6 +71,7 @@ class PagesController extends AppController {
 			$title_for_layout = Inflector::humanize($path[$count - 1]);
 		}
 		$this->set(compact('page', 'subpage', 'title_for_layout'));
+		$this->set('userid', $this->Auth->user('id'));
 		$this->render(implode('/', $path));
 	}
 }

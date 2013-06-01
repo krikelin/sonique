@@ -3218,3 +3218,168 @@ Stack Trace:
 #3 C:\wamp\www\sonique\lib\Cake\Core\App.php(899): App::_checkFatalError()
 #4 [internal function]: App::shutdown()
 #5 {main}
+2013-06-01 13:20:05 Error: Fatal Error (4): syntax error, unexpected ';' in [C:\wamp\www\sonique\app\Controller\LessionsController.php, line 143]
+2013-06-01 13:20:05 Error: [FatalErrorException] syntax error, unexpected ';'
+Request URL: /sonique/admin/lessions/add
+Stack Trace:
+#0 C:\wamp\www\sonique\lib\Cake\Error\ErrorHandler.php(184): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'C:\wamp\www\son...', 143)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'C:\wamp\www\son...', 143, Array)
+#2 C:\wamp\www\sonique\lib\Cake\Core\App.php(926): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'C:\wamp\www\son...', 143, Array)
+#3 C:\wamp\www\sonique\lib\Cake\Core\App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-06-01 13:21:51 Error: [NotFoundException] Invalid lession
+Request URL: /sonique/admin/lessions/deleteall/231412
+Stack Trace:
+#0 [internal function]: LessionsController->admin_deleteall('231412')
+#1 C:\wamp\www\sonique\lib\Cake\Controller\Controller.php(486): ReflectionMethod->invokeArgs(Object(LessionsController), Array)
+#2 C:\wamp\www\sonique\lib\Cake\Routing\Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#3 C:\wamp\www\sonique\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(LessionsController), Object(CakeRequest), Object(CakeResponse))
+#4 C:\wamp\www\sonique\app\webroot\index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2013-06-01 13:22:27 Error: [MissingActionException] Action LessionsController::deleteall() could not be found.
+Exception Attributes: array (
+  'controller' => 'LessionsController',
+  'action' => 'deleteall',
+)
+Request URL: /sonique/lessions/deleteall/231412
+Stack Trace:
+#0 C:\wamp\www\sonique\lib\Cake\Routing\Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#1 C:\wamp\www\sonique\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(LessionsController), Object(CakeRequest), Object(CakeResponse))
+#2 C:\wamp\www\sonique\app\webroot\index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2013-06-01 13:22:33 Error: [MissingActionException] Action LessionsController::admin_deleteallw() could not be found.
+Exception Attributes: array (
+  'controller' => 'LessionsController',
+  'action' => 'admin_deleteallw',
+)
+Request URL: /sonique/admin/lessions/deleteallw/231412
+Stack Trace:
+#0 C:\wamp\www\sonique\lib\Cake\Routing\Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#1 C:\wamp\www\sonique\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(LessionsController), Object(CakeRequest), Object(CakeResponse))
+#2 C:\wamp\www\sonique\app\webroot\index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2013-06-01 13:22:44 Error: [MethodNotAllowedException] Method Not Allowed
+Request URL: /sonique/admin/lessions/deleteall/231412
+Stack Trace:
+#0 C:\wamp\www\sonique\app\Controller\LessionsController.php(134): CakeRequest->onlyAllow('post', 'delete')
+#1 [internal function]: LessionsController->admin_deleteall('231412')
+#2 C:\wamp\www\sonique\lib\Cake\Controller\Controller.php(486): ReflectionMethod->invokeArgs(Object(LessionsController), Array)
+#3 C:\wamp\www\sonique\lib\Cake\Routing\Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#4 C:\wamp\www\sonique\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(LessionsController), Object(CakeRequest), Object(CakeResponse))
+#5 C:\wamp\www\sonique\app\webroot\index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#6 {main}
+2013-06-01 13:22:45 Error: [MethodNotAllowedException] Method Not Allowed
+Request URL: /sonique/admin/lessions/deleteall/231412
+Stack Trace:
+#0 C:\wamp\www\sonique\app\Controller\LessionsController.php(134): CakeRequest->onlyAllow('post', 'delete')
+#1 [internal function]: LessionsController->admin_deleteall('231412')
+#2 C:\wamp\www\sonique\lib\Cake\Controller\Controller.php(486): ReflectionMethod->invokeArgs(Object(LessionsController), Array)
+#3 C:\wamp\www\sonique\lib\Cake\Routing\Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#4 C:\wamp\www\sonique\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(LessionsController), Object(CakeRequest), Object(CakeResponse))
+#5 C:\wamp\www\sonique\app\webroot\index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#6 {main}
+2013-06-01 13:23:33 Error: [NotFoundException] Invalid lession
+Request URL: /sonique/admin/lessions/deleteall/231412
+Stack Trace:
+#0 [internal function]: LessionsController->admin_deleteall('231412')
+#1 C:\wamp\www\sonique\lib\Cake\Controller\Controller.php(486): ReflectionMethod->invokeArgs(Object(LessionsController), Array)
+#2 C:\wamp\www\sonique\lib\Cake\Routing\Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#3 C:\wamp\www\sonique\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(LessionsController), Object(CakeRequest), Object(CakeResponse))
+#4 C:\wamp\www\sonique\app\webroot\index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2013-06-01 13:23:40 Error: [NotFoundException] Invalid lession
+Request URL: /sonique/admin/lessions/deleteall/231412
+Stack Trace:
+#0 [internal function]: LessionsController->admin_deleteall('231412')
+#1 C:\wamp\www\sonique\lib\Cake\Controller\Controller.php(486): ReflectionMethod->invokeArgs(Object(LessionsController), Array)
+#2 C:\wamp\www\sonique\lib\Cake\Routing\Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#3 C:\wamp\www\sonique\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(LessionsController), Object(CakeRequest), Object(CakeResponse))
+#4 C:\wamp\www\sonique\app\webroot\index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2013-06-01 13:57:56 Error: Fatal Error (1): Call to undefined method LessionsController::_unique() in [C:\wamp\www\sonique\app\Controller\LessionsController.php, line 176]
+2013-06-01 13:57:56 Error: [FatalErrorException] Call to undefined method LessionsController::_unique()
+Request URL: /sonique/admin/lessions/add
+Stack Trace:
+#0 C:\wamp\www\sonique\lib\Cake\Error\ErrorHandler.php(184): ErrorHandler::handleFatalError(1, 'Call to undefin...', 'C:\wamp\www\son...', 176)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to undefin...', 'C:\wamp\www\son...', 176, Array)
+#2 C:\wamp\www\sonique\lib\Cake\Core\App.php(926): call_user_func('ErrorHandler::h...', 1, 'Call to undefin...', 'C:\wamp\www\son...', 176, Array)
+#3 C:\wamp\www\sonique\lib\Cake\Core\App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-06-01 13:58:03 Error: [PDOException] SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '_unique' at line 1
+Request URL: /sonique/admin/lessions/add
+Stack Trace:
+#0 C:\wamp\www\sonique\lib\Cake\Model\Datasource\DboSource.php(460): PDOStatement->execute(Array)
+#1 C:\wamp\www\sonique\lib\Cake\Model\Datasource\DboSource.php(426): DboSource->_execute('_unique', Array)
+#2 C:\wamp\www\sonique\lib\Cake\Model\Datasource\DboSource.php(670): DboSource->execute('_unique', Array, Array)
+#3 C:\wamp\www\sonique\lib\Cake\Model\Datasource\DboSource.php(612): DboSource->fetchAll('_unique', Array, Array)
+#4 C:\wamp\www\sonique\lib\Cake\Model\Model.php(800): DboSource->query('_unique', Array, Object(Lession))
+#5 C:\wamp\www\sonique\app\Controller\LessionsController.php(176): Model->__call('_unique', Array)
+#6 C:\wamp\www\sonique\app\Controller\LessionsController.php(176): Lession->_unique(false)
+#7 [internal function]: LessionsController->admin_add()
+#8 C:\wamp\www\sonique\lib\Cake\Controller\Controller.php(486): ReflectionMethod->invokeArgs(Object(LessionsController), Array)
+#9 C:\wamp\www\sonique\lib\Cake\Routing\Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#10 C:\wamp\www\sonique\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(LessionsController), Object(CakeRequest), Object(CakeResponse))
+#11 C:\wamp\www\sonique\app\webroot\index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#12 {main}
+2013-06-01 14:20:33 Error: Fatal Error (1): Call to a member function user() on a non-object in [C:\wamp\www\sonique\app\Controller\PagesController.php, line 74]
+2013-06-01 14:20:33 Error: [FatalErrorException] Call to a member function user() on a non-object
+Request URL: /sonique/
+Stack Trace:
+#0 C:\wamp\www\sonique\lib\Cake\Error\ErrorHandler.php(184): ErrorHandler::handleFatalError(1, 'Call to a membe...', 'C:\wamp\www\son...', 74)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', 'C:\wamp\www\son...', 74, Array)
+#2 C:\wamp\www\sonique\lib\Cake\Core\App.php(926): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', 'C:\wamp\www\son...', 74, Array)
+#3 C:\wamp\www\sonique\lib\Cake\Core\App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-06-01 14:33:31 Error: Fatal Error (4): syntax error, unexpected ';' in [C:\wamp\www\sonique\app\View\Elements\schedule.ctp, line 22]
+2013-06-01 14:33:31 Error: [FatalErrorException] syntax error, unexpected ';'
+Request URL: /sonique/schedule/users/1
+Stack Trace:
+#0 C:\wamp\www\sonique\lib\Cake\Error\ErrorHandler.php(184): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'C:\wamp\www\son...', 22)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'C:\wamp\www\son...', 22, Array)
+#2 C:\wamp\www\sonique\lib\Cake\Core\App.php(926): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'C:\wamp\www\son...', 22, Array)
+#3 C:\wamp\www\sonique\lib\Cake\Core\App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-06-01 14:33:36 Error: Fatal Error (4): syntax error, unexpected ')', expecting ',' or ';' in [C:\wamp\www\sonique\app\View\Elements\schedule.ctp, line 22]
+2013-06-01 14:33:36 Error: [FatalErrorException] syntax error, unexpected ')', expecting ',' or ';'
+Request URL: /sonique/schedule/users/1
+Stack Trace:
+#0 C:\wamp\www\sonique\lib\Cake\Error\ErrorHandler.php(184): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'C:\wamp\www\son...', 22)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'C:\wamp\www\son...', 22, Array)
+#2 C:\wamp\www\sonique\lib\Cake\Core\App.php(926): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'C:\wamp\www\son...', 22, Array)
+#3 C:\wamp\www\sonique\lib\Cake\Core\App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-06-01 14:33:47 Error: Fatal Error (4): syntax error, unexpected ')', expecting ',' or ';' in [C:\wamp\www\sonique\app\View\Elements\schedule.ctp, line 22]
+2013-06-01 14:33:47 Error: [FatalErrorException] syntax error, unexpected ')', expecting ',' or ';'
+Request URL: /sonique/schedule/users/1
+Stack Trace:
+#0 C:\wamp\www\sonique\lib\Cake\Error\ErrorHandler.php(184): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'C:\wamp\www\son...', 22)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'C:\wamp\www\son...', 22, Array)
+#2 C:\wamp\www\sonique\lib\Cake\Core\App.php(926): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'C:\wamp\www\son...', 22, Array)
+#3 C:\wamp\www\sonique\lib\Cake\Core\App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-06-01 14:33:52 Error: Fatal Error (4): syntax error, unexpected ')', expecting ',' or ';' in [C:\wamp\www\sonique\app\View\Elements\schedule.ctp, line 22]
+2013-06-01 14:33:52 Error: [FatalErrorException] syntax error, unexpected ')', expecting ',' or ';'
+Request URL: /sonique/schedule/users/1
+Stack Trace:
+#0 C:\wamp\www\sonique\lib\Cake\Error\ErrorHandler.php(184): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'C:\wamp\www\son...', 22)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'C:\wamp\www\son...', 22, Array)
+#2 C:\wamp\www\sonique\lib\Cake\Core\App.php(926): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'C:\wamp\www\son...', 22, Array)
+#3 C:\wamp\www\sonique\lib\Cake\Core\App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-06-01 14:37:31 Error: Fatal Error (4): syntax error, unexpected 'catch' (T_CATCH) in [C:\wamp\www\sonique\app\View\Elements\schedule.ctp, line 36]
+2013-06-01 14:37:31 Error: [FatalErrorException] syntax error, unexpected 'catch' (T_CATCH)
+Request URL: /sonique/schedule/users/1
+Stack Trace:
+#0 C:\wamp\www\sonique\lib\Cake\Error\ErrorHandler.php(184): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'C:\wamp\www\son...', 36)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'C:\wamp\www\son...', 36, Array)
+#2 C:\wamp\www\sonique\lib\Cake\Core\App.php(926): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'C:\wamp\www\son...', 36, Array)
+#3 C:\wamp\www\sonique\lib\Cake\Core\App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}

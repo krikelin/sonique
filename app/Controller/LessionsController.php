@@ -128,7 +128,11 @@ class LessionsController extends AppController {
 		$options = array('conditions' => array('Lession.' . $this->Lession->primaryKey => $id));
 		$this->set('lession', $this->Lession->find('first', $options));
 	}
-
+	public function admin_deleteall($serie) {
+		$this->Lession->deleteAll(array('token' => $serie));
+		$this->Session->setFlash(__('Lession seie deleted'));
+		$this->redirect(array('action' => 'index'));
+	}
 /**
  * admin_add method
  *
@@ -139,30 +143,41 @@ class LessionsController extends AppController {
 			$repeat = 1;
 			$interval = 7;
 			if(isset($this->request->data['Lession']['repeat'])) {
-				$repeat = $this->request->data['Lession']['repeat'];
+				$repeat = (int)$this->request->data['Lession']['repeat'];
+				
 				unset($this->request->data['Lession']['repeat']);
 			}
 			if(isset($this->request->data['Lession']['interval'])) {
-				$interval = $this->request->data['Lession']['interval'];
+				$interval = (int)$this->request->data['Lession']['interval'];
 				unset($this->request->data['Lession']['interval']);
 			}
+
 			
 			$this->Lession->create();
 			if ($this->Lession->save($this->request->data)) {
 				$this->Session->setFlash(__('The lession has been saved'));
-				
+				$date =  $this->request->data['Lession']['time'];
+				print_r($this->request->data);
+				$date = $this->Lession->deconstruct('time', $date);
 				// Repeat for every week
-				for($i = 0; $i < $repeat-1; $i++) {
-					$date =  $this->request->data['Lession']['time'];
-					$date = $this->Lession->deconstruct('time', $date);
-					$date = strtotime( $date);
-
-					$date += 60 * 60 * 23 * $interval; // add one week
-					$time =  array('year' => date('Y', $date), 'month' => date('m', $date), 'day' => date('d', $date), 'hour' => date('H', $date), 'min' => date('i', $date), 'meridian' => date('A', $date));
+				for($i = 0; $i < (int)($repeat)-1; $i++) {
+				//	print $i."<br/>";
 					
-					$this->request->data['Lession']['time'] = $time;	
+					
+					//print $date." +".$interval * $i . " DAYS<br/>";
+					$time = strtotime( $date." +".$interval * ($i + 1) . " DAYS");
+					//print $time;
+					//$date +=  60 * 60 * 24 * $interval * $i; // add one week
+				//	$time =  array('year' => date('Y', $time), 'month' => date('m', $time), 'day' => date('d', $time), 'hour' => date('H', $time), 'min' => date('i', $time), 'meridian' => date('a', $time));
+					unset($this->request->data['Lession']['time']);
+					$this->request->data['Lession']['time'] = date('Y-m-d H:i:s', $time);	
+				//	print_r($time)."<br>";
+					$this->Lession->create();
 					$this->Lession->save($this->request->data);
+					print $this->Lession->id."<br/>";
+					
 				}
+			//	die("C");
 				$this->redirect(array('action' => 'index'));
 
 			} else {

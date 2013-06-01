@@ -1,2 +1,1 @@
-<h1>Welcome</h1>
-<p>This tool is intended to track your submission progress</p>
+<iframe src="<?php echo Router::Url('/schedule/users/'.$userid)?>" width="100%" height="800" border="0"></iframe>

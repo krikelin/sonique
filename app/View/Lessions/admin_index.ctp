@@ -30,6 +30,7 @@
 			<?php echo $this->Html->link(__('View'), array('action' => 'view', $lession['Lession']['id'])); ?>
 			<?php echo $this->Html->link(__('Edit'), array('action' => 'edit', $lession['Lession']['id'])); ?>
 			<?php echo $this->Form->postLink(__('Delete'), array('action' => 'delete', $lession['Lession']['id']), null, __('Are you sure you want to delete # %s?', $lession['Lession']['id'])); ?>
+			<?php echo $this->Form->postLink(__('Delete Serie'), array('action' => 'deleteall', $lession['Lession']['token']), null, __('Are you sure you want to delete the serie # %s?', $lession['Lession']['token'])); ?>
 		</td>
 	</tr>
 <?php endforeach; ?>

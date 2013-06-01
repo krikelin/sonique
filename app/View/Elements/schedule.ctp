@@ -1,11 +1,13 @@
 <?php
-$wn = array(__('Monday'), __('Tuesday'), __('Wednesday'), __('Thursday'), __('Friday'), __('Saturday'));
+$wn = array(__('Monday'), __('Tuesday'), __('Wednesday'), __('Thursday'), __('Friday'), __('Saturday'), __('Sunday'));
 ?>
 			<?php $start = 480 ; // Starts at eight o clock and ends on nine?>
-			<?php $end = 540;?>
-			<?php for($i = 8; $i < 21; $i++): ?>
+			<?php $end = 540;
+			$count_hours = 8;
+			?>
+			<?php for($i = $count_hours; $i < 16; $i++): ?>
 
-			<div class="timemarker" style="position: absolute; left: 0px; width:5%; top: <?php echo round((( ($i - 8) * 60) / (1380 -$start)) * 100) + 5 ?>%">
+			<div class="timemarker" style="position: absolute; left: 0px; width:5%; top: <?php echo round((( ($i - 8) * 60) / ($count_hours * 60)) * 100)  ?>%">
 				<?php echo $i.":00"?>
 			</div>
 		<?php endfor;?>
@@ -19,9 +21,18 @@ $wn = array(__('Monday'), __('Tuesday'), __('Wednesday'), __('Thursday'), __('Fr
 			
 	
 			<?php foreach($weekday as $lession) {?>
-			<?php try { ?>
-			<?php echo ((date('H', strtotime($lession['lessions']['time'])) * 60) + date('i', strtotime($lession['lessions']['time']))) / (1380 - $start) * 100;?>
-			<div class="lession" style="left:-1px; width:100%; top: <?php echo round(((date('H', strtotime($lession['lessions']['time'])) * 60) + date('i', strtotime($lession['lessions']['time']))) / (1380 * 3) * 100) ?>%; height: <?php echo round((date($lession['lessions']['duration']) / (1380 - $start))* 100)?>%"><b><?php echo date('H:i', strtotime($lession['lessions']['time']))?></b><br /><?php echo $lession['courses']['title']?><br />
+			<?php $hour = date('H', strtotime($lession['lessions']['time']));
+				$minute = date('i', strtotime($lession['lessions']['time']));
+				$minutes = (($hour * 60) + $minute);
+			
+				$dayMinutes = $count_hours * 60;
+				debug($minutes);
+				$top = ($minutes - (480)) / $dayMinutes;
+
+				$top = $top * 100;
+				try {
+				?>
+			<div class="lession" style="left:-1px; width:100%; top: <?php echo $top  ?>%; height: <?php echo round((date($lession['lessions']['duration']) / (1380 - $start))* 100)?>%"><b><?php echo date('H:i', strtotime($lession['lessions']['time']))?></b><br /><?php echo $lession['courses']['title']?><br />
 				<?php echo $lession['halls']['title']?><br />
 				<?php echo $lession['tutors']['username']?>
 			</div>
