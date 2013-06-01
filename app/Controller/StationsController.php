@@ -1,0 +1,196 @@
+<?php
+App::uses('AppController', 'Controller');
+/**
+ * Stations Controller
+ *
+ * @property Station $Station
+ */
+class StationsController extends AppController {
+	public $components = array('Auth');
+/**
+ * index method
+ *
+ * @return void
+ */
+	public function index() {
+		$this->Station->recursive = 0;
+		$this->set('stations', $this->paginate());
+	}
+
+/**
+ * view method
+ *
+ * @throws NotFoundException
+ * @param string $id
+ * @return void
+ */
+	public function view($id = null) {
+		if (!$this->Station->exists($id)) {
+			throw new NotFoundException(__('Invalid station'));
+		}
+		$options = array('conditions' => array('Station.' . $this->Station->primaryKey => $id));
+		$this->set('station', $this->Station->find('first', $options));
+	}
+
+/**
+ * add method
+ *
+ * @return void
+ */
+	public function add() {
+		if ($this->request->is('post')) {
+			$this->Station->create();
+			if ($this->Station->save($this->request->data)) {
+				$this->Session->setFlash(__('The station has been saved'));
+				$this->redirect(array('action' => 'index'));
+			} else {
+				$this->Session->setFlash(__('The station could not be saved. Please, try again.'));
+			}
+		}
+		$stationTypes = $this->Station->StationType->find('list');
+		$companies = $this->Station->Company->find('list');
+		$this->set(compact('stationTypes', 'companies'));
+	}
+
+/**
+ * edit method
+ *
+ * @throws NotFoundException
+ * @param string $id
+ * @return void
+ */
+	public function edit($id = null) {
+		if (!$this->Station->exists($id)) {
+			throw new NotFoundException(__('Invalid station'));
+		}
+		if ($this->request->is('post') || $this->request->is('put')) {
+			if ($this->Station->save($this->request->data)) {
+				$this->Session->setFlash(__('The station has been saved'));
+				$this->redirect(array('action' => 'index'));
+			} else {
+				$this->Session->setFlash(__('The station could not be saved. Please, try again.'));
+			}
+		} else {
+			$options = array('conditions' => array('Station.' . $this->Station->primaryKey => $id));
+			$this->request->data = $this->Station->find('first', $options);
+		}
+		$stationTypes = $this->Station->StationType->find('list');
+		$companies = $this->Station->Company->find('list');
+		$this->set(compact('stationTypes', 'companies'));
+	}
+
+/**
+ * delete method
+ *
+ * @throws NotFoundException
+ * @param string $id
+ * @return void
+ */
+	public function delete($id = null) {
+		$this->Station->id = $id;
+		if (!$this->Station->exists()) {
+			throw new NotFoundException(__('Invalid station'));
+		}
+		$this->request->onlyAllow('post', 'delete');
+		if ($this->Station->delete()) {
+			$this->Session->setFlash(__('Station deleted'));
+			$this->redirect(array('action' => 'index'));
+		}
+		$this->Session->setFlash(__('Station was not deleted'));
+		$this->redirect(array('action' => 'index'));
+	}
+
+
+/**
+ * admin_index method
+ *
+ * @return void
+ */
+	public function admin_index() {
+		$this->Station->recursive = 0;
+		$this->set('stations', $this->paginate());
+	}
+
+/**
+ * admin_view method
+ *
+ * @throws NotFoundException
+ * @param string $id
+ * @return void
+ */
+	public function admin_view($id = null) {
+		if (!$this->Station->exists($id)) {
+			throw new NotFoundException(__('Invalid station'));
+		}
+		$options = array('conditions' => array('Station.' . $this->Station->primaryKey => $id));
+		$this->set('station', $this->Station->find('first', $options));
+	}
+
+/**
+ * admin_add method
+ *
+ * @return void
+ */
+	public function admin_add() {
+		if ($this->request->is('post')) {
+			$this->Station->create();
+			if ($this->Station->save($this->request->data)) {
+				$this->Session->setFlash(__('The station has been saved'));
+				$this->redirect(array('action' => 'index'));
+			} else {
+				$this->Session->setFlash(__('The station could not be saved. Please, try again.'));
+			}
+		}
+		$stationTypes = $this->Station->StationType->find('list');
+		$companies = $this->Station->Company->find('list');
+		$this->set(compact('stationTypes', 'companies'));
+	}
+
+/**
+ * admin_edit method
+ *
+ * @throws NotFoundException
+ * @param string $id
+ * @return void
+ */
+	public function admin_edit($id = null) {
+		if (!$this->Station->exists($id)) {
+			throw new NotFoundException(__('Invalid station'));
+		}
+		if ($this->request->is('post') || $this->request->is('put')) {
+			if ($this->Station->save($this->request->data)) {
+				$this->Session->setFlash(__('The station has been saved'));
+				$this->redirect(array('action' => 'index'));
+			} else {
+				$this->Session->setFlash(__('The station could not be saved. Please, try again.'));
+			}
+		} else {
+			$options = array('conditions' => array('Station.' . $this->Station->primaryKey => $id));
+			$this->request->data = $this->Station->find('first', $options);
+		}
+		$stationTypes = $this->Station->StationType->find('list');
+		$companies = $this->Station->Company->find('list');
+		$this->set(compact('stationTypes', 'companies'));
+	}
+
+/**
+ * admin_delete method
+ *
+ * @throws NotFoundException
+ * @param string $id
+ * @return void
+ */
+	public function admin_delete($id = null) {
+		$this->Station->id = $id;
+		if (!$this->Station->exists()) {
+			throw new NotFoundException(__('Invalid station'));
+		}
+		$this->request->onlyAllow('post', 'delete');
+		if ($this->Station->delete()) {
+			$this->Session->setFlash(__('Station deleted'));
+			$this->redirect(array('action' => 'index'));
+		}
+		$this->Session->setFlash(__('Station was not deleted'));
+		$this->redirect(array('action' => 'index'));
+	}
+}
