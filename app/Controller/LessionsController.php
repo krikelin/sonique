@@ -111,6 +111,7 @@ class LessionsController extends AppController {
  */
 	public function admin_index() {
 		$this->Lession->recursive = 0;
+		$this->Lession->order = array('time DESC');
 		$this->set('lessions', $this->paginate());
 	}
 
