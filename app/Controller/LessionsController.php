@@ -146,8 +146,9 @@ class LessionsController extends AppController {
 		}
 		$courses = $this->Lession->Course->find('list');
 		$users = $this->Lession->User->find('list');
+		$tutors = $this->Lession->Tutor->find('list');
 		$halls = $this->Lession->Hall->find('list');
-		$this->set(compact('courses', 'users', 'halls'));
+		$this->set(compact('courses', 'users', 'halls', 'tutors'));
 	}
 
 /**

@@ -3118,3 +3118,27 @@ Stack Trace:
 #3 C:\wamp\www\sonique\lib\Cake\Core\App.php(899): App::_checkFatalError()
 #4 [internal function]: App::shutdown()
 #5 {main}
+2013-06-01 12:28:04 Error: [PDOException] SQLSTATE[HY000]: General error: 1364 Field 'tutor_id' doesn't have a default value
+Request URL: /sonique/admin/lessions/add
+Stack Trace:
+#0 C:\wamp\www\sonique\lib\Cake\Model\Datasource\DboSource.php(460): PDOStatement->execute(Array)
+#1 C:\wamp\www\sonique\lib\Cake\Model\Datasource\DboSource.php(426): DboSource->_execute('INSERT INTO `so...', Array)
+#2 C:\wamp\www\sonique\lib\Cake\Model\Datasource\DboSource.php(1008): DboSource->execute('INSERT INTO `so...')
+#3 C:\wamp\www\sonique\lib\Cake\Model\Model.php(1742): DboSource->create(Object(Lession), Array, Array)
+#4 C:\wamp\www\sonique\app\Controller\LessionsController.php(140): Model->save(Array)
+#5 [internal function]: LessionsController->admin_add()
+#6 C:\wamp\www\sonique\lib\Cake\Controller\Controller.php(486): ReflectionMethod->invokeArgs(Object(LessionsController), Array)
+#7 C:\wamp\www\sonique\lib\Cake\Routing\Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#8 C:\wamp\www\sonique\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(LessionsController), Object(CakeRequest), Object(CakeResponse))
+#9 C:\wamp\www\sonique\app\webroot\index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#10 {main}
+2013-06-01 12:35:41 Error: Fatal Error (1): Call to undefined function _() in [C:\wamp\www\sonique\app\View\Elements\schedule.ctp, line 2]
+2013-06-01 12:35:41 Error: [FatalErrorException] Call to undefined function _()
+Request URL: /sonique/schedule/users/1?week=22
+Stack Trace:
+#0 C:\wamp\www\sonique\lib\Cake\Error\ErrorHandler.php(184): ErrorHandler::handleFatalError(1, 'Call to undefin...', 'C:\wamp\www\son...', 2)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to undefin...', 'C:\wamp\www\son...', 2, Array)
+#2 C:\wamp\www\sonique\lib\Cake\Core\App.php(926): call_user_func('ErrorHandler::h...', 1, 'Call to undefin...', 'C:\wamp\www\son...', 2, Array)
+#3 C:\wamp\www\sonique\lib\Cake\Core\App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}

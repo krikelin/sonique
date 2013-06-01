@@ -13,10 +13,11 @@ body {
 .day {
 	border: 1px solid black;
 	overflow: hidden;
+	box-shadow:inset 0px 4px 5px rgba(0, 0, 0, .2);
 }
 .lession{
 
-	padding: 20px;
+	padding: 3px;
 			border: 1px solid black;
 			background: white;
 			position: absolute;

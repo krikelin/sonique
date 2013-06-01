@@ -9,6 +9,7 @@
 		echo $this->Form->input('duration');
 		echo $this->Form->input('token');
 		echo $this->Form->input('hall_id');
+		echo $this->Form->input('tutor_id');
 	?>
 	</fieldset>
 <?php echo $this->Form->end(__('Submit')); ?>
