@@ -18,7 +18,7 @@ $wn = array(__('Monday'), __('Tuesday'), __('Wednesday'), __('Thursday'), __('Fr
 		
 		<?php foreach($weekdays as $weekday) {?>
 		<div class="dayheader" style="text-align: center;position:absolute; left:<?php echo round($i * 10 + 5)?>%; height:20px; width:10%; top: 0px"><?php echo $wn[$i]?></div>
-		<div class="day" style="position: absolute; left: <?php echo round($i * 10 + 5)?>%; height:90%; width: 10%; top: 20px">
+		<div class="day <?php echo $wn[$i]?>" style="position: absolute; left: <?php echo round($i * 10 + 5)?>%; height:90%; width: 10%; top: 20px">
 		
 
 		<?php foreach($weekday as $_lession) {?>
@@ -81,12 +81,17 @@ $wn = array(__('Monday'), __('Tuesday'), __('Wednesday'), __('Thursday'), __('Fr
 					$top = $top * 100;
 				
 					?>
-				<div class="lession" style="position: absolute;left:<?php echo (100 / ($count_a)) * $x -1;?>%; width:<?php echo 100 / ($count_a) + 1 ?>%; top: <?php echo $top  ?>%; height: <?php echo round((date($lession['lessions']['duration']) / (1380 - $start))* 100)?>%"><b><?php echo date('H:i', strtotime($lession['lessions']['time']))?></b><br />
-
+				<div class="lession" style="position: absolute;left:<?php echo (100 / ($count_a)) * $x -1;?>%; width:<?php echo 100 / ($count_a) + 1 ?>%; top: <?php echo $top  ?>%; height: <?php echo round((date($lession['lessions']['duration']) / (1380 - $start))* 100)?>%"><b><?php echo date('H:i', strtotime($lession['lessions']['time']))?><?php if($lession['lessions']['notes'] != NULL):?>
+				<?php echo $this->Html->image("/img/s_info.png", array('style' => 'float: right; padding-right: 10px', 'title' => $lession['lessions']['notes']))?>
+				<?php endif;?></b><br />
+					
 					<?php echo $this->Html->link($lession['courses']['title'], "/schedule/courses/".$lession['course_class']['id']);?><br />
 					<?php echo $this->Html->link($lession['halls']['title'], "/schedule/halls/".$lession['halls']['id']."?week=".$week."&year=".$year."")?><br />
 					<?php echo $this->Html->link($lession['tutors']['username'], "/schedule/users/".$lession['tutors']['id'])?>
+					<p><?php echo $lession['lessions']['notes']?></p>
+
 					<span style="position: absolute; right: 10px;bottom: 0px; float: right;"><b><?php echo date('H:i', $lession['lessions']['time'] + $lession['lessions']['duration']);?>
+
 				</div>
 					
 					<?php ?>

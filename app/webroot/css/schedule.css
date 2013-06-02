@@ -29,6 +29,12 @@ body {
 .day {
 	background: #eeeeee;
 }
+.Saturday {
+	background: #eeeeff;
+}
+.Sunday {
+	background: #ffeeee;
+}
 
 /*
 .lession {

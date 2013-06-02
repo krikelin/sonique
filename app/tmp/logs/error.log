@@ -4574,3 +4574,280 @@ Stack Trace:
 #3 C:\wamp\www\sonique\lib\Cake\Core\App.php(899): App::_checkFatalError()
 #4 [internal function]: App::shutdown()
 #5 {main}
+2013-06-02 16:28:18 Error: Fatal Error (4): syntax error, unexpected '=>' (T_DOUBLE_ARROW) in [C:\wamp\www\sonique\app\Controller\LessionsController.php, line 23]
+2013-06-02 16:28:18 Error: [FatalErrorException] syntax error, unexpected '=>' (T_DOUBLE_ARROW)
+Request URL: /sonique/lessions?date%5Bmonth%5D=06&date%5Bday%5D=07&date%5Byear%5D=2013
+Stack Trace:
+#0 C:\wamp\www\sonique\lib\Cake\Error\ErrorHandler.php(184): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'C:\wamp\www\son...', 23)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'C:\wamp\www\son...', 23, Array)
+#2 C:\wamp\www\sonique\lib\Cake\Core\App.php(926): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'C:\wamp\www\son...', 23, Array)
+#3 C:\wamp\www\sonique\lib\Cake\Core\App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-06-02 16:28:19 Error: Fatal Error (4): syntax error, unexpected '=>' (T_DOUBLE_ARROW) in [C:\wamp\www\sonique\app\Controller\LessionsController.php, line 23]
+2013-06-02 16:28:19 Error: [FatalErrorException] syntax error, unexpected '=>' (T_DOUBLE_ARROW)
+Request URL: /sonique/lessions?date%5Bmonth%5D=06&date%5Bday%5D=07&date%5Byear%5D=2013
+Stack Trace:
+#0 C:\wamp\www\sonique\lib\Cake\Error\ErrorHandler.php(184): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'C:\wamp\www\son...', 23)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'C:\wamp\www\son...', 23, Array)
+#2 C:\wamp\www\sonique\lib\Cake\Core\App.php(926): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'C:\wamp\www\son...', 23, Array)
+#3 C:\wamp\www\sonique\lib\Cake\Core\App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-06-02 16:28:29 Error: Fatal Error (4): syntax error, unexpected ';' in [C:\wamp\www\sonique\app\Controller\LessionsController.php, line 23]
+2013-06-02 16:28:29 Error: [FatalErrorException] syntax error, unexpected ';'
+Request URL: /sonique/lessions?date%5Bmonth%5D=06&date%5Bday%5D=07&date%5Byear%5D=2013
+Stack Trace:
+#0 C:\wamp\www\sonique\lib\Cake\Error\ErrorHandler.php(184): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'C:\wamp\www\son...', 23)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'C:\wamp\www\son...', 23, Array)
+#2 C:\wamp\www\sonique\lib\Cake\Core\App.php(926): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'C:\wamp\www\son...', 23, Array)
+#3 C:\wamp\www\sonique\lib\Cake\Core\App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-06-02 16:28:32 Error: [PDOException] SQLSTATE[42S22]: Column not found: 1054 Unknown column 'conditions' in 'where clause'
+Request URL: /sonique/lessions?date%5Bmonth%5D=06&date%5Bday%5D=07&date%5Byear%5D=2013
+Stack Trace:
+#0 C:\wamp\www\sonique\lib\Cake\Model\Datasource\DboSource.php(460): PDOStatement->execute(Array)
+#1 C:\wamp\www\sonique\lib\Cake\Model\Datasource\DboSource.php(426): DboSource->_execute('SELECT `Lession...', Array)
+#2 C:\wamp\www\sonique\lib\Cake\Model\Datasource\DboSource.php(670): DboSource->execute('SELECT `Lession...', Array, Array)
+#3 C:\wamp\www\sonique\lib\Cake\Model\Datasource\DboSource.php(1081): DboSource->fetchAll('SELECT `Lession...', false)
+#4 C:\wamp\www\sonique\lib\Cake\Model\Model.php(2694): DboSource->read(Object(Lession), Array)
+#5 C:\wamp\www\sonique\lib\Cake\Controller\Component\PaginatorComponent.php(196): Model->find('all', Array)
+#6 C:\wamp\www\sonique\lib\Cake\Controller\Controller.php(1074): PaginatorComponent->paginate(Array, Array, Array)
+#7 C:\wamp\www\sonique\app\Controller\LessionsController.php(23): Controller->paginate(Array)
+#8 [internal function]: LessionsController->index()
+#9 C:\wamp\www\sonique\lib\Cake\Controller\Controller.php(486): ReflectionMethod->invokeArgs(Object(LessionsController), Array)
+#10 C:\wamp\www\sonique\lib\Cake\Routing\Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#11 C:\wamp\www\sonique\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(LessionsController), Object(CakeRequest), Object(CakeResponse))
+#12 C:\wamp\www\sonique\app\webroot\index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#13 {main}
+2013-06-02 16:30:13 Error: [PDOException] SQLSTATE[42S22]: Column not found: 1054 Unknown column 'CourseClassUser.user_id' in 'where clause'
+Request URL: /sonique/lessions?date%5Bmonth%5D=06&date%5Bday%5D=03&date%5Byear%5D=2013
+Stack Trace:
+#0 C:\wamp\www\sonique\lib\Cake\Model\Datasource\DboSource.php(460): PDOStatement->execute(Array)
+#1 C:\wamp\www\sonique\lib\Cake\Model\Datasource\DboSource.php(426): DboSource->_execute('SELECT `Lession...', Array)
+#2 C:\wamp\www\sonique\lib\Cake\Model\Datasource\DboSource.php(670): DboSource->execute('SELECT `Lession...', Array, Array)
+#3 C:\wamp\www\sonique\lib\Cake\Model\Datasource\DboSource.php(1081): DboSource->fetchAll('SELECT `Lession...', false)
+#4 C:\wamp\www\sonique\lib\Cake\Model\Model.php(2694): DboSource->read(Object(Lession), Array)
+#5 C:\wamp\www\sonique\lib\Cake\Controller\Component\PaginatorComponent.php(196): Model->find('all', Array)
+#6 C:\wamp\www\sonique\lib\Cake\Controller\Controller.php(1074): PaginatorComponent->paginate(Array, Array, Array)
+#7 C:\wamp\www\sonique\app\Controller\LessionsController.php(23): Controller->paginate(Array)
+#8 [internal function]: LessionsController->index()
+#9 C:\wamp\www\sonique\lib\Cake\Controller\Controller.php(486): ReflectionMethod->invokeArgs(Object(LessionsController), Array)
+#10 C:\wamp\www\sonique\lib\Cake\Routing\Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#11 C:\wamp\www\sonique\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(LessionsController), Object(CakeRequest), Object(CakeResponse))
+#12 C:\wamp\www\sonique\app\webroot\index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#13 {main}
+2013-06-02 16:30:39 Error: [PDOException] SQLSTATE[42S22]: Column not found: 1054 Unknown column 'CourseClassUser.user_id' in 'where clause'
+Request URL: /sonique/lessions?date%5Bmonth%5D=06&date%5Bday%5D=03&date%5Byear%5D=2013
+Stack Trace:
+#0 C:\wamp\www\sonique\lib\Cake\Model\Datasource\DboSource.php(460): PDOStatement->execute(Array)
+#1 C:\wamp\www\sonique\lib\Cake\Model\Datasource\DboSource.php(426): DboSource->_execute('SELECT `Lession...', Array)
+#2 C:\wamp\www\sonique\lib\Cake\Model\Datasource\DboSource.php(670): DboSource->execute('SELECT `Lession...', Array, Array)
+#3 C:\wamp\www\sonique\lib\Cake\Model\Datasource\DboSource.php(1081): DboSource->fetchAll('SELECT `Lession...', false)
+#4 C:\wamp\www\sonique\lib\Cake\Model\Model.php(2694): DboSource->read(Object(Lession), Array)
+#5 C:\wamp\www\sonique\lib\Cake\Controller\Component\PaginatorComponent.php(196): Model->find('all', Array)
+#6 C:\wamp\www\sonique\lib\Cake\Controller\Controller.php(1074): PaginatorComponent->paginate(Array, Array, Array)
+#7 C:\wamp\www\sonique\app\Controller\LessionsController.php(23): Controller->paginate(Array)
+#8 [internal function]: LessionsController->index()
+#9 C:\wamp\www\sonique\lib\Cake\Controller\Controller.php(486): ReflectionMethod->invokeArgs(Object(LessionsController), Array)
+#10 C:\wamp\www\sonique\lib\Cake\Routing\Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#11 C:\wamp\www\sonique\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(LessionsController), Object(CakeRequest), Object(CakeResponse))
+#12 C:\wamp\www\sonique\app\webroot\index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#13 {main}
+2013-06-02 16:30:40 Error: [PDOException] SQLSTATE[42S22]: Column not found: 1054 Unknown column 'CourseClassUser.user_id' in 'where clause'
+Request URL: /sonique/lessions?date%5Bmonth%5D=06&date%5Bday%5D=03&date%5Byear%5D=2013
+Stack Trace:
+#0 C:\wamp\www\sonique\lib\Cake\Model\Datasource\DboSource.php(460): PDOStatement->execute(Array)
+#1 C:\wamp\www\sonique\lib\Cake\Model\Datasource\DboSource.php(426): DboSource->_execute('SELECT `Lession...', Array)
+#2 C:\wamp\www\sonique\lib\Cake\Model\Datasource\DboSource.php(670): DboSource->execute('SELECT `Lession...', Array, Array)
+#3 C:\wamp\www\sonique\lib\Cake\Model\Datasource\DboSource.php(1081): DboSource->fetchAll('SELECT `Lession...', false)
+#4 C:\wamp\www\sonique\lib\Cake\Model\Model.php(2694): DboSource->read(Object(Lession), Array)
+#5 C:\wamp\www\sonique\lib\Cake\Controller\Component\PaginatorComponent.php(196): Model->find('all', Array)
+#6 C:\wamp\www\sonique\lib\Cake\Controller\Controller.php(1074): PaginatorComponent->paginate(Array, Array, Array)
+#7 C:\wamp\www\sonique\app\Controller\LessionsController.php(23): Controller->paginate(Array)
+#8 [internal function]: LessionsController->index()
+#9 C:\wamp\www\sonique\lib\Cake\Controller\Controller.php(486): ReflectionMethod->invokeArgs(Object(LessionsController), Array)
+#10 C:\wamp\www\sonique\lib\Cake\Routing\Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#11 C:\wamp\www\sonique\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(LessionsController), Object(CakeRequest), Object(CakeResponse))
+#12 C:\wamp\www\sonique\app\webroot\index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#13 {main}
+2013-06-02 16:30:42 Error: [PDOException] SQLSTATE[42S22]: Column not found: 1054 Unknown column 'CourseClassUser.user_id' in 'where clause'
+Request URL: /sonique/lessions?date%5Bmonth%5D=06&date%5Bday%5D=03&date%5Byear%5D=2013
+Stack Trace:
+#0 C:\wamp\www\sonique\lib\Cake\Model\Datasource\DboSource.php(460): PDOStatement->execute(Array)
+#1 C:\wamp\www\sonique\lib\Cake\Model\Datasource\DboSource.php(426): DboSource->_execute('SELECT `Lession...', Array)
+#2 C:\wamp\www\sonique\lib\Cake\Model\Datasource\DboSource.php(670): DboSource->execute('SELECT `Lession...', Array, Array)
+#3 C:\wamp\www\sonique\lib\Cake\Model\Datasource\DboSource.php(1081): DboSource->fetchAll('SELECT `Lession...', false)
+#4 C:\wamp\www\sonique\lib\Cake\Model\Model.php(2694): DboSource->read(Object(Lession), Array)
+#5 C:\wamp\www\sonique\lib\Cake\Controller\Component\PaginatorComponent.php(196): Model->find('all', Array)
+#6 C:\wamp\www\sonique\lib\Cake\Controller\Controller.php(1074): PaginatorComponent->paginate(Array, Array, Array)
+#7 C:\wamp\www\sonique\app\Controller\LessionsController.php(23): Controller->paginate(Array)
+#8 [internal function]: LessionsController->index()
+#9 C:\wamp\www\sonique\lib\Cake\Controller\Controller.php(486): ReflectionMethod->invokeArgs(Object(LessionsController), Array)
+#10 C:\wamp\www\sonique\lib\Cake\Routing\Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#11 C:\wamp\www\sonique\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(LessionsController), Object(CakeRequest), Object(CakeResponse))
+#12 C:\wamp\www\sonique\app\webroot\index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#13 {main}
+2013-06-02 16:30:44 Error: [PDOException] SQLSTATE[42S22]: Column not found: 1054 Unknown column 'CourseClassUser.user_id' in 'where clause'
+Request URL: /sonique/lessions?date%5Bmonth%5D=06&date%5Bday%5D=03&date%5Byear%5D=2013
+Stack Trace:
+#0 C:\wamp\www\sonique\lib\Cake\Model\Datasource\DboSource.php(460): PDOStatement->execute(Array)
+#1 C:\wamp\www\sonique\lib\Cake\Model\Datasource\DboSource.php(426): DboSource->_execute('SELECT `Lession...', Array)
+#2 C:\wamp\www\sonique\lib\Cake\Model\Datasource\DboSource.php(670): DboSource->execute('SELECT `Lession...', Array, Array)
+#3 C:\wamp\www\sonique\lib\Cake\Model\Datasource\DboSource.php(1081): DboSource->fetchAll('SELECT `Lession...', false)
+#4 C:\wamp\www\sonique\lib\Cake\Model\Model.php(2694): DboSource->read(Object(Lession), Array)
+#5 C:\wamp\www\sonique\lib\Cake\Controller\Component\PaginatorComponent.php(196): Model->find('all', Array)
+#6 C:\wamp\www\sonique\lib\Cake\Controller\Controller.php(1074): PaginatorComponent->paginate(Array, Array, Array)
+#7 C:\wamp\www\sonique\app\Controller\LessionsController.php(23): Controller->paginate(Array)
+#8 [internal function]: LessionsController->index()
+#9 C:\wamp\www\sonique\lib\Cake\Controller\Controller.php(486): ReflectionMethod->invokeArgs(Object(LessionsController), Array)
+#10 C:\wamp\www\sonique\lib\Cake\Routing\Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#11 C:\wamp\www\sonique\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(LessionsController), Object(CakeRequest), Object(CakeResponse))
+#12 C:\wamp\www\sonique\app\webroot\index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#13 {main}
+2013-06-02 16:30:59 Error: [PDOException] SQLSTATE[42S22]: Column not found: 1054 Unknown column 'CourseClassUser.user_id' in 'where clause'
+Request URL: /sonique/lessions?date%5Bmonth%5D=06&date%5Bday%5D=03&date%5Byear%5D=2013
+Stack Trace:
+#0 C:\wamp\www\sonique\lib\Cake\Model\Datasource\DboSource.php(460): PDOStatement->execute(Array)
+#1 C:\wamp\www\sonique\lib\Cake\Model\Datasource\DboSource.php(426): DboSource->_execute('SELECT `Lession...', Array)
+#2 C:\wamp\www\sonique\lib\Cake\Model\Datasource\DboSource.php(670): DboSource->execute('SELECT `Lession...', Array, Array)
+#3 C:\wamp\www\sonique\lib\Cake\Model\Datasource\DboSource.php(1081): DboSource->fetchAll('SELECT `Lession...', false)
+#4 C:\wamp\www\sonique\lib\Cake\Model\Model.php(2694): DboSource->read(Object(Lession), Array)
+#5 C:\wamp\www\sonique\lib\Cake\Controller\Component\PaginatorComponent.php(196): Model->find('all', Array)
+#6 C:\wamp\www\sonique\lib\Cake\Controller\Controller.php(1074): PaginatorComponent->paginate(Array, Array, Array)
+#7 C:\wamp\www\sonique\app\Controller\LessionsController.php(23): Controller->paginate(Array)
+#8 [internal function]: LessionsController->index()
+#9 C:\wamp\www\sonique\lib\Cake\Controller\Controller.php(486): ReflectionMethod->invokeArgs(Object(LessionsController), Array)
+#10 C:\wamp\www\sonique\lib\Cake\Routing\Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#11 C:\wamp\www\sonique\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(LessionsController), Object(CakeRequest), Object(CakeResponse))
+#12 C:\wamp\www\sonique\app\webroot\index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#13 {main}
+2013-06-02 16:42:27 Error: Fatal Error (4): syntax error, unexpected '}' in [C:\wamp\www\sonique\app\View\Elements\schedule.ctp, line 97]
+2013-06-02 16:42:27 Error: [FatalErrorException] syntax error, unexpected '}'
+Request URL: /sonique/schedule/users/1/?week=23
+Stack Trace:
+#0 C:\wamp\www\sonique\lib\Cake\Error\ErrorHandler.php(184): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'C:\wamp\www\son...', 97)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'C:\wamp\www\son...', 97, Array)
+#2 C:\wamp\www\sonique\lib\Cake\Core\App.php(926): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'C:\wamp\www\son...', 97, Array)
+#3 C:\wamp\www\sonique\lib\Cake\Core\App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-06-02 16:43:25 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /sonique/img/a
+Stack Trace:
+#0 C:\wamp\www\sonique\app\webroot\index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-06-02 16:43:39 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /sonique/img/a
+Stack Trace:
+#0 C:\wamp\www\sonique\app\webroot\index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-06-02 16:43:50 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /sonique/img/a
+Stack Trace:
+#0 C:\wamp\www\sonique\app\webroot\index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-06-02 16:45:15 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /sonique/img/info.png
+Stack Trace:
+#0 C:\wamp\www\sonique\app\webroot\index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-06-02 16:45:16 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /sonique/img/info.png
+Stack Trace:
+#0 C:\wamp\www\sonique\app\webroot\index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-06-02 16:45:17 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /sonique/img/info.png
+Stack Trace:
+#0 C:\wamp\www\sonique\app\webroot\index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-06-02 16:45:18 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /sonique/img/info.png
+Stack Trace:
+#0 C:\wamp\www\sonique\app\webroot\index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-06-02 16:45:18 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /sonique/img/info.png
+Stack Trace:
+#0 C:\wamp\www\sonique\app\webroot\index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-06-02 16:45:37 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /sonique/img/info.png
+Stack Trace:
+#0 C:\wamp\www\sonique\app\webroot\index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-06-02 16:45:39 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /sonique/img/info.png
+Stack Trace:
+#0 C:\wamp\www\sonique\app\webroot\index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-06-02 16:46:16 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /sonique/img/info.png
+Stack Trace:
+#0 C:\wamp\www\sonique\app\webroot\index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-06-02 16:46:18 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /sonique/img/info.png
+Stack Trace:
+#0 C:\wamp\www\sonique\app\webroot\index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-06-02 16:57:14 Error: Fatal Error (4): syntax error, unexpected 'as' (T_AS), expecting ';' in [C:\wamp\www\sonique\app\Controller\LessionsController.php, line 216]
+2013-06-02 16:57:14 Error: [FatalErrorException] syntax error, unexpected 'as' (T_AS), expecting ';'
+Request URL: /sonique/admin/lessions
+Stack Trace:
+#0 C:\wamp\www\sonique\lib\Cake\Error\ErrorHandler.php(184): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'C:\wamp\www\son...', 216)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'C:\wamp\www\son...', 216, Array)
+#2 C:\wamp\www\sonique\lib\Cake\Core\App.php(926): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'C:\wamp\www\son...', 216, Array)
+#3 C:\wamp\www\sonique\lib\Cake\Core\App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}

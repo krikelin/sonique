@@ -11,6 +11,7 @@
 		echo $this->Form->input('token');
 		echo $this->Form->input('hall_id');
 		echo $this->Form->input('tutor_id');
+		echo $this->Form->input('notes');
 	?>
 	</fieldset>
 <?php echo $this->Form->end(__('Submit')); ?>

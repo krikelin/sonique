@@ -15,12 +15,12 @@ class LessionsController extends AppController {
 	public function index() {
 		$this->Lession->recursive = 0;
 
-		$this->Lession->conditions = array('Lession.tutor_id' => $this->Auth->user('id'));
+		$conditions = array('Lession.tutor_id' => $this->Auth->user('id'));
 
 		if(isset($this->request->query['date'])) {
-			$this->Lession->conditions = array('Lession.tutor_id' => $this->Auth->user('id'), 'Lession.time' => $this->request->query['date']);
+			$conditions = array('OR' => array('Lession.tutor_id' => $this->Auth->user('id')), 'Lession.time' => $this->request->query['date']);
 		}
-		$this->set('lessions', $this->paginate());
+		$this->set('lessions', $this->paginate($conditions));
 	}
 
 /**
@@ -83,10 +83,11 @@ class LessionsController extends AppController {
 			$this->request->data = $this->Lession->find('first', $options);
 		}
 		$courses = $this->Lession->Course->find('list');
-		$courseClasses = $this->Lession->CourseClass->find('list');
+		$course_classes = $this->Lession->CourseClass->find('list');
 		$halls = $this->Lession->Hall->find('list');
 		$tutors = $this->Lession->Tutor->find('list');
-		$this->set(compact('courses', 'courseClasses', 'halls', 'tutors'));
+		$this->set(compact('courses', 'course_classes', 'halls', 'tutors'));
+		$this->render('admin_edit');
 	}
 
 /**
@@ -208,21 +209,34 @@ class LessionsController extends AppController {
 			throw new NotFoundException(__('Invalid lession'));
 		}
 		if ($this->request->is('post') || $this->request->is('put')) {
-			if ($this->Lession->save($this->request->data)) {
-				$this->Session->setFlash(__('The lession has been saved'));
-				$this->redirect(array('action' => 'index'));
+			$multiple = isset($this->request->data['Lession']['multiple']);
+			unset($this->request->data['Lession']['multiple']);
+			if($multiple) {
+				$lessions = $this->Lession->find('all', array('conditions' => array('Lession.token' => $this->request->data['Lession']['token'])));
+				foreach($lessions as $lession) {
+
+					$this->Lession->read(null, $lession['Lession']['id']);
+					$this->Lession->save($this->request->data);
+			
+				}
 			} else {
-				$this->Session->setFlash(__('The lession could not be saved. Please, try again.'));
+
+				if ($this->Lession->save($this->request->data)) {
+					$this->Session->setFlash(__('The lession has been saved'));
+					$this->redirect(array('action' => 'index'));
+				} else {
+					$this->Session->setFlash(__('The lession could not be saved. Please, try again.'));
+				}
 			}
 		} else {
 			$options = array('conditions' => array('Lession.' . $this->Lession->primaryKey => $id));
 			$this->request->data = $this->Lession->find('first', $options);
 		}
 		$courses = $this->Lession->Course->find('list');
-		$courseClasses = $this->Lession->CourseClass->find('list');
+		$course_classes = $this->Lession->CourseClass->find('list');
 		$halls = $this->Lession->Hall->find('list');
 		$tutors = $this->Lession->Tutor->find('list');
-		$this->set(compact('courses', 'courseClasses', 'halls', 'tutors'));
+		$this->set(compact('courses', 'course_classes', 'halls', 'tutors'));
 	}
 
 /**
