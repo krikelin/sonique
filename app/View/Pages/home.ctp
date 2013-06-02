@@ -1,1 +1,2 @@
-<iframe src="<?php echo Router::Url('/schedule/users/'.$userid)?>" width="100%" height="600" frameborder="0"></iframe>
+<span><a href="?week=<?php echo $week-1?>"><?php echo __('Previous week')?></a> <?php echo $week?> <a href="?week=<?php echo $week+1?>"><?php echo __('Next week')?></a>
+<iframe src="<?php echo Router::Url('/schedule/users/'.$userid.'/?week='.$week)?>" id="schedule" width="100%" height="600" frameborder="0"></iframe>

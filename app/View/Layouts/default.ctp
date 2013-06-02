@@ -49,6 +49,7 @@ $cakeDescription = __d('cake_dev', 'CakePHP: the rapid development php framework
 			'Home' => '/',
 			'Songs' => '/songs',
 			'Submissions' => '/submissions',
+			'Lessions' => '/lessions',
 			'Log Out' => '/users/logout'
 		);?>
 		<div class="row">

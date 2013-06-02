@@ -6,7 +6,8 @@ App::uses('AppController', 'Controller');
  * @property Qi $Qi
  */
 class QisController extends AppController {
-
+	var $uses = array('User', 'Qi');
+	var $components = array('Auth');
 /**
  * index method
  *
@@ -40,7 +41,17 @@ class QisController extends AppController {
 	public function add() {
 		if ($this->request->is('post')) {
 			$this->Qi->create();
+			$amount = $this->request->data['Qi']['amount'];
+			$this->request->data['Qi']['user_id'] = $this->Auth->user('id');
+			$this->User->read(null, $this->Auth->user('id'));
+			$this->User->id = $this->Auth->user('id');
+			$balance = $this->User->read('qi', $this->Auth->user('id'));
+			$balance = (float)$balance + (float)$amount;
+			$this->request->data['Qi']['balance'] = $balance;
 			if ($this->Qi->save($this->request->data)) {
+				// Deduct the account
+
+				$this->User->set('qi', $balance);
 				$this->Session->setFlash(__('The qi has been saved'));
 				$this->redirect(array('action' => 'index'));
 			} else {
@@ -62,7 +73,9 @@ class QisController extends AppController {
 		if (!$this->Qi->exists($id)) {
 			throw new NotFoundException(__('Invalid qi'));
 		}
+
 		if ($this->request->is('post') || $this->request->is('put')) {
+			
 			if ($this->Qi->save($this->request->data)) {
 				$this->Session->setFlash(__('The qi has been saved'));
 				$this->redirect(array('action' => 'index'));

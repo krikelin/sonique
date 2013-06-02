@@ -1,5 +1,12 @@
 <div class="lessions index">
 	<h2><?php echo __('Lessions'); ?></h2>
+	<?php echo $this->Form->create('Filter', array('type' => 'get'))?>
+	<fieldset>
+		<legend>Filter</legend>
+			<?php echo $this->Form->input('date', array('type' => 'date', 'value' => $this->Paginator->conditions['time']));?>
+	
+	</fieldset>
+	<?php echo $this->Form->end(__('filter'));?>
 	<table cellpadding="0" cellspacing="0">
 	<tr>
 			<th><?php echo $this->Paginator->sort('id'); ?></th>
@@ -19,7 +26,7 @@
 			<?php echo $this->Html->link($lession['Course']['title'], array('controller' => 'courses', 'action' => 'view', $lession['Course']['id'])); ?>
 		</td>
 		<td>
-			<?php echo $this->Html->link($lession['User']['id'], array('controller' => 'users', 'action' => 'view', $lession['User']['id'])); ?>
+			<?php echo $this->Html->link($lession['Tutor']['username'], array('controller' => 'users', 'action' => 'view', $lession['Tutor']['id'])); ?>
 		</td>
 		<td><?php echo h($lession['Lession']['duration']); ?>&nbsp;</td>
 		<td><?php echo h($lession['Lession']['token']); ?>&nbsp;</td>

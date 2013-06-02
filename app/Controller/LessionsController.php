@@ -6,7 +6,7 @@ App::uses('AppController', 'Controller');
  * @property Lession $Lession
  */
 class LessionsController extends AppController {
-
+	var $components = array('Auth');
 /**
  * index method
  *
@@ -14,6 +14,12 @@ class LessionsController extends AppController {
  */
 	public function index() {
 		$this->Lession->recursive = 0;
+
+		$this->Lession->conditions = array('Lession.tutor_id' => $this->Auth->user('id'));
+
+		if(isset($this->request->query['date'])) {
+			$this->Lession->conditions = array('Lession.tutor_id' => $this->Auth->user('id'), 'Lession.time' => $this->request->query['date']);
+		}
 		$this->set('lessions', $this->paginate());
 	}
 
@@ -114,6 +120,7 @@ class LessionsController extends AppController {
 		$this->Lession->recursive = 0;
 		$this->Lession->order = array('Lession.time DESC');
 		$this->set('lessions', $this->paginate());
+		$this->render('admin_index');
 	}
 
 /**

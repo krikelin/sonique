@@ -72,6 +72,13 @@ class PagesController extends AppController {
 		}
 		$this->set(compact('page', 'subpage', 'title_for_layout'));
 		$this->set('userid', $this->Auth->user('id'));
+		$week = date('W');
+		if(isset($this->request->query['week'])) {
+			
+			$week = $this->request->query['week'];
+		}
+		$this->set('week', $week);
 		$this->render(implode('/', $path));
+
 	}
 }
