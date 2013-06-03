@@ -1,5 +1,5 @@
 <h2>Schema för <?php echo @$entity.','?> vecka <?php echo $week?> <?php echo $year?></h2>
-<div style="position:relative; width: 100%; height: 85%">
+<div style="position:absolute; width: 95%; height: 85%">
 <?php
 			$prevEntries = array();
 $wn = array(__('Monday'), __('Tuesday'), __('Wednesday'), __('Thursday'), __('Friday'), __('Saturday'), __('Sunday'));
@@ -19,7 +19,8 @@ $wn = array(__('Monday'), __('Tuesday'), __('Wednesday'), __('Thursday'), __('Fr
 			
 		<?php $i = 0; ?>
 		
-		<?php foreach($weekdays as $weekday) {?>
+		<?php foreach($weekdays as $weekday) { ?>
+
 		<div class="dayheader" style="text-align: center;position:absolute; left:<?php echo ((1 / 7) * $i * 95  +5 )?>%; height:20px; width: <?php echo ((1 / 7) * 100 - 5)?>%; top: 0px"><?php echo $wn[$i]?></div>
 		<div class="day <?php echo $wn[$i]?>" style="position: absolute; left: <?php echo ((1 / 7) * $i * 95  + 5)?>%; height:90%; width: <?php echo ((1 / 7) * 95 )?>%; top: 20px">
 		
@@ -131,3 +132,4 @@ $wn = array(__('Monday'), __('Tuesday'), __('Wednesday'), __('Thursday'), __('Fr
 			
 			
 	}?>
+</div>
