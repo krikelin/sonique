@@ -8,7 +8,7 @@ $wn = array(__('Monday'), __('Tuesday'), __('Wednesday'), __('Thursday'), __('Fr
 			?>
 			<?php for($i = $count_hours; $i < 16; $i++): ?>
 
-			<div class="timemarker" style="position: absolute; left: 0px; width:5%; top: <?php echo round((( ($i - 8) * 60) / ($count_hours * 60)) * 100)  ?>%">
+			<div class="timemarker" style="position: absolute; left: 0px; width:5%; top: <?php echo ((( ($i - 7) * 60) / ($count_hours * 60)) * 100)  ?>%">
 				<?php echo $i.":00"?>
 			</div>
 		<?php endfor;?>
@@ -17,8 +17,8 @@ $wn = array(__('Monday'), __('Tuesday'), __('Wednesday'), __('Thursday'), __('Fr
 		<?php $i = 0; ?>
 		
 		<?php foreach($weekdays as $weekday) {?>
-		<div class="dayheader" style="text-align: center;position:absolute; left:<?php echo round($i * 10 + 5)?>%; height:20px; width:10%; top: 0px"><?php echo $wn[$i]?></div>
-		<div class="day <?php echo $wn[$i]?>" style="position: absolute; left: <?php echo round($i * 10 + 5)?>%; height:90%; width: 10%; top: 20px">
+		<div class="dayheader" style="text-align: center;position:absolute; left:<?php echo ((1 / 7) * $i * 95  +5 )?>%; height:20px; width: <?php echo ((1 / 7) * 100 - 5)?>%; top: 0px"><?php echo $wn[$i]?></div>
+		<div class="day <?php echo $wn[$i]?>" style="position: absolute; left: <?php echo ((1 / 7) * $i * 95  + 5)?>%; height:90%; width: <?php echo ((1 / 7) * 95 )?>%; top: 20px">
 		
 
 		<?php foreach($weekday as $_lession) {?>
@@ -81,7 +81,7 @@ $wn = array(__('Monday'), __('Tuesday'), __('Wednesday'), __('Thursday'), __('Fr
 					$top = $top * 100;
 				
 					?>
-				<div class="lession" style="position: absolute;left:<?php echo (100 / ($count_a)) * $x -1;?>%; width:<?php echo 100 / ($count_a) + 1 ?>%; top: <?php echo $top  ?>%; height: <?php echo round((date($lession['lessions']['duration']) / (1380 - $start))* 100)?>%"><b><?php echo date('H:i', strtotime($lession['lessions']['time']))?><?php if($lession['lessions']['notes'] != NULL):?>
+				<div class="lession" style="position: absolute;left:<?php echo (100 / ($count_a)) * $x ;?>%; width:<?php echo ceil((100 / ($count_a)) )  ?>%; top: <?php echo $top  ?>%; height: <?php echo round((date($lession['lessions']['duration']) / (1380 - $start))* 100)?>%"><b><?php echo date('H:i', strtotime($lession['lessions']['time']))?><?php if($lession['lessions']['notes'] != NULL):?>
 				<?php echo $this->Html->image("/img/s_info.png", array('style' => 'float: right; padding-right: 10px', 'title' => $lession['lessions']['notes']))?>
 				<?php endif;?></b><br />
 					
@@ -90,15 +90,29 @@ $wn = array(__('Monday'), __('Tuesday'), __('Wednesday'), __('Thursday'), __('Fr
 					<?php echo $this->Html->link($lession['tutors']['username'], "/schedule/users/".$lession['tutors']['id'])?>
 					<p><?php echo $lession['lessions']['notes']?></p>
 
-					<span style="position: absolute; right: 10px;bottom: 0px; float: right;"><b><?php echo date('H:i', $lession['lessions']['time'] + $lession['lessions']['duration']);?>
+					<span style="position: absolute; right: 10px;bottom: 0px; float: right;"><?php echo date('H:i', $lession['lessions']['time'] + $lession['lessions']['duration']);?>
 
 				</div>
 					
 					<?php ?>
+					<?php
+				if(date('N')-1  == $i) {
+					print $x;
+				$width = 95 * (1 / 7 );
+
+				$min =  (date('H') * 60) + date('m') ;
+				$top = ($min - (480)) / $dayMinutes;
+				$top = $top * 100;
+				?>
+				<div class="marker" style="width: 100%; z-index: 12;position: absolute; top:<?php echo $top?>%; height: 2px; left: 0px"></div>
+				<?php } ?>
 				<?php  }?>
+				
 			<?php } ?>
-			<?php $i++ ?>
 		</div>
+			<?php $i++ ?>
 			<?php 
 
+			
+			
 	}?>

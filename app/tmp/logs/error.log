@@ -4851,3 +4851,428 @@ Stack Trace:
 #3 C:\wamp\www\sonique\lib\Cake\Core\App.php(899): App::_checkFatalError()
 #4 [internal function]: App::shutdown()
 #5 {main}
+2013-06-03 17:28:02 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /sonique/img/joyify.png
+Stack Trace:
+#0 C:\wamp\www\sonique\app\webroot\index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-06-03 17:34:07 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /sonique/img/joyify.png
+Stack Trace:
+#0 C:\wamp\www\sonique\app\webroot\index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-06-03 17:34:55 Error: [MissingControllerException] Controller class AdminController could not be found.
+Exception Attributes: array (
+  'class' => 'AdminController',
+  'plugin' => NULL,
+)
+Request URL: /sonique/admin?week=22
+Stack Trace:
+#0 C:\wamp\www\sonique\app\webroot\index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-06-03 17:39:46 Error: Fatal Error (4): syntax error, unexpected '=' in [C:\wamp\www\sonique\app\Controller\LessionsController.php, line 219]
+2013-06-03 17:39:46 Error: [FatalErrorException] syntax error, unexpected '='
+Request URL: /sonique/admin/lessions/edit/461
+Stack Trace:
+#0 C:\wamp\www\sonique\lib\Cake\Error\ErrorHandler.php(184): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'C:\wamp\www\son...', 219)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'C:\wamp\www\son...', 219, Array)
+#2 C:\wamp\www\sonique\lib\Cake\Core\App.php(926): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'C:\wamp\www\son...', 219, Array)
+#3 C:\wamp\www\sonique\lib\Cake\Core\App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-06-03 17:42:39 Error: [PDOException] SQLSTATE[42S22]: Column not found: 1054 Unknown column 'Lession.Lession' in 'field list'
+Request URL: /sonique/admin/lessions/edit/461
+Stack Trace:
+#0 C:\wamp\www\sonique\lib\Cake\Model\Datasource\DboSource.php(460): PDOStatement->execute(Array)
+#1 C:\wamp\www\sonique\lib\Cake\Model\Datasource\DboSource.php(426): DboSource->_execute('UPDATE `sonique...', Array)
+#2 C:\wamp\www\sonique\lib\Cake\Model\Datasource\Database\Mysql.php(379): DboSource->execute('UPDATE `sonique...')
+#3 C:\wamp\www\sonique\lib\Cake\Model\Model.php(2378): Mysql->update(Object(Lession), Array, NULL, Array)
+#4 C:\wamp\www\sonique\app\Controller\LessionsController.php(216): Model->updateAll(Array, Array)
+#5 [internal function]: LessionsController->admin_edit('461')
+#6 C:\wamp\www\sonique\lib\Cake\Controller\Controller.php(486): ReflectionMethod->invokeArgs(Object(LessionsController), Array)
+#7 C:\wamp\www\sonique\lib\Cake\Routing\Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#8 C:\wamp\www\sonique\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(LessionsController), Object(CakeRequest), Object(CakeResponse))
+#9 C:\wamp\www\sonique\app\webroot\index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#10 {main}
+2013-06-03 17:43:19 Error: [PDOException] SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'WHERE `token` = 21412' at line 1
+Request URL: /sonique/admin/lessions/edit/461
+Stack Trace:
+#0 C:\wamp\www\sonique\lib\Cake\Model\Datasource\DboSource.php(460): PDOStatement->execute(Array)
+#1 C:\wamp\www\sonique\lib\Cake\Model\Datasource\DboSource.php(426): DboSource->_execute('UPDATE `sonique...', Array)
+#2 C:\wamp\www\sonique\lib\Cake\Model\Datasource\Database\Mysql.php(379): DboSource->execute('UPDATE `sonique...')
+#3 C:\wamp\www\sonique\lib\Cake\Model\Model.php(2378): Mysql->update(Object(Lession), Array, NULL, Array)
+#4 C:\wamp\www\sonique\app\Controller\LessionsController.php(216): Model->updateAll(Array, Array)
+#5 [internal function]: LessionsController->admin_edit('461')
+#6 C:\wamp\www\sonique\lib\Cake\Controller\Controller.php(486): ReflectionMethod->invokeArgs(Object(LessionsController), Array)
+#7 C:\wamp\www\sonique\lib\Cake\Routing\Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#8 C:\wamp\www\sonique\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(LessionsController), Object(CakeRequest), Object(CakeResponse))
+#9 C:\wamp\www\sonique\app\webroot\index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#10 {main}
+2013-06-03 17:45:27 Error: Fatal Error (1): Class 'Sanitize' not found in [C:\wamp\www\sonique\app\Controller\LessionsController.php, line 216]
+2013-06-03 17:45:27 Error: [FatalErrorException] Class 'Sanitize' not found
+Request URL: /sonique/admin/lessions/edit/461
+Stack Trace:
+#0 C:\wamp\www\sonique\lib\Cake\Error\ErrorHandler.php(184): ErrorHandler::handleFatalError(1, 'Class 'Sanitize...', 'C:\wamp\www\son...', 216)
+#1 [internal function]: ErrorHandler::handleError(1, 'Class 'Sanitize...', 'C:\wamp\www\son...', 216, Array)
+#2 C:\wamp\www\sonique\lib\Cake\Core\App.php(926): call_user_func('ErrorHandler::h...', 1, 'Class 'Sanitize...', 'C:\wamp\www\son...', 216, Array)
+#3 C:\wamp\www\sonique\lib\Cake\Core\App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-06-03 17:45:37 Error: Fatal Error (1): Class 'Sanitize' not found in [C:\wamp\www\sonique\app\Controller\LessionsController.php, line 216]
+2013-06-03 17:45:37 Error: [FatalErrorException] Class 'Sanitize' not found
+Request URL: /sonique/admin/lessions/edit/461
+Stack Trace:
+#0 C:\wamp\www\sonique\lib\Cake\Error\ErrorHandler.php(184): ErrorHandler::handleFatalError(1, 'Class 'Sanitize...', 'C:\wamp\www\son...', 216)
+#1 [internal function]: ErrorHandler::handleError(1, 'Class 'Sanitize...', 'C:\wamp\www\son...', 216, Array)
+#2 C:\wamp\www\sonique\lib\Cake\Core\App.php(926): call_user_func('ErrorHandler::h...', 1, 'Class 'Sanitize...', 'C:\wamp\www\son...', 216, Array)
+#3 C:\wamp\www\sonique\lib\Cake\Core\App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-06-03 17:45:56 Error: Fatal Error (1): Class 'Sanitize' not found in [C:\wamp\www\sonique\app\Controller\LessionsController.php, line 217]
+2013-06-03 17:45:56 Error: [FatalErrorException] Class 'Sanitize' not found
+Request URL: /sonique/admin/lessions/edit/461
+Stack Trace:
+#0 C:\wamp\www\sonique\lib\Cake\Error\ErrorHandler.php(184): ErrorHandler::handleFatalError(1, 'Class 'Sanitize...', 'C:\wamp\www\son...', 217)
+#1 [internal function]: ErrorHandler::handleError(1, 'Class 'Sanitize...', 'C:\wamp\www\son...', 217, Array)
+#2 C:\wamp\www\sonique\lib\Cake\Core\App.php(926): call_user_func('ErrorHandler::h...', 1, 'Class 'Sanitize...', 'C:\wamp\www\son...', 217, Array)
+#3 C:\wamp\www\sonique\lib\Cake\Core\App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-06-03 17:46:50 Error: Fatal Error (1): Class 'Sanitize' not found in [C:\wamp\www\sonique\app\Controller\LessionsController.php, line 217]
+2013-06-03 17:46:50 Error: [FatalErrorException] Class 'Sanitize' not found
+Request URL: /sonique/admin/lessions/edit/461
+Stack Trace:
+#0 C:\wamp\www\sonique\lib\Cake\Error\ErrorHandler.php(184): ErrorHandler::handleFatalError(1, 'Class 'Sanitize...', 'C:\wamp\www\son...', 217)
+#1 [internal function]: ErrorHandler::handleError(1, 'Class 'Sanitize...', 'C:\wamp\www\son...', 217, Array)
+#2 C:\wamp\www\sonique\lib\Cake\Core\App.php(926): call_user_func('ErrorHandler::h...', 1, 'Class 'Sanitize...', 'C:\wamp\www\son...', 217, Array)
+#3 C:\wamp\www\sonique\lib\Cake\Core\App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-06-03 17:47:12 Error: Fatal Error (1): Class 'AppController' not found in [C:\wamp\www\sonique\app\Controller\LessionsController.php, line 9]
+2013-06-03 17:47:12 Error: [FatalErrorException] Class 'AppController' not found
+Request URL: /sonique/admin/lessions/edit/461
+Stack Trace:
+#0 C:\wamp\www\sonique\lib\Cake\Error\ErrorHandler.php(184): ErrorHandler::handleFatalError(1, 'Class 'AppContr...', 'C:\wamp\www\son...', 9)
+#1 [internal function]: ErrorHandler::handleError(1, 'Class 'AppContr...', 'C:\wamp\www\son...', 9, Array)
+#2 C:\wamp\www\sonique\lib\Cake\Core\App.php(926): call_user_func('ErrorHandler::h...', 1, 'Class 'AppContr...', 'C:\wamp\www\son...', 9, Array)
+#3 C:\wamp\www\sonique\lib\Cake\Core\App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-06-03 17:47:42 Error: Fatal Error (1): Class 'Sanitize' not found in [C:\wamp\www\sonique\app\Controller\LessionsController.php, line 218]
+2013-06-03 17:47:42 Error: [FatalErrorException] Class 'Sanitize' not found
+Request URL: /sonique/admin/lessions/edit/461
+Stack Trace:
+#0 C:\wamp\www\sonique\lib\Cake\Error\ErrorHandler.php(184): ErrorHandler::handleFatalError(1, 'Class 'Sanitize...', 'C:\wamp\www\son...', 218)
+#1 [internal function]: ErrorHandler::handleError(1, 'Class 'Sanitize...', 'C:\wamp\www\son...', 218, Array)
+#2 C:\wamp\www\sonique\lib\Cake\Core\App.php(926): call_user_func('ErrorHandler::h...', 1, 'Class 'Sanitize...', 'C:\wamp\www\son...', 218, Array)
+#3 C:\wamp\www\sonique\lib\Cake\Core\App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-06-03 17:47:44 Error: Fatal Error (1): Class 'Sanitize' not found in [C:\wamp\www\sonique\app\Controller\LessionsController.php, line 218]
+2013-06-03 17:47:44 Error: [FatalErrorException] Class 'Sanitize' not found
+Request URL: /sonique/admin/lessions/edit/461
+Stack Trace:
+#0 C:\wamp\www\sonique\lib\Cake\Error\ErrorHandler.php(184): ErrorHandler::handleFatalError(1, 'Class 'Sanitize...', 'C:\wamp\www\son...', 218)
+#1 [internal function]: ErrorHandler::handleError(1, 'Class 'Sanitize...', 'C:\wamp\www\son...', 218, Array)
+#2 C:\wamp\www\sonique\lib\Cake\Core\App.php(926): call_user_func('ErrorHandler::h...', 1, 'Class 'Sanitize...', 'C:\wamp\www\son...', 218, Array)
+#3 C:\wamp\www\sonique\lib\Cake\Core\App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-06-03 17:48:36 Error: [PDOException] SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'WHERE `token` = 21412' at line 1
+Request URL: /sonique/admin/lessions/edit/461
+Stack Trace:
+#0 C:\wamp\www\sonique\lib\Cake\Model\Datasource\DboSource.php(460): PDOStatement->execute(Array)
+#1 C:\wamp\www\sonique\lib\Cake\Model\Datasource\DboSource.php(426): DboSource->_execute('UPDATE `sonique...', Array)
+#2 C:\wamp\www\sonique\lib\Cake\Model\Datasource\Database\Mysql.php(379): DboSource->execute('UPDATE `sonique...')
+#3 C:\wamp\www\sonique\lib\Cake\Model\Model.php(2378): Mysql->update(Object(Lession), false, NULL, Array)
+#4 C:\wamp\www\sonique\app\Controller\LessionsController.php(218): Model->updateAll(false, Array)
+#5 [internal function]: LessionsController->admin_edit('461')
+#6 C:\wamp\www\sonique\lib\Cake\Controller\Controller.php(486): ReflectionMethod->invokeArgs(Object(LessionsController), Array)
+#7 C:\wamp\www\sonique\lib\Cake\Routing\Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#8 C:\wamp\www\sonique\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(LessionsController), Object(CakeRequest), Object(CakeResponse))
+#9 C:\wamp\www\sonique\app\webroot\index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#10 {main}
+2013-06-03 17:49:09 Error: [PDOException] SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'WHERE `token` = 21412' at line 1
+Request URL: /sonique/admin/lessions/edit/461
+Stack Trace:
+#0 C:\wamp\www\sonique\lib\Cake\Model\Datasource\DboSource.php(460): PDOStatement->execute(Array)
+#1 C:\wamp\www\sonique\lib\Cake\Model\Datasource\DboSource.php(426): DboSource->_execute('UPDATE `sonique...', Array)
+#2 C:\wamp\www\sonique\lib\Cake\Model\Datasource\Database\Mysql.php(379): DboSource->execute('UPDATE `sonique...')
+#3 C:\wamp\www\sonique\lib\Cake\Model\Model.php(2378): Mysql->update(Object(Lession), false, NULL, Array)
+#4 C:\wamp\www\sonique\app\Controller\LessionsController.php(218): Model->updateAll(false, Array)
+#5 [internal function]: LessionsController->admin_edit('461')
+#6 C:\wamp\www\sonique\lib\Cake\Controller\Controller.php(486): ReflectionMethod->invokeArgs(Object(LessionsController), Array)
+#7 C:\wamp\www\sonique\lib\Cake\Routing\Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#8 C:\wamp\www\sonique\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(LessionsController), Object(CakeRequest), Object(CakeResponse))
+#9 C:\wamp\www\sonique\app\webroot\index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#10 {main}
+2013-06-03 17:49:32 Error: [PDOException] SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'WHERE `token` = 21412' at line 1
+Request URL: /sonique/admin/lessions/edit/461
+Stack Trace:
+#0 C:\wamp\www\sonique\lib\Cake\Model\Datasource\DboSource.php(460): PDOStatement->execute(Array)
+#1 C:\wamp\www\sonique\lib\Cake\Model\Datasource\DboSource.php(426): DboSource->_execute('UPDATE `sonique...', Array)
+#2 C:\wamp\www\sonique\lib\Cake\Model\Datasource\Database\Mysql.php(379): DboSource->execute('UPDATE `sonique...')
+#3 C:\wamp\www\sonique\lib\Cake\Model\Model.php(2378): Mysql->update(Object(Lession), false, NULL, Array)
+#4 C:\wamp\www\sonique\app\Controller\LessionsController.php(218): Model->updateAll(false, Array)
+#5 [internal function]: LessionsController->admin_edit('461')
+#6 C:\wamp\www\sonique\lib\Cake\Controller\Controller.php(486): ReflectionMethod->invokeArgs(Object(LessionsController), Array)
+#7 C:\wamp\www\sonique\lib\Cake\Routing\Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#8 C:\wamp\www\sonique\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(LessionsController), Object(CakeRequest), Object(CakeResponse))
+#9 C:\wamp\www\sonique\app\webroot\index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#10 {main}
+2013-06-03 17:49:40 Error: [PDOException] SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'WHERE `token` = 21412' at line 1
+Request URL: /sonique/admin/lessions/edit/461
+Stack Trace:
+#0 C:\wamp\www\sonique\lib\Cake\Model\Datasource\DboSource.php(460): PDOStatement->execute(Array)
+#1 C:\wamp\www\sonique\lib\Cake\Model\Datasource\DboSource.php(426): DboSource->_execute('UPDATE `sonique...', Array)
+#2 C:\wamp\www\sonique\lib\Cake\Model\Datasource\Database\Mysql.php(379): DboSource->execute('UPDATE `sonique...')
+#3 C:\wamp\www\sonique\lib\Cake\Model\Model.php(2378): Mysql->update(Object(Lession), Array, NULL, Array)
+#4 C:\wamp\www\sonique\app\Controller\LessionsController.php(218): Model->updateAll(Array, Array)
+#5 [internal function]: LessionsController->admin_edit('461')
+#6 C:\wamp\www\sonique\lib\Cake\Controller\Controller.php(486): ReflectionMethod->invokeArgs(Object(LessionsController), Array)
+#7 C:\wamp\www\sonique\lib\Cake\Routing\Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#8 C:\wamp\www\sonique\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(LessionsController), Object(CakeRequest), Object(CakeResponse))
+#9 C:\wamp\www\sonique\app\webroot\index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#10 {main}
+2013-06-03 17:50:32 Error: [PDOException] SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'WHERE `token` = 21412' at line 1
+Request URL: /sonique/admin/lessions/edit/461
+Stack Trace:
+#0 C:\wamp\www\sonique\lib\Cake\Model\Datasource\DboSource.php(460): PDOStatement->execute(Array)
+#1 C:\wamp\www\sonique\lib\Cake\Model\Datasource\DboSource.php(426): DboSource->_execute('UPDATE `sonique...', Array)
+#2 C:\wamp\www\sonique\lib\Cake\Model\Datasource\Database\Mysql.php(379): DboSource->execute('UPDATE `sonique...')
+#3 C:\wamp\www\sonique\lib\Cake\Model\Model.php(2378): Mysql->update(Object(Lession), Array, NULL, Array)
+#4 C:\wamp\www\sonique\app\Controller\LessionsController.php(218): Model->updateAll(Array, Array)
+#5 [internal function]: LessionsController->admin_edit('461')
+#6 C:\wamp\www\sonique\lib\Cake\Controller\Controller.php(486): ReflectionMethod->invokeArgs(Object(LessionsController), Array)
+#7 C:\wamp\www\sonique\lib\Cake\Routing\Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#8 C:\wamp\www\sonique\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(LessionsController), Object(CakeRequest), Object(CakeResponse))
+#9 C:\wamp\www\sonique\app\webroot\index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#10 {main}
+2013-06-03 17:50:42 Error: [PDOException] SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '07:00:00, `Lession`.`course_class_id` = 1, `Lession`.`duration` = 360, `Lession`' at line 1
+Request URL: /sonique/admin/lessions/edit/461
+Stack Trace:
+#0 C:\wamp\www\sonique\lib\Cake\Model\Datasource\DboSource.php(460): PDOStatement->execute(Array)
+#1 C:\wamp\www\sonique\lib\Cake\Model\Datasource\DboSource.php(426): DboSource->_execute('UPDATE `sonique...', Array)
+#2 C:\wamp\www\sonique\lib\Cake\Model\Datasource\Database\Mysql.php(379): DboSource->execute('UPDATE `sonique...')
+#3 C:\wamp\www\sonique\lib\Cake\Model\Model.php(2378): Mysql->update(Object(Lession), Array, NULL, Array)
+#4 C:\wamp\www\sonique\app\Controller\LessionsController.php(218): Model->updateAll(Array, Array)
+#5 [internal function]: LessionsController->admin_edit('461')
+#6 C:\wamp\www\sonique\lib\Cake\Controller\Controller.php(486): ReflectionMethod->invokeArgs(Object(LessionsController), Array)
+#7 C:\wamp\www\sonique\lib\Cake\Routing\Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#8 C:\wamp\www\sonique\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(LessionsController), Object(CakeRequest), Object(CakeResponse))
+#9 C:\wamp\www\sonique\app\webroot\index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#10 {main}
+2013-06-03 17:51:43 Error: [PDOException] SQLSTATE[42S22]: Column not found: 1054 Unknown column 'Lession' in 'field list'
+Request URL: /sonique/admin/lessions/edit/461
+Stack Trace:
+#0 C:\wamp\www\sonique\lib\Cake\Model\Datasource\DboSource.php(460): PDOStatement->execute(Array)
+#1 C:\wamp\www\sonique\lib\Cake\Model\Datasource\DboSource.php(426): DboSource->_execute('UPDATE `sonique...', Array)
+#2 C:\wamp\www\sonique\lib\Cake\Model\Datasource\Database\Mysql.php(379): DboSource->execute('UPDATE `sonique...')
+#3 C:\wamp\www\sonique\lib\Cake\Model\Model.php(2378): Mysql->update(Object(Lession), Array, NULL, Array)
+#4 C:\wamp\www\sonique\app\Controller\LessionsController.php(220): Model->updateAll(Array, Array)
+#5 [internal function]: LessionsController->admin_edit('461')
+#6 C:\wamp\www\sonique\lib\Cake\Controller\Controller.php(486): ReflectionMethod->invokeArgs(Object(LessionsController), Array)
+#7 C:\wamp\www\sonique\lib\Cake\Routing\Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#8 C:\wamp\www\sonique\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(LessionsController), Object(CakeRequest), Object(CakeResponse))
+#9 C:\wamp\www\sonique\app\webroot\index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#10 {main}
+2013-06-03 17:51:57 Error: [PDOException] SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '07:00:00, `Lession`.`course_class_id` = 1, `Lession`.`duration` = 360, `Lession`' at line 1
+Request URL: /sonique/admin/lessions/edit/461
+Stack Trace:
+#0 C:\wamp\www\sonique\lib\Cake\Model\Datasource\DboSource.php(460): PDOStatement->execute(Array)
+#1 C:\wamp\www\sonique\lib\Cake\Model\Datasource\DboSource.php(426): DboSource->_execute('UPDATE `sonique...', Array)
+#2 C:\wamp\www\sonique\lib\Cake\Model\Datasource\Database\Mysql.php(379): DboSource->execute('UPDATE `sonique...')
+#3 C:\wamp\www\sonique\lib\Cake\Model\Model.php(2378): Mysql->update(Object(Lession), Array, NULL, Array)
+#4 C:\wamp\www\sonique\app\Controller\LessionsController.php(220): Model->updateAll(Array, Array)
+#5 [internal function]: LessionsController->admin_edit('461')
+#6 C:\wamp\www\sonique\lib\Cake\Controller\Controller.php(486): ReflectionMethod->invokeArgs(Object(LessionsController), Array)
+#7 C:\wamp\www\sonique\lib\Cake\Routing\Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#8 C:\wamp\www\sonique\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(LessionsController), Object(CakeRequest), Object(CakeResponse))
+#9 C:\wamp\www\sonique\app\webroot\index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#10 {main}
+2013-06-03 17:53:28 Error: Fatal Error (4): syntax error, unexpected '}' in [C:\wamp\www\sonique\app\Controller\LessionsController.php, line 227]
+2013-06-03 17:53:28 Error: [FatalErrorException] syntax error, unexpected '}'
+Request URL: /sonique/admin/lessions/edit/461
+Stack Trace:
+#0 C:\wamp\www\sonique\lib\Cake\Error\ErrorHandler.php(184): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'C:\wamp\www\son...', 227)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'C:\wamp\www\son...', 227, Array)
+#2 C:\wamp\www\sonique\lib\Cake\Core\App.php(926): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'C:\wamp\www\son...', 227, Array)
+#3 C:\wamp\www\sonique\lib\Cake\Core\App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-06-03 18:08:50 Error: [PDOException] SQLSTATE[42S22]: Column not found: 1054 Unknown column 'Array' in 'field list'
+Request URL: /sonique/admin/lessions/edit/447
+Stack Trace:
+#0 C:\wamp\www\sonique\lib\Cake\Model\Datasource\DboSource.php(460): PDOStatement->execute(Array)
+#1 C:\wamp\www\sonique\lib\Cake\Model\Datasource\DboSource.php(426): DboSource->_execute('UPDATE `sonique...', Array)
+#2 C:\wamp\www\sonique\lib\Cake\Model\Datasource\Database\Mysql.php(379): DboSource->execute('UPDATE `sonique...')
+#3 C:\wamp\www\sonique\lib\Cake\Model\Model.php(1731): Mysql->update(Object(Lession), Array, Array)
+#4 C:\wamp\www\sonique\app\Controller\LessionsController.php(226): Model->save(Array, false)
+#5 [internal function]: LessionsController->admin_edit('447')
+#6 C:\wamp\www\sonique\lib\Cake\Controller\Controller.php(486): ReflectionMethod->invokeArgs(Object(LessionsController), Array)
+#7 C:\wamp\www\sonique\lib\Cake\Routing\Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#8 C:\wamp\www\sonique\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(LessionsController), Object(CakeRequest), Object(CakeResponse))
+#9 C:\wamp\www\sonique\app\webroot\index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#10 {main}
+2013-06-03 18:09:09 Error: [PDOException] SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'time' cannot be null
+Request URL: /sonique/admin/lessions/edit/447
+Stack Trace:
+#0 C:\wamp\www\sonique\lib\Cake\Model\Datasource\DboSource.php(460): PDOStatement->execute(Array)
+#1 C:\wamp\www\sonique\lib\Cake\Model\Datasource\DboSource.php(426): DboSource->_execute('UPDATE `sonique...', Array)
+#2 C:\wamp\www\sonique\lib\Cake\Model\Datasource\Database\Mysql.php(379): DboSource->execute('UPDATE `sonique...')
+#3 C:\wamp\www\sonique\lib\Cake\Model\Model.php(1731): Mysql->update(Object(Lession), Array, Array)
+#4 C:\wamp\www\sonique\app\Controller\LessionsController.php(226): Model->save(Array, false)
+#5 [internal function]: LessionsController->admin_edit('447')
+#6 C:\wamp\www\sonique\lib\Cake\Controller\Controller.php(486): ReflectionMethod->invokeArgs(Object(LessionsController), Array)
+#7 C:\wamp\www\sonique\lib\Cake\Routing\Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#8 C:\wamp\www\sonique\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(LessionsController), Object(CakeRequest), Object(CakeResponse))
+#9 C:\wamp\www\sonique\app\webroot\index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#10 {main}
+2013-06-03 18:09:28 Error: [PDOException] SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'time' cannot be null
+Request URL: /sonique/admin/lessions/edit/447
+Stack Trace:
+#0 C:\wamp\www\sonique\lib\Cake\Model\Datasource\DboSource.php(460): PDOStatement->execute(Array)
+#1 C:\wamp\www\sonique\lib\Cake\Model\Datasource\DboSource.php(426): DboSource->_execute('UPDATE `sonique...', Array)
+#2 C:\wamp\www\sonique\lib\Cake\Model\Datasource\Database\Mysql.php(379): DboSource->execute('UPDATE `sonique...')
+#3 C:\wamp\www\sonique\lib\Cake\Model\Model.php(1731): Mysql->update(Object(Lession), Array, Array)
+#4 C:\wamp\www\sonique\app\Controller\LessionsController.php(225): Model->save(Array, false)
+#5 [internal function]: LessionsController->admin_edit('447')
+#6 C:\wamp\www\sonique\lib\Cake\Controller\Controller.php(486): ReflectionMethod->invokeArgs(Object(LessionsController), Array)
+#7 C:\wamp\www\sonique\lib\Cake\Routing\Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#8 C:\wamp\www\sonique\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(LessionsController), Object(CakeRequest), Object(CakeResponse))
+#9 C:\wamp\www\sonique\app\webroot\index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#10 {main}
+2013-06-03 18:31:59 Error: Fatal Error (4): syntax error, unexpected '?>' in [C:\wamp\www\sonique\app\View\Elements\schedule.ctp, line 21]
+2013-06-03 18:31:59 Error: [FatalErrorException] syntax error, unexpected '?>'
+Request URL: /sonique/schedule/users/1/?week=22
+Stack Trace:
+#0 C:\wamp\www\sonique\lib\Cake\Error\ErrorHandler.php(184): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'C:\wamp\www\son...', 21)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'C:\wamp\www\son...', 21, Array)
+#2 C:\wamp\www\sonique\lib\Cake\Core\App.php(926): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'C:\wamp\www\son...', 21, Array)
+#3 C:\wamp\www\sonique\lib\Cake\Core\App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-06-03 18:32:15 Error: Fatal Error (4): syntax error, unexpected '100' (T_LNUMBER) in [C:\wamp\www\sonique\app\View\Elements\schedule.ctp, line 21]
+2013-06-03 18:32:15 Error: [FatalErrorException] syntax error, unexpected '100' (T_LNUMBER)
+Request URL: /sonique/schedule/users/1/?week=22
+Stack Trace:
+#0 C:\wamp\www\sonique\lib\Cake\Error\ErrorHandler.php(184): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'C:\wamp\www\son...', 21)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'C:\wamp\www\son...', 21, Array)
+#2 C:\wamp\www\sonique\lib\Cake\Core\App.php(926): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'C:\wamp\www\son...', 21, Array)
+#3 C:\wamp\www\sonique\lib\Cake\Core\App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-06-03 18:32:18 Error: Fatal Error (4): syntax error, unexpected '?>' in [C:\wamp\www\sonique\app\View\Elements\schedule.ctp, line 21]
+2013-06-03 18:32:18 Error: [FatalErrorException] syntax error, unexpected '?>'
+Request URL: /sonique/schedule/users/1/?week=22
+Stack Trace:
+#0 C:\wamp\www\sonique\lib\Cake\Error\ErrorHandler.php(184): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'C:\wamp\www\son...', 21)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'C:\wamp\www\son...', 21, Array)
+#2 C:\wamp\www\sonique\lib\Cake\Core\App.php(926): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'C:\wamp\www\son...', 21, Array)
+#3 C:\wamp\www\sonique\lib\Cake\Core\App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-06-03 18:32:27 Error: Fatal Error (4): syntax error, unexpected '?>' in [C:\wamp\www\sonique\app\View\Elements\schedule.ctp, line 21]
+2013-06-03 18:32:27 Error: [FatalErrorException] syntax error, unexpected '?>'
+Request URL: /sonique/schedule/users/1/?week=22
+Stack Trace:
+#0 C:\wamp\www\sonique\lib\Cake\Error\ErrorHandler.php(184): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'C:\wamp\www\son...', 21)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'C:\wamp\www\son...', 21, Array)
+#2 C:\wamp\www\sonique\lib\Cake\Core\App.php(926): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'C:\wamp\www\son...', 21, Array)
+#3 C:\wamp\www\sonique\lib\Cake\Core\App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-06-03 18:47:47 Error: Fatal Error (4): syntax error, unexpected '<' in [C:\wamp\www\sonique\app\View\Elements\schedule.ctp, line 112]
+2013-06-03 18:47:47 Error: [FatalErrorException] syntax error, unexpected '<'
+Request URL: /sonique/schedule/users/1/?week=23
+Stack Trace:
+#0 C:\wamp\www\sonique\lib\Cake\Error\ErrorHandler.php(184): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'C:\wamp\www\son...', 112)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'C:\wamp\www\son...', 112, Array)
+#2 C:\wamp\www\sonique\lib\Cake\Core\App.php(926): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'C:\wamp\www\son...', 112, Array)
+#3 C:\wamp\www\sonique\lib\Cake\Core\App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-06-03 18:47:54 Error: Fatal Error (4): syntax error, unexpected '<' in [C:\wamp\www\sonique\app\View\Elements\schedule.ctp, line 105]
+2013-06-03 18:47:54 Error: [FatalErrorException] syntax error, unexpected '<'
+Request URL: /sonique/schedule/users/1/?week=23
+Stack Trace:
+#0 C:\wamp\www\sonique\lib\Cake\Error\ErrorHandler.php(184): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'C:\wamp\www\son...', 105)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'C:\wamp\www\son...', 105, Array)
+#2 C:\wamp\www\sonique\lib\Cake\Core\App.php(926): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'C:\wamp\www\son...', 105, Array)
+#3 C:\wamp\www\sonique\lib\Cake\Core\App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-06-03 18:47:59 Error: Fatal Error (4): syntax error, unexpected end of file in [C:\wamp\www\sonique\app\View\Elements\schedule.ctp, line 114]
+2013-06-03 18:47:59 Error: [FatalErrorException] syntax error, unexpected end of file
+Request URL: /sonique/schedule/users/1/?week=23
+Stack Trace:
+#0 C:\wamp\www\sonique\lib\Cake\Error\ErrorHandler.php(184): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'C:\wamp\www\son...', 114)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'C:\wamp\www\son...', 114, Array)
+#2 C:\wamp\www\sonique\lib\Cake\Core\App.php(926): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'C:\wamp\www\son...', 114, Array)
+#3 C:\wamp\www\sonique\lib\Cake\Core\App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-06-03 18:52:30 Error: [PDOException] SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'WHERE lessions.time BETWEEN ('2013-01-01' + INTERVAL 22 WEEK - INTERVAL  1 DAY) ' at line 1
+Request URL: /sonique/schedule/courses/
+Stack Trace:
+#0 C:\wamp\www\sonique\lib\Cake\Model\Datasource\DboSource.php(460): PDOStatement->execute(Array)
+#1 C:\wamp\www\sonique\lib\Cake\Model\Datasource\DboSource.php(426): DboSource->_execute('SELECT * FROM l...', Array)
+#2 C:\wamp\www\sonique\lib\Cake\Model\Datasource\DboSource.php(670): DboSource->execute('SELECT * FROM l...', Array, Array)
+#3 C:\wamp\www\sonique\lib\Cake\Model\Datasource\DboSource.php(539): DboSource->fetchAll('SELECT * FROM l...')
+#4 [internal function]: DboSource->query('SELECT * FROM l...')
+#5 C:\wamp\www\sonique\lib\Cake\Model\Model.php(3055): call_user_func_array(Array, Array)
+#6 C:\wamp\www\sonique\app\Controller\ScheduleController.php(43): Model->query('SELECT * FROM l...')
+#7 [internal function]: ScheduleController->courses()
+#8 C:\wamp\www\sonique\lib\Cake\Controller\Controller.php(486): ReflectionMethod->invokeArgs(Object(ScheduleController), Array)
+#9 C:\wamp\www\sonique\lib\Cake\Routing\Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#10 C:\wamp\www\sonique\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(ScheduleController), Object(CakeRequest), Object(CakeResponse))
+#11 C:\wamp\www\sonique\app\webroot\index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#12 {main}
+2013-06-03 18:54:00 Error: Fatal Error (4): syntax error, unexpected ';' in [C:\wamp\www\sonique\app\View\Elements\schedule.ctp, line 103]
+2013-06-03 18:54:00 Error: [FatalErrorException] syntax error, unexpected ';'
+Request URL: /sonique/schedule/users/1/?week=23
+Stack Trace:
+#0 C:\wamp\www\sonique\lib\Cake\Error\ErrorHandler.php(184): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'C:\wamp\www\son...', 103)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'C:\wamp\www\son...', 103, Array)
+#2 C:\wamp\www\sonique\lib\Cake\Core\App.php(926): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'C:\wamp\www\son...', 103, Array)
+#3 C:\wamp\www\sonique\lib\Cake\Core\App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-06-03 18:56:31 Error: Fatal Error (4): syntax error, unexpected ')' in [C:\wamp\www\sonique\app\View\Elements\schedule.ctp, line 104]
+2013-06-03 18:56:31 Error: [FatalErrorException] syntax error, unexpected ')'
+Request URL: /sonique/schedule/users/1/?week=23
+Stack Trace:
+#0 C:\wamp\www\sonique\lib\Cake\Error\ErrorHandler.php(184): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'C:\wamp\www\son...', 104)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'C:\wamp\www\son...', 104, Array)
+#2 C:\wamp\www\sonique\lib\Cake\Core\App.php(926): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'C:\wamp\www\son...', 104, Array)
+#3 C:\wamp\www\sonique\lib\Cake\Core\App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-06-03 18:56:45 Error: Fatal Error (4): syntax error, unexpected '*' in [C:\wamp\www\sonique\app\View\Elements\schedule.ctp, line 104]
+2013-06-03 18:56:45 Error: [FatalErrorException] syntax error, unexpected '*'
+Request URL: /sonique/schedule/users/1/?week=23
+Stack Trace:
+#0 C:\wamp\www\sonique\lib\Cake\Error\ErrorHandler.php(184): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'C:\wamp\www\son...', 104)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'C:\wamp\www\son...', 104, Array)
+#2 C:\wamp\www\sonique\lib\Cake\Core\App.php(926): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'C:\wamp\www\son...', 104, Array)
+#3 C:\wamp\www\sonique\lib\Cake\Core\App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-06-03 18:56:54 Error: Fatal Error (4): syntax error, unexpected '*' in [C:\wamp\www\sonique\app\View\Elements\schedule.ctp, line 104]
+2013-06-03 18:56:54 Error: [FatalErrorException] syntax error, unexpected '*'
+Request URL: /sonique/schedule/users/1/?week=23
+Stack Trace:
+#0 C:\wamp\www\sonique\lib\Cake\Error\ErrorHandler.php(184): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'C:\wamp\www\son...', 104)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'C:\wamp\www\son...', 104, Array)
+#2 C:\wamp\www\sonique\lib\Cake\Core\App.php(926): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'C:\wamp\www\son...', 104, Array)
+#3 C:\wamp\www\sonique\lib\Cake\Core\App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}

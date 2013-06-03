@@ -210,15 +210,26 @@ class LessionsController extends AppController {
 		}
 		if ($this->request->is('post') || $this->request->is('put')) {
 			$multiple = isset($this->request->data['Lession']['multiple']);
+
 			unset($this->request->data['Lession']['multiple']);
 			if($multiple) {
 				$lessions = $this->Lession->find('all', array('conditions' => array('Lession.token' => $this->request->data['Lession']['token'])));
+				
 				foreach($lessions as $lession) {
-
 					$this->Lession->read(null, $lession['Lession']['id']);
-					$this->Lession->save($this->request->data);
+					$this->request->data['Lession']['id'] = $lession['Lession']['id'];
+					$this->request->data['Lession']['time']['year'] = date('Y', strtotime($lession['Lession']['time']));
+					$this->request->data['Lession']['time']['month'] = date('m', strtotime($lession['Lession']['time']));
+					$this->request->data['Lession']['time']['day'] = date('d', strtotime($lession['Lession']['time']));
+					//print_r($this->request->data['Lession']['time']);
+					if($this->Lession->save($this->request->data, false)) {
+						//print 'Saved<br />';
+					}
 			
 				}
+				//die("A");
+				$this->Session->setFlash(__('The lession has been saved'));
+				$this->redirect(array('action' => 'index'));
 			} else {
 
 				if ($this->Lession->save($this->request->data)) {

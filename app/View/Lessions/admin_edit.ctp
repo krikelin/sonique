@@ -12,7 +12,7 @@
 		echo $this->Form->input('hall_id');
 		echo $this->Form->input('tutor_id', array('type' => 'select', 'options' => $tutors));
 		echo $this->Form->input('notes');
-		echo $this->Form->input('multiple', array('type' => 'checkbox'));
+		echo $this->Form->input('multiple', array('type' => 'checkbox', 'value' => 'true', 'hiddenField' => FALSE));
 	?>
 	</fieldset>
 <?php echo $this->Form->end(__('Submit')); ?>

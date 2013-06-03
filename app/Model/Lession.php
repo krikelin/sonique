@@ -9,7 +9,7 @@ App::uses('AppModel', 'Model');
  * @property Tutor $Tutor
  */
 class Lession extends AppModel {
-
+	var $primaryKey = 'id';
 /**
  * Validation rules
  *
