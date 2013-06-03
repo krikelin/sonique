@@ -5276,3 +5276,43 @@ Stack Trace:
 #3 C:\wamp\www\sonique\lib\Cake\Core\App.php(899): App::_checkFatalError()
 #4 [internal function]: App::shutdown()
 #5 {main}
+2013-06-03 19:26:26 Error: Fatal Error (4): syntax error, unexpected ';', expecting ')' in [C:\wamp\www\sonique\app\View\Elements\schedule.ctp, line 23]
+2013-06-03 19:26:26 Error: [FatalErrorException] syntax error, unexpected ';', expecting ')'
+Request URL: /sonique/schedule/users/1/?week=23
+Stack Trace:
+#0 C:\wamp\www\sonique\lib\Cake\Error\ErrorHandler.php(184): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'C:\wamp\www\son...', 23)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'C:\wamp\www\son...', 23, Array)
+#2 C:\wamp\www\sonique\lib\Cake\Core\App.php(926): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'C:\wamp\www\son...', 23, Array)
+#3 C:\wamp\www\sonique\lib\Cake\Core\App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-06-03 19:27:10 Error: Fatal Error (4): syntax error, unexpected '++' (T_INC), expecting ')' in [C:\wamp\www\sonique\app\View\Elements\schedule.ctp, line 23]
+2013-06-03 19:27:10 Error: [FatalErrorException] syntax error, unexpected '++' (T_INC), expecting ')'
+Request URL: /sonique/schedule/users/1/?week=23
+Stack Trace:
+#0 C:\wamp\www\sonique\lib\Cake\Error\ErrorHandler.php(184): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'C:\wamp\www\son...', 23)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'C:\wamp\www\son...', 23, Array)
+#2 C:\wamp\www\sonique\lib\Cake\Core\App.php(926): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'C:\wamp\www\son...', 23, Array)
+#3 C:\wamp\www\sonique\lib\Cake\Core\App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-06-03 19:32:13 Error: Fatal Error (4): syntax error, unexpected ')' in [C:\wamp\www\sonique\app\View\Elements\schedule.ctp, line 12]
+2013-06-03 19:32:13 Error: [FatalErrorException] syntax error, unexpected ')'
+Request URL: /sonique/schedule/users/1/?week=23
+Stack Trace:
+#0 C:\wamp\www\sonique\lib\Cake\Error\ErrorHandler.php(184): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'C:\wamp\www\son...', 12)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'C:\wamp\www\son...', 12, Array)
+#2 C:\wamp\www\sonique\lib\Cake\Core\App.php(926): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'C:\wamp\www\son...', 12, Array)
+#3 C:\wamp\www\sonique\lib\Cake\Core\App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-06-03 19:46:47 Error: Fatal Error (64): Cannot redeclare ScheduleController::courses() in [C:\wamp\www\sonique\app\Controller\ScheduleController.php, line 60]
+2013-06-03 19:46:47 Error: [FatalErrorException] Cannot redeclare ScheduleController::courses()
+Request URL: /sonique/schedule/users/1/?week=32&year=2013
+Stack Trace:
+#0 C:\wamp\www\sonique\lib\Cake\Error\ErrorHandler.php(184): ErrorHandler::handleFatalError(64, 'Cannot redeclar...', 'C:\wamp\www\son...', 60)
+#1 [internal function]: ErrorHandler::handleError(64, 'Cannot redeclar...', 'C:\wamp\www\son...', 60, Array)
+#2 C:\wamp\www\sonique\lib\Cake\Core\App.php(926): call_user_func('ErrorHandler::h...', 64, 'Cannot redeclar...', 'C:\wamp\www\son...', 60, Array)
+#3 C:\wamp\www\sonique\lib\Cake\Core\App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}

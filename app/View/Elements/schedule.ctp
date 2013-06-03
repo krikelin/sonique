@@ -1,3 +1,5 @@
+<h2>Schema för <?php echo @$entity.','?> vecka <?php echo $week?> <?php echo $year?></h2>
+<div style="position:relative; width: 100%; height: 85%">
 <?php
 			$prevEntries = array();
 $wn = array(__('Monday'), __('Tuesday'), __('Wednesday'), __('Thursday'), __('Friday'), __('Saturday'), __('Sunday'));
@@ -5,10 +7,11 @@ $wn = array(__('Monday'), __('Tuesday'), __('Wednesday'), __('Thursday'), __('Fr
 			<?php $start = 480 ; // Starts at eight o clock and ends on nine?>
 			<?php $end = 540;
 			$count_hours = 12;
+			$dayMinutes = $count_hours * 60;
 			?>
-			<?php for($i = $count_hours; $i < 16; $i++): ?>
+			<?php for($i = 8; $i < 18; $i++): ?>
 
-			<div class="timemarker" style="position: absolute; left: 0px; width:5%; top: <?php echo ((( ($i - 7) * 60) / ($count_hours * 60)) * 100)  ?>%">
+			<div class="timemarker" style="position: absolute; left: 0px; width:5%; top: <?php echo ((( ($i - 8) * 60) / ($count_hours * 60)) * 100 + 3)  ?>%">
 				<?php echo $i.":00"?>
 			</div>
 		<?php endfor;?>
@@ -20,7 +23,16 @@ $wn = array(__('Monday'), __('Tuesday'), __('Wednesday'), __('Thursday'), __('Fr
 		<div class="dayheader" style="text-align: center;position:absolute; left:<?php echo ((1 / 7) * $i * 95  +5 )?>%; height:20px; width: <?php echo ((1 / 7) * 100 - 5)?>%; top: 0px"><?php echo $wn[$i]?></div>
 		<div class="day <?php echo $wn[$i]?>" style="position: absolute; left: <?php echo ((1 / 7) * $i * 95  + 5)?>%; height:90%; width: <?php echo ((1 / 7) * 95 )?>%; top: 20px">
 		
+		<?php for($h = 0; $h < $count_hours; $h++) { 
+			$width = 95 * (1 / 7 );
 
+			$min =  ($h * 60);
+			$top = ($min ) / $dayMinutes;
+			$top = $top * 100;
+
+			?>
+		<div class="hmarker" style="top: <?php echo $top?>%; position: absolute; left: 0px; width: 100%"></div>
+		<?php } ?>
 		<?php foreach($weekday as $_lession) {?>
 			<?php
 			$positions = array($_lession);
@@ -67,6 +79,7 @@ $wn = array(__('Monday'), __('Tuesday'), __('Wednesday'), __('Thursday'), __('Fr
 			}
 			
 			$count_a = count($positions);
+			$dayMinutes = $count_hours * 60;
 			for($x = 0; $x < $count_a; $x++) {
 					$lession = $positions[$x];
 					$hour = date('H', strtotime($lession['lessions']['time']));
@@ -74,7 +87,7 @@ $wn = array(__('Monday'), __('Tuesday'), __('Wednesday'), __('Thursday'), __('Fr
 					$minute = date('i', strtotime($lession['lessions']['time']));
 					$minutes = (($hour * 60) + $minute);
 				
-					$dayMinutes = $count_hours * 60;
+					
 					// debug($minutes);
 					$top = ($minutes - (480)) / $dayMinutes;
 
@@ -85,9 +98,9 @@ $wn = array(__('Monday'), __('Tuesday'), __('Wednesday'), __('Thursday'), __('Fr
 				<?php echo $this->Html->image("/img/s_info.png", array('style' => 'float: right; padding-right: 10px', 'title' => $lession['lessions']['notes']))?>
 				<?php endif;?></b><br />
 					
-					<?php echo $this->Html->link($lession['courses']['title'], "/schedule/courses/".$lession['course_class']['id']);?><br />
+					<?php echo $this->Html->link($lession['courses']['title'], "/schedule/courses/".$lession['courses']['id']."?week=".$week."&year=".$year);?><br />
 					<?php echo $this->Html->link($lession['halls']['title'], "/schedule/halls/".$lession['halls']['id']."?week=".$week."&year=".$year."")?><br />
-					<?php echo $this->Html->link($lession['tutors']['username'], "/schedule/users/".$lession['tutors']['id'])?>
+					<?php echo $this->Html->link($lession['tutors']['username'], "/schedule/users/".$lession['tutors']['id']."?week=".$week."&year=".$year)?>
 					<p><?php echo $lession['lessions']['notes']?></p>
 
 					<span style="position: absolute; right: 10px;bottom: 0px; float: right;"><?php echo date('H:i', $lession['lessions']['time'] + $lession['lessions']['duration']);?>
@@ -95,20 +108,22 @@ $wn = array(__('Monday'), __('Tuesday'), __('Wednesday'), __('Thursday'), __('Fr
 				</div>
 					
 					<?php ?>
-					<?php
+
+				<?php  }?>
+				
+			<?php } ?>
+			<?php
 				if(date('N')-1  == $i) {
-					print $x;
+				
 				$width = 95 * (1 / 7 );
 
 				$min =  (date('H') * 60) + date('m') ;
 				$top = ($min - (480)) / $dayMinutes;
 				$top = $top * 100;
+
 				?>
 				<div class="marker" style="width: 100%; z-index: 12;position: absolute; top:<?php echo $top?>%; height: 2px; left: 0px"></div>
 				<?php } ?>
-				<?php  }?>
-				
-			<?php } ?>
 		</div>
 			<?php $i++ ?>
 			<?php 

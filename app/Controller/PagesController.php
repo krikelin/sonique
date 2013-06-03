@@ -53,6 +53,11 @@ class PagesController extends AppController {
  * @return void
  */
 	public function display() {
+		$weeks = array();
+		for($i = 1; $i < 53; $i++) {
+			$weeks[] = $i;
+		}
+		$this->set('weeks', $weeks);
 		$path = func_get_args();
 
 		$count = count($path);
@@ -73,11 +78,18 @@ class PagesController extends AppController {
 		$this->set(compact('page', 'subpage', 'title_for_layout'));
 		$this->set('userid', $this->Auth->user('id'));
 		$week = date('W');
+		$year = date('Y');
 		if(isset($this->request->query['week'])) {
 			
 			$week = $this->request->query['week'];
 		}
 		$this->set('week', $week);
+
+		if(isset($this->request->query['year'])) {
+			
+			$year = $this->request->query['year'];
+		}
+		$this->set('year', $year);
 		$this->render(implode('/', $path));
 
 	}
