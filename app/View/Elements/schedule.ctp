@@ -84,7 +84,7 @@ $wn = array(__('Monday'), __('Tuesday'), __('Wednesday'), __('Thursday'), __('Fr
 			for($x = 0; $x < $count_a; $x++) {
 					$lession = $positions[$x];
 					$hour = date('H', strtotime($lession['lessions']['time']));
-					
+					$endtime = date('H:i', strtotime($lession['lessions']['time']  ." +".$lession['lessions']['duration'] . " minutes"));	;
 					$minute = date('i', strtotime($lession['lessions']['time']));
 					$minutes = (($hour * 60) + $minute);
 				
@@ -93,18 +93,20 @@ $wn = array(__('Monday'), __('Tuesday'), __('Wednesday'), __('Thursday'), __('Fr
 					$top = ($minutes - (480)) / $dayMinutes;
 
 					$top = $top * 100;
-					$height = round((date($lession['lessions']['duration']) / (1380 - $start))* 100);
+					$height = round((date($lession['lessions']['duration']) / (600))* 100);
 					?>
-					<div class="lession" style="position: absolute;left:<?php echo (100 / ($count_a)) * $x ;?>%; width:<?php echo ceil((100 / ($count_a)) )  ?>%; top: <?php echo $top  ?>%; height: <?php echo $height?>%"><b><?php echo date('H:i', strtotime($lession['lessions']['time']))?><?php if($lession['lessions']['notes'] != NULL):?>
+					<div class="lession" style="position: absolute;left:<?php echo (100 / ($count_a)) * $x ;?>%; width:<?php echo ceil((100 / ($count_a)) )  ?>%; top: <?php echo $top  ?>%; height: <?php echo $height?>%"><b><?php echo date('H:i', strtotime($lession['lessions']['time']))?> - <?php echo $endtime?> <?php if($lession['lessions']['notes'] != NULL):?>
 					<?php echo $this->Html->image("/img/s_info.png", array('style' => 'float: right; padding-right: 10px', 'title' => $lession['lessions']['notes']))?>
 					<?php endif;?></b><br />
-					
-					<?php echo $this->Html->link($lession['courses']['title'], "/schedules/courseId=".$lession['courses']['id']."&week=".$week."&year=".$year, array('target' => 'top'));?><br />
+					<a href="<?php echo Router::Url('/admin/lessions/edit/'.$lession['lessions']['id'])?>" target="__blank" style="float: right"><img src="<?php echo Router::Url('/img/b_edit.png')?>" /></a>
+					<?php echo$lession['courses']['title']?><br />
 					<?php echo $this->Html->link($lession['halls']['title'], "/schedules/?hallId=".$lession['halls']['id']."&week=".$week."&year=".$year."",array('target' => 'top'))?><br />
 					<?php echo $this->Html->link($lession['tutors']['username'], "/schedules/?userId=".$lession['tutors']['id']."&week=".$week."&year=".$year, array('target' => 'top'))?>
 					<p><?php echo $lession['lessions']['notes']?></p>
 
-					<span style="position: absolute; right: 10px;bottom: 0px; float: right;"><?php echo date('H:i', $lession['lessions']['time'] + $lession['lessions']['duration']);?>
+					<b style="position: absolute; right: 10px;bottom: 0px; float: right;"><?php 
+						echo $endtime;
+					 		 ;?></b>
 
 				</div>
 					

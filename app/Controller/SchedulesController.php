@@ -37,14 +37,28 @@ class SchedulesController extends AppController {
 		}
 		$this->set('scheduleUrl', $q);
 
-		$classes = $this->CourseClass->find('list', array('fields' => array('id', 'title'), 'order' => array('title ASC')));
-		array_unshift($classes, array(0 => __('-- Select class --')));
-		$users = $this->User->find('list', array('fields' => array('id', 'username'), 'order' => array('username ASC')));
-		array_unshift($users, array(0 => __('-- Select user --')));
-		$halls = $this->Hall->find('list', array('fields' => array('id', 'title'), 'order' => array('title ASC')));
-		array_unshift($halls, array(0 => __('-- Select halls --')));
-		$courses = $this->Course->find('list', array('fields' => array('id', 'title'), 'order' => array('title ASC')));
-		array_unshift($courses, array(0 => __('-- Select courses --')));
+		$_classes = $this->CourseClass->find('list', array('fields' => array('id', 'title'), 'order' => array('title ASC')));
+		$classes = array(0 => __('-- Select class --'));
+		foreach($_classes as $key => $val) {
+			$classes[$key] = $val;
+		}
+		$users = array(0 => __('-- Select class --'));
+		$_users = $this->User->find('list', array('fields' => array('id', 'username'), 'order' => array('username ASC')));
+		foreach($_users as $key => $val) {
+			$users[$key] = $val;
+		}
+	
+		$_halls = $this->Hall->find('list', array('fields' => array('id', 'title'), 'order' => array('title ASC')));
+		$halls = array(0 => __('-- Select halls --'));
+		foreach($_halls as $key => $val) {
+			$halls[$key] = $val;
+		}
+		$courses = array(0 => __('-- Select courses --'));
+
+		$_courses = $this->Course->find('list', array('fields' => array('id', 'title'), 'order' => array('title ASC')));
+		foreach($_courses as $key => $val) {
+			$courses[$key] = $val;
+		}
 		$this->set(compact('classes', 'users', 'halls', 'courses', 'week', 'year', 'userId', 'classId', 'hallId', 'courseId'));
 	}
 }

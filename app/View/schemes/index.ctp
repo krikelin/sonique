@@ -1,0 +1,1 @@
+Select a class, user or course in the drop down below to find schedules.
