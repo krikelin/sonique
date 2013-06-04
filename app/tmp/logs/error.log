@@ -5477,3 +5477,113 @@ Stack Trace:
 #10 C:\wamp\www\sonique\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(ScheduleController), Object(CakeRequest), Object(CakeResponse))
 #11 C:\wamp\www\sonique\app\webroot\index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
 #12 {main}
+2013-06-04 09:33:39 Error: Fatal Error (4): syntax error, unexpected T_STRING, expecting ',' or ';' in [C:\wamp\www\sonique\app\View\Elements\schedule.ctp, line 117]
+2013-06-04 09:33:39 Error: [FatalErrorException] syntax error, unexpected T_STRING, expecting ',' or ';'
+Request URL: /sonique/schedule/users/1/?week=23&year=2013
+Stack Trace:
+#0 C:\wamp\www\sonique\lib\Cake\Error\ErrorHandler.php(184): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'C:\wamp\www\son...', 117)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'C:\wamp\www\son...', 117, Array)
+#2 C:\wamp\www\sonique\lib\Cake\Core\App.php(926): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'C:\wamp\www\son...', 117, Array)
+#3 C:\wamp\www\sonique\lib\Cake\Core\App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-06-04 09:53:15 Error: Fatal Error (4): syntax error, unexpected T_DOUBLE_ARROW in [C:\wamp\www\sonique\app\Controller\SchedulesController.php, line 40]
+2013-06-04 09:53:15 Error: [FatalErrorException] syntax error, unexpected T_DOUBLE_ARROW
+Request URL: /sonique/schedules
+Stack Trace:
+#0 C:\wamp\www\sonique\lib\Cake\Error\ErrorHandler.php(184): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'C:\wamp\www\son...', 40)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'C:\wamp\www\son...', 40, Array)
+#2 C:\wamp\www\sonique\lib\Cake\Core\App.php(926): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'C:\wamp\www\son...', 40, Array)
+#3 C:\wamp\www\sonique\lib\Cake\Core\App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-06-04 09:54:09 Error: Fatal Error (4): syntax error, unexpected ';' in [C:\wamp\www\sonique\app\Controller\SchedulesController.php, line 40]
+2013-06-04 09:54:09 Error: [FatalErrorException] syntax error, unexpected ';'
+Request URL: /sonique/schedules
+Stack Trace:
+#0 C:\wamp\www\sonique\lib\Cake\Error\ErrorHandler.php(184): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'C:\wamp\www\son...', 40)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'C:\wamp\www\son...', 40, Array)
+#2 C:\wamp\www\sonique\lib\Cake\Core\App.php(926): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'C:\wamp\www\son...', 40, Array)
+#3 C:\wamp\www\sonique\lib\Cake\Core\App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-06-04 09:54:10 Error: Fatal Error (4): syntax error, unexpected ';' in [C:\wamp\www\sonique\app\Controller\SchedulesController.php, line 40]
+2013-06-04 09:54:10 Error: [FatalErrorException] syntax error, unexpected ';'
+Request URL: /sonique/schedules
+Stack Trace:
+#0 C:\wamp\www\sonique\lib\Cake\Error\ErrorHandler.php(184): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'C:\wamp\www\son...', 40)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'C:\wamp\www\son...', 40, Array)
+#2 C:\wamp\www\sonique\lib\Cake\Core\App.php(926): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'C:\wamp\www\son...', 40, Array)
+#3 C:\wamp\www\sonique\lib\Cake\Core\App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-06-04 09:54:11 Error: Fatal Error (4): syntax error, unexpected ';' in [C:\wamp\www\sonique\app\Controller\SchedulesController.php, line 40]
+2013-06-04 09:54:11 Error: [FatalErrorException] syntax error, unexpected ';'
+Request URL: /sonique/schedules
+Stack Trace:
+#0 C:\wamp\www\sonique\lib\Cake\Error\ErrorHandler.php(184): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'C:\wamp\www\son...', 40)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'C:\wamp\www\son...', 40, Array)
+#2 C:\wamp\www\sonique\lib\Cake\Core\App.php(926): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'C:\wamp\www\son...', 40, Array)
+#3 C:\wamp\www\sonique\lib\Cake\Core\App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-06-04 09:54:15 Error: Fatal Error (1): Call to a member function find() on a non-object in [C:\wamp\www\sonique\app\Controller\SchedulesController.php, line 37]
+2013-06-04 09:54:15 Error: [FatalErrorException] Call to a member function find() on a non-object
+Request URL: /sonique/schedules
+Stack Trace:
+#0 C:\wamp\www\sonique\lib\Cake\Error\ErrorHandler.php(184): ErrorHandler::handleFatalError(1, 'Call to a membe...', 'C:\wamp\www\son...', 37)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', 'C:\wamp\www\son...', 37, Array)
+#2 C:\wamp\www\sonique\lib\Cake\Core\App.php(926): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', 'C:\wamp\www\son...', 37, Array)
+#3 C:\wamp\www\sonique\lib\Cake\Core\App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-06-04 09:54:16 Error: Fatal Error (1): Call to a member function find() on a non-object in [C:\wamp\www\sonique\app\Controller\SchedulesController.php, line 37]
+2013-06-04 09:54:16 Error: [FatalErrorException] Call to a member function find() on a non-object
+Request URL: /sonique/schedules
+Stack Trace:
+#0 C:\wamp\www\sonique\lib\Cake\Error\ErrorHandler.php(184): ErrorHandler::handleFatalError(1, 'Call to a membe...', 'C:\wamp\www\son...', 37)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', 'C:\wamp\www\son...', 37, Array)
+#2 C:\wamp\www\sonique\lib\Cake\Core\App.php(926): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', 'C:\wamp\www\son...', 37, Array)
+#3 C:\wamp\www\sonique\lib\Cake\Core\App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-06-04 09:54:30 Error: Fatal Error (1): Call to a member function find() on a non-object in [C:\wamp\www\sonique\app\Controller\SchedulesController.php, line 39]
+2013-06-04 09:54:30 Error: [FatalErrorException] Call to a member function find() on a non-object
+Request URL: /sonique/schedules
+Stack Trace:
+#0 C:\wamp\www\sonique\lib\Cake\Error\ErrorHandler.php(184): ErrorHandler::handleFatalError(1, 'Call to a membe...', 'C:\wamp\www\son...', 39)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', 'C:\wamp\www\son...', 39, Array)
+#2 C:\wamp\www\sonique\lib\Cake\Core\App.php(926): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', 'C:\wamp\www\son...', 39, Array)
+#3 C:\wamp\www\sonique\lib\Cake\Core\App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-06-04 09:54:31 Error: Fatal Error (1): Call to a member function find() on a non-object in [C:\wamp\www\sonique\app\Controller\SchedulesController.php, line 39]
+2013-06-04 09:54:31 Error: [FatalErrorException] Call to a member function find() on a non-object
+Request URL: /sonique/schedules
+Stack Trace:
+#0 C:\wamp\www\sonique\lib\Cake\Error\ErrorHandler.php(184): ErrorHandler::handleFatalError(1, 'Call to a membe...', 'C:\wamp\www\son...', 39)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', 'C:\wamp\www\son...', 39, Array)
+#2 C:\wamp\www\sonique\lib\Cake\Core\App.php(926): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', 'C:\wamp\www\son...', 39, Array)
+#3 C:\wamp\www\sonique\lib\Cake\Core\App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-06-04 10:03:09 Error: Fatal Error (4): syntax error, unexpected T_STRING in [C:\wamp\www\sonique\app\Controller\SchedulesController.php, line 38]
+2013-06-04 10:03:09 Error: [FatalErrorException] syntax error, unexpected T_STRING
+Request URL: /sonique/schedules?week=32&year=2013&userId=1
+Stack Trace:
+#0 C:\wamp\www\sonique\lib\Cake\Error\ErrorHandler.php(184): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'C:\wamp\www\son...', 38)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'C:\wamp\www\son...', 38, Array)
+#2 C:\wamp\www\sonique\lib\Cake\Core\App.php(926): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'C:\wamp\www\son...', 38, Array)
+#3 C:\wamp\www\sonique\lib\Cake\Core\App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-06-04 10:03:10 Error: Fatal Error (4): syntax error, unexpected T_STRING in [C:\wamp\www\sonique\app\Controller\SchedulesController.php, line 38]
+2013-06-04 10:03:10 Error: [FatalErrorException] syntax error, unexpected T_STRING
+Request URL: /sonique/schedules?week=32&year=2013&userId=1
+Stack Trace:
+#0 C:\wamp\www\sonique\lib\Cake\Error\ErrorHandler.php(184): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'C:\wamp\www\son...', 38)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'C:\wamp\www\son...', 38, Array)
+#2 C:\wamp\www\sonique\lib\Cake\Core\App.php(926): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'C:\wamp\www\son...', 38, Array)
+#3 C:\wamp\www\sonique\lib\Cake\Core\App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}

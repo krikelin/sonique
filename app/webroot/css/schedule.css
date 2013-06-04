@@ -62,3 +62,10 @@ body {
 .Sunday {
 	background: #ffeeee;
 }
+
+.travel {
+	background: black;
+	color: white;
+	z-index: 12;
+	width: 100%;
+}
