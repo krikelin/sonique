@@ -21,8 +21,8 @@ $wn = array(__('Monday'), __('Tuesday'), __('Wednesday'), __('Thursday'), __('Fr
 		
 		<?php foreach($weekdays as $weekday) { ?>
 
-		<div class="dayheader" style="text-align: center;position:absolute; left:<?php echo ((1 / 7) * $i * 95  +5 )?>%; height:20px; width: <?php echo ((1 / 7) * 100 - 5)?>%; top: 0px"><?php echo $wn[$i]?></div>
-		<div class="day <?php echo $wn[$i]?>" style="position: absolute; left: <?php echo ((1 / 7) * $i * 95  + 5)?>%; height:90%; width: <?php echo ((1 / 7) * 95 )?>%; top: 20px">
+		<div class="dayheader" style="text-align: center;position:absolute; left:<?php echo ((1 / 7) * $i * 95  +5 )?>%; height:20px; width: <?php echo ((1 / 7) * 93)?>%; top: 0px"><?php echo $wn[$i]?></div>
+		<div class="day <?php echo $wn[$i]?>" style="position: absolute; left: <?php echo ((1 / 7) * $i * 95  + 5)?>%; height:90%; width: <?php echo ((1 / 7) * 93 )?>%; top: 20px">
 		
 		<?php for($h = 0; $h < $count_hours; $h++) { 
 			$width = 95 * (1 / 7 );
@@ -119,7 +119,7 @@ $wn = array(__('Monday'), __('Tuesday'), __('Wednesday'), __('Thursday'), __('Fr
 				$width = 95 * (1 / 7 );
 
 				$min =  (date('H') * 60) + date('m') ;
-				$top = ($min - (480)) / $dayMinutes;
+				$top = ($min - (360)) / $dayMinutes;
 				$top = $top * 100;
 
 				?>

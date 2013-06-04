@@ -5334,3 +5334,146 @@ Request URL: /sonique/img/joyify.png
 Stack Trace:
 #0 C:\wamp\www\sonique\app\webroot\index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
 #1 {main}
+2013-06-04 07:37:00 Error: [MissingConnectionException] Database connection "Mysql" is missing, or could not be created.
+Exception Attributes: array (
+  'class' => 'Mysql',
+  'message' => 'SQLSTATE[28000] [1045] Access denied for user \'root\'@\'localhost\' (using password: YES)',
+  'enabled' => true,
+)
+Request URL: /sonique/schedule/users/2/?week=23&year=2013
+Stack Trace:
+#0 C:\wamp\www\sonique\lib\Cake\Model\Datasource\DboSource.php(262): Mysql->connect()
+#1 C:\wamp\www\sonique\lib\Cake\Model\ConnectionManager.php(108): DboSource->__construct(Array)
+#2 C:\wamp\www\sonique\lib\Cake\Model\Model.php(3215): ConnectionManager::getDataSource('default')
+#3 C:\wamp\www\sonique\lib\Cake\Model\Model.php(1108): Model->setDataSource('default')
+#4 C:\wamp\www\sonique\lib\Cake\Model\Model.php(3237): Model->setSource('lessions')
+#5 C:\wamp\www\sonique\lib\Cake\Model\Model.php(3054): Model->getDataSource()
+#6 C:\wamp\www\sonique\app\Controller\ScheduleController.php(22): Model->query('SELECT * FROM l...')
+#7 [internal function]: ScheduleController->users('2')
+#8 C:\wamp\www\sonique\lib\Cake\Controller\Controller.php(486): ReflectionMethod->invokeArgs(Object(ScheduleController), Array)
+#9 C:\wamp\www\sonique\lib\Cake\Routing\Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#10 C:\wamp\www\sonique\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(ScheduleController), Object(CakeRequest), Object(CakeResponse))
+#11 C:\wamp\www\sonique\app\webroot\index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#12 {main}
+2013-06-04 07:37:01 Error: [MissingConnectionException] Database connection "Mysql" is missing, or could not be created.
+Exception Attributes: array (
+  'class' => 'Mysql',
+  'message' => 'SQLSTATE[28000] [1045] Access denied for user \'root\'@\'localhost\' (using password: YES)',
+  'enabled' => true,
+)
+Request URL: /sonique/schedule/users/2/?week=23&year=2013
+Stack Trace:
+#0 C:\wamp\www\sonique\lib\Cake\Model\Datasource\DboSource.php(262): Mysql->connect()
+#1 C:\wamp\www\sonique\lib\Cake\Model\ConnectionManager.php(108): DboSource->__construct(Array)
+#2 C:\wamp\www\sonique\lib\Cake\Model\Model.php(3215): ConnectionManager::getDataSource('default')
+#3 C:\wamp\www\sonique\lib\Cake\Model\Model.php(1108): Model->setDataSource('default')
+#4 C:\wamp\www\sonique\lib\Cake\Model\Model.php(3237): Model->setSource('lessions')
+#5 C:\wamp\www\sonique\lib\Cake\Model\Model.php(3054): Model->getDataSource()
+#6 C:\wamp\www\sonique\app\Controller\ScheduleController.php(22): Model->query('SELECT * FROM l...')
+#7 [internal function]: ScheduleController->users('2')
+#8 C:\wamp\www\sonique\lib\Cake\Controller\Controller.php(486): ReflectionMethod->invokeArgs(Object(ScheduleController), Array)
+#9 C:\wamp\www\sonique\lib\Cake\Routing\Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#10 C:\wamp\www\sonique\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(ScheduleController), Object(CakeRequest), Object(CakeResponse))
+#11 C:\wamp\www\sonique\app\webroot\index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#12 {main}
+2013-06-04 07:37:18 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /sonique/img/joyify.png
+Stack Trace:
+#0 C:\wamp\www\sonique\app\webroot\index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-06-04 07:37:21 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /sonique/img/joyify.png
+Stack Trace:
+#0 C:\wamp\www\sonique\app\webroot\index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-06-04 07:37:24 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /sonique/img/joyify.png
+Stack Trace:
+#0 C:\wamp\www\sonique\app\webroot\index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-06-04 07:37:28 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /sonique/img/joyify.png
+Stack Trace:
+#0 C:\wamp\www\sonique\app\webroot\index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-06-04 07:56:55 Error: [CakeException] Unknown status code
+Request URL: /sonique/?week=-122&year=2013
+Stack Trace:
+#0 C:\wamp\www\sonique\lib\Cake\Controller\Controller.php(781): CakeResponse->statusCode(Array)
+#1 C:\wamp\www\sonique\app\Controller\PagesController.php(103): Controller->redirect('/', Array)
+#2 [internal function]: PagesController->display('home')
+#3 C:\wamp\www\sonique\lib\Cake\Controller\Controller.php(486): ReflectionMethod->invokeArgs(Object(PagesController), Array)
+#4 C:\wamp\www\sonique\lib\Cake\Routing\Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#5 C:\wamp\www\sonique\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(PagesController), Object(CakeRequest), Object(CakeResponse))
+#6 C:\wamp\www\sonique\app\webroot\index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#7 {main}
+2013-06-04 07:59:19 Error: Fatal Error (4): syntax error, unexpected T_CONSTANT_ENCAPSED_STRING in [C:\wamp\www\sonique\app\Controller\PagesController.php, line 97]
+2013-06-04 07:59:19 Error: [FatalErrorException] syntax error, unexpected T_CONSTANT_ENCAPSED_STRING
+Request URL: /sonique/?week=0&year=2007
+Stack Trace:
+#0 C:\wamp\www\sonique\lib\Cake\Error\ErrorHandler.php(184): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'C:\wamp\www\son...', 97)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'C:\wamp\www\son...', 97, Array)
+#2 C:\wamp\www\sonique\lib\Cake\Core\App.php(926): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'C:\wamp\www\son...', 97, Array)
+#3 C:\wamp\www\sonique\lib\Cake\Core\App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-06-04 08:05:06 Error: [MissingConnectionException] Database connection "Mysql" is missing, or could not be created.
+Exception Attributes: array (
+  'class' => 'Mysql',
+  'message' => 'SQLSTATE[HY000] [2002] Det gick inte att göra en anslutning eftersom måldatorn aktivt nekade det.
+',
+  'enabled' => true,
+)
+Request URL: /sonique/schedule/users/1/?week=23&year=2013
+Stack Trace:
+#0 C:\wamp\www\sonique\lib\Cake\Model\Datasource\DboSource.php(262): Mysql->connect()
+#1 C:\wamp\www\sonique\lib\Cake\Model\ConnectionManager.php(108): DboSource->__construct(Array)
+#2 C:\wamp\www\sonique\lib\Cake\Model\Model.php(3215): ConnectionManager::getDataSource('default')
+#3 C:\wamp\www\sonique\lib\Cake\Model\Model.php(1108): Model->setDataSource('default')
+#4 C:\wamp\www\sonique\lib\Cake\Model\Model.php(3237): Model->setSource('lessions')
+#5 C:\wamp\www\sonique\lib\Cake\Model\Model.php(3054): Model->getDataSource()
+#6 C:\wamp\www\sonique\app\Controller\ScheduleController.php(22): Model->query('SELECT * FROM l...')
+#7 [internal function]: ScheduleController->users('1')
+#8 C:\wamp\www\sonique\lib\Cake\Controller\Controller.php(486): ReflectionMethod->invokeArgs(Object(ScheduleController), Array)
+#9 C:\wamp\www\sonique\lib\Cake\Routing\Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#10 C:\wamp\www\sonique\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(ScheduleController), Object(CakeRequest), Object(CakeResponse))
+#11 C:\wamp\www\sonique\app\webroot\index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#12 {main}
+2013-06-04 08:05:07 Error: [MissingConnectionException] Database connection "Mysql" is missing, or could not be created.
+Exception Attributes: array (
+  'class' => 'Mysql',
+  'message' => 'SQLSTATE[HY000] [2002] Det gick inte att göra en anslutning eftersom måldatorn aktivt nekade det.
+',
+  'enabled' => true,
+)
+Request URL: /sonique/schedule/users/1/?week=23&year=2013
+Stack Trace:
+#0 C:\wamp\www\sonique\lib\Cake\Model\Datasource\DboSource.php(262): Mysql->connect()
+#1 C:\wamp\www\sonique\lib\Cake\Model\ConnectionManager.php(108): DboSource->__construct(Array)
+#2 C:\wamp\www\sonique\lib\Cake\Model\Model.php(3215): ConnectionManager::getDataSource('default')
+#3 C:\wamp\www\sonique\lib\Cake\Model\Model.php(1108): Model->setDataSource('default')
+#4 C:\wamp\www\sonique\lib\Cake\Model\Model.php(3237): Model->setSource('lessions')
+#5 C:\wamp\www\sonique\lib\Cake\Model\Model.php(3054): Model->getDataSource()
+#6 C:\wamp\www\sonique\app\Controller\ScheduleController.php(22): Model->query('SELECT * FROM l...')
+#7 [internal function]: ScheduleController->users('1')
+#8 C:\wamp\www\sonique\lib\Cake\Controller\Controller.php(486): ReflectionMethod->invokeArgs(Object(ScheduleController), Array)
+#9 C:\wamp\www\sonique\lib\Cake\Routing\Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#10 C:\wamp\www\sonique\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(ScheduleController), Object(CakeRequest), Object(CakeResponse))
+#11 C:\wamp\www\sonique\app\webroot\index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#12 {main}

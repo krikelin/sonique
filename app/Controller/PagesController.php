@@ -83,12 +83,36 @@ class PagesController extends AppController {
 			
 			$week = $this->request->query['week'];
 		}
+
+
 		$this->set('week', $week);
 
 		if(isset($this->request->query['year'])) {
 			
 			$year = $this->request->query['year'];
 		}
+
+		// If week is < 1 go to back year
+		if($week < 1) {
+			$t = $year . "-01-01 ".($week-1)." week";
+		
+			$date = strtotime($t);
+
+			$week = date('W', $date);
+			$year = date('Y', $date);
+			$this->redirect('/?week=' . $week . '&year=' . $year);
+		} else if($week > 52) {
+
+			$t = $year . "-01-01 ".($week )." week";
+		
+			$date = strtotime($t);
+
+			$week = date('W', $date);
+			$year = date('Y', $date);
+			$this->redirect('/?week=' . $week . '&year=' . $year);
+		}
+
+		
 		$this->set('year', $year);
 		$this->render(implode('/', $path));
 

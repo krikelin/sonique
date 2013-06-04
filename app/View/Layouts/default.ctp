@@ -47,8 +47,6 @@ $cakeDescription = __d('cake_dev', 'CakePHP: the rapid development php framework
 	
 		$menu = array(
 			'Home' => '/',
-			'Songs' => '/songs',
-			'Submissions' => '/submissions',
 			'Lessions' => '/lessions',
 			'Log Out' => '/users/logout'
 		);?>
