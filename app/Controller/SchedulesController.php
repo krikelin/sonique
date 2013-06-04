@@ -18,7 +18,7 @@ class SchedulesController extends AppController {
 	}
 	public function index() {
 		$classId = $this->get('classId', 0);
-		$userId = $this->get('userId', $this->Auth->user('id'));
+		$userId = $this->get('userId', 0);
 		$courseId = $this->get('courseId', 0);
 
 		$hallId = $this->get('hallId', 0);

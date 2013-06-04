@@ -14,7 +14,9 @@
 	<script language="javascript">
 		function bind(id) {
 			document.getElementById(id).addEventListener('change', function () {
-				self.location="<?php echo Router::Url('/schedules/')?>?" + id + "=" + document.getElementById(id).options[document.getElementById(id).selectedIndex].value;
+				var selectedValue =  document.getElementById(id).options[document.getElementById(id).selectedIndex].value;
+				if(selectedValue > 0)
+					self.location="<?php echo Router::Url('/schedules/')?>?" + id + "=" + selectedValue;
 			});
 		}
 		window.addEventListener('load', function () {

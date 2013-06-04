@@ -99,9 +99,9 @@ $wn = array(__('Monday'), __('Tuesday'), __('Wednesday'), __('Thursday'), __('Fr
 					<?php echo $this->Html->image("/img/s_info.png", array('style' => 'float: right; padding-right: 10px', 'title' => $lession['lessions']['notes']))?>
 					<?php endif;?></b><br />
 					
-					<?php echo $this->Html->link($lession['courses']['title'], "/schedules/courseId=".$lession['courses']['id']."&week=".$week."&year=".$year);?><br />
-					<?php echo $this->Html->link($lession['halls']['title'], "/schedules/?hallId=".$lession['halls']['id']."&week=".$week."&year=".$year."")?><br />
-					<?php echo $this->Html->link($lession['tutors']['username'], "/schedules/?userId=".$lession['tutors']['id']."&week=".$week."&year=".$year)?>
+					<?php echo $this->Html->link($lession['courses']['title'], "/schedules/courseId=".$lession['courses']['id']."&week=".$week."&year=".$year, array('target' => 'top'));?><br />
+					<?php echo $this->Html->link($lession['halls']['title'], "/schedules/?hallId=".$lession['halls']['id']."&week=".$week."&year=".$year."",array('target' => 'top'))?><br />
+					<?php echo $this->Html->link($lession['tutors']['username'], "/schedules/?userId=".$lession['tutors']['id']."&week=".$week."&year=".$year, array('target' => 'top'))?>
 					<p><?php echo $lession['lessions']['notes']?></p>
 
 					<span style="position: absolute; right: 10px;bottom: 0px; float: right;"><?php echo date('H:i', $lession['lessions']['time'] + $lession['lessions']['duration']);?>
