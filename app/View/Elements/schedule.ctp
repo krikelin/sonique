@@ -95,13 +95,13 @@ $wn = array(__('Monday'), __('Tuesday'), __('Wednesday'), __('Thursday'), __('Fr
 					$top = $top * 100;
 					$height = round((date($lession['lessions']['duration']) / (1380 - $start))* 100);
 					?>
-				<div class="lession" style="position: absolute;left:<?php echo (100 / ($count_a)) * $x ;?>%; width:<?php echo ceil((100 / ($count_a)) )  ?>%; top: <?php echo $top  ?>%; height: <?php echo $height?>%"><b><?php echo date('H:i', strtotime($lession['lessions']['time']))?><?php if($lession['lessions']['notes'] != NULL):?>
-				<?php echo $this->Html->image("/img/s_info.png", array('style' => 'float: right; padding-right: 10px', 'title' => $lession['lessions']['notes']))?>
-				<?php endif;?></b><br />
+					<div class="lession" style="position: absolute;left:<?php echo (100 / ($count_a)) * $x ;?>%; width:<?php echo ceil((100 / ($count_a)) )  ?>%; top: <?php echo $top  ?>%; height: <?php echo $height?>%"><b><?php echo date('H:i', strtotime($lession['lessions']['time']))?><?php if($lession['lessions']['notes'] != NULL):?>
+					<?php echo $this->Html->image("/img/s_info.png", array('style' => 'float: right; padding-right: 10px', 'title' => $lession['lessions']['notes']))?>
+					<?php endif;?></b><br />
 					
-					<?php echo $this->Html->link($lession['courses']['title'], "/schedule/courses/".$lession['courses']['id']."?week=".$week."&year=".$year);?><br />
-					<?php echo $this->Html->link($lession['halls']['title'], "/schedule/halls/".$lession['halls']['id']."?week=".$week."&year=".$year."")?><br />
-					<?php echo $this->Html->link($lession['tutors']['username'], "/schedule/users/".$lession['tutors']['id']."?week=".$week."&year=".$year)?>
+					<?php echo $this->Html->link($lession['courses']['title'], "/schedules/courseId=".$lession['courses']['id']."&week=".$week."&year=".$year);?><br />
+					<?php echo $this->Html->link($lession['halls']['title'], "/schedules/?hallId=".$lession['halls']['id']."&week=".$week."&year=".$year."")?><br />
+					<?php echo $this->Html->link($lession['tutors']['username'], "/schedules/?userId=".$lession['tutors']['id']."&week=".$week."&year=".$year)?>
 					<p><?php echo $lession['lessions']['notes']?></p>
 
 					<span style="position: absolute; right: 10px;bottom: 0px; float: right;"><?php echo date('H:i', $lession['lessions']['time'] + $lession['lessions']['duration']);?>

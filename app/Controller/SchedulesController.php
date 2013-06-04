@@ -20,17 +20,20 @@ class SchedulesController extends AppController {
 		$classId = $this->get('classId', 0);
 		$userId = $this->get('userId', $this->Auth->user('id'));
 		$courseId = $this->get('courseId', 0);
+
 		$hallId = $this->get('hallId', 0);
 
 		$week = $this->get('week', date('W'));
 		$year = $this->get('year', date('Y'));
-		$q = "/schedule/";
+		$q = Router::Url("/schemes/");
 		if($classId > 0) {
 			$q.="classes/".$classId."?week=".$week."&year=".$year;
-		} else if($userId > 0) {
-			$q.="users/".$userId."?week=".$week."&year=".$year;
-		} else if($hallId > 0) {
+		} elseif($hallId > 0) {
 			$q.="halls/".$hallId."?week=".$week."&year=".$year;
+		} elseif($courseId > 0) {
+			$q.="courses/".$courseId."?week=".$week."&year=".$year;
+		} elseif($userId > 0) {
+			$q.="users/".$userId."?week=".$week."&year=".$year;
 		}
 		$this->set('scheduleUrl', $q);
 
