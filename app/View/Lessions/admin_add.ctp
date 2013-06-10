@@ -9,6 +9,7 @@
 		echo $this->Form->input('duration');
 		echo $this->Form->input('token');
 		echo $this->Form->input('hall_id');
+		echo $this->Form->input('travelling_time');
 		echo $this->Form->input('tutor_id', array('type' => 'select', 'options' => $tutors));
 		echo $this->Form->input('repeat', array('value' => 1, 'type' => 'number', 'min' => 1));
 		echo $this->Form->input('interval', array('value' => 7));

@@ -18,6 +18,9 @@ body {
 	overflow: hidden;
 	/*box-shadow:inset 0px 4px 5px rgba(0, 0, 0, .05);*/
 }
+.dayheader {
+	border: 1px solid black;
+}
 .lession{
 
 	padding: 3px;
@@ -58,4 +61,11 @@ body {
 }
 .Sunday {
 	background: #ffeeee;
+}
+
+.travel {
+	background: black;
+	color: white;
+	z-index: 12;
+	width: 100%;
 }
