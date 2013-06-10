@@ -5334,3 +5334,495 @@ Request URL: /sonique/img/joyify.png
 Stack Trace:
 #0 C:\wamp\www\sonique\app\webroot\index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
 #1 {main}
+2013-06-04 07:37:00 Error: [MissingConnectionException] Database connection "Mysql" is missing, or could not be created.
+Exception Attributes: array (
+  'class' => 'Mysql',
+  'message' => 'SQLSTATE[28000] [1045] Access denied for user \'root\'@\'localhost\' (using password: YES)',
+  'enabled' => true,
+)
+Request URL: /sonique/schedule/users/2/?week=23&year=2013
+Stack Trace:
+#0 C:\wamp\www\sonique\lib\Cake\Model\Datasource\DboSource.php(262): Mysql->connect()
+#1 C:\wamp\www\sonique\lib\Cake\Model\ConnectionManager.php(108): DboSource->__construct(Array)
+#2 C:\wamp\www\sonique\lib\Cake\Model\Model.php(3215): ConnectionManager::getDataSource('default')
+#3 C:\wamp\www\sonique\lib\Cake\Model\Model.php(1108): Model->setDataSource('default')
+#4 C:\wamp\www\sonique\lib\Cake\Model\Model.php(3237): Model->setSource('lessions')
+#5 C:\wamp\www\sonique\lib\Cake\Model\Model.php(3054): Model->getDataSource()
+#6 C:\wamp\www\sonique\app\Controller\ScheduleController.php(22): Model->query('SELECT * FROM l...')
+#7 [internal function]: ScheduleController->users('2')
+#8 C:\wamp\www\sonique\lib\Cake\Controller\Controller.php(486): ReflectionMethod->invokeArgs(Object(ScheduleController), Array)
+#9 C:\wamp\www\sonique\lib\Cake\Routing\Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#10 C:\wamp\www\sonique\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(ScheduleController), Object(CakeRequest), Object(CakeResponse))
+#11 C:\wamp\www\sonique\app\webroot\index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#12 {main}
+2013-06-04 07:37:01 Error: [MissingConnectionException] Database connection "Mysql" is missing, or could not be created.
+Exception Attributes: array (
+  'class' => 'Mysql',
+  'message' => 'SQLSTATE[28000] [1045] Access denied for user \'root\'@\'localhost\' (using password: YES)',
+  'enabled' => true,
+)
+Request URL: /sonique/schedule/users/2/?week=23&year=2013
+Stack Trace:
+#0 C:\wamp\www\sonique\lib\Cake\Model\Datasource\DboSource.php(262): Mysql->connect()
+#1 C:\wamp\www\sonique\lib\Cake\Model\ConnectionManager.php(108): DboSource->__construct(Array)
+#2 C:\wamp\www\sonique\lib\Cake\Model\Model.php(3215): ConnectionManager::getDataSource('default')
+#3 C:\wamp\www\sonique\lib\Cake\Model\Model.php(1108): Model->setDataSource('default')
+#4 C:\wamp\www\sonique\lib\Cake\Model\Model.php(3237): Model->setSource('lessions')
+#5 C:\wamp\www\sonique\lib\Cake\Model\Model.php(3054): Model->getDataSource()
+#6 C:\wamp\www\sonique\app\Controller\ScheduleController.php(22): Model->query('SELECT * FROM l...')
+#7 [internal function]: ScheduleController->users('2')
+#8 C:\wamp\www\sonique\lib\Cake\Controller\Controller.php(486): ReflectionMethod->invokeArgs(Object(ScheduleController), Array)
+#9 C:\wamp\www\sonique\lib\Cake\Routing\Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#10 C:\wamp\www\sonique\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(ScheduleController), Object(CakeRequest), Object(CakeResponse))
+#11 C:\wamp\www\sonique\app\webroot\index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#12 {main}
+2013-06-04 07:37:18 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /sonique/img/joyify.png
+Stack Trace:
+#0 C:\wamp\www\sonique\app\webroot\index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-06-04 07:37:21 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /sonique/img/joyify.png
+Stack Trace:
+#0 C:\wamp\www\sonique\app\webroot\index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-06-04 07:37:24 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /sonique/img/joyify.png
+Stack Trace:
+#0 C:\wamp\www\sonique\app\webroot\index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-06-04 07:37:28 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /sonique/img/joyify.png
+Stack Trace:
+#0 C:\wamp\www\sonique\app\webroot\index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-06-04 07:56:55 Error: [CakeException] Unknown status code
+Request URL: /sonique/?week=-122&year=2013
+Stack Trace:
+#0 C:\wamp\www\sonique\lib\Cake\Controller\Controller.php(781): CakeResponse->statusCode(Array)
+#1 C:\wamp\www\sonique\app\Controller\PagesController.php(103): Controller->redirect('/', Array)
+#2 [internal function]: PagesController->display('home')
+#3 C:\wamp\www\sonique\lib\Cake\Controller\Controller.php(486): ReflectionMethod->invokeArgs(Object(PagesController), Array)
+#4 C:\wamp\www\sonique\lib\Cake\Routing\Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#5 C:\wamp\www\sonique\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(PagesController), Object(CakeRequest), Object(CakeResponse))
+#6 C:\wamp\www\sonique\app\webroot\index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#7 {main}
+2013-06-04 07:59:19 Error: Fatal Error (4): syntax error, unexpected T_CONSTANT_ENCAPSED_STRING in [C:\wamp\www\sonique\app\Controller\PagesController.php, line 97]
+2013-06-04 07:59:19 Error: [FatalErrorException] syntax error, unexpected T_CONSTANT_ENCAPSED_STRING
+Request URL: /sonique/?week=0&year=2007
+Stack Trace:
+#0 C:\wamp\www\sonique\lib\Cake\Error\ErrorHandler.php(184): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'C:\wamp\www\son...', 97)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'C:\wamp\www\son...', 97, Array)
+#2 C:\wamp\www\sonique\lib\Cake\Core\App.php(926): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'C:\wamp\www\son...', 97, Array)
+#3 C:\wamp\www\sonique\lib\Cake\Core\App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-06-04 08:05:06 Error: [MissingConnectionException] Database connection "Mysql" is missing, or could not be created.
+Exception Attributes: array (
+  'class' => 'Mysql',
+  'message' => 'SQLSTATE[HY000] [2002] Det gick inte att göra en anslutning eftersom måldatorn aktivt nekade det.
+',
+  'enabled' => true,
+)
+Request URL: /sonique/schedule/users/1/?week=23&year=2013
+Stack Trace:
+#0 C:\wamp\www\sonique\lib\Cake\Model\Datasource\DboSource.php(262): Mysql->connect()
+#1 C:\wamp\www\sonique\lib\Cake\Model\ConnectionManager.php(108): DboSource->__construct(Array)
+#2 C:\wamp\www\sonique\lib\Cake\Model\Model.php(3215): ConnectionManager::getDataSource('default')
+#3 C:\wamp\www\sonique\lib\Cake\Model\Model.php(1108): Model->setDataSource('default')
+#4 C:\wamp\www\sonique\lib\Cake\Model\Model.php(3237): Model->setSource('lessions')
+#5 C:\wamp\www\sonique\lib\Cake\Model\Model.php(3054): Model->getDataSource()
+#6 C:\wamp\www\sonique\app\Controller\ScheduleController.php(22): Model->query('SELECT * FROM l...')
+#7 [internal function]: ScheduleController->users('1')
+#8 C:\wamp\www\sonique\lib\Cake\Controller\Controller.php(486): ReflectionMethod->invokeArgs(Object(ScheduleController), Array)
+#9 C:\wamp\www\sonique\lib\Cake\Routing\Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#10 C:\wamp\www\sonique\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(ScheduleController), Object(CakeRequest), Object(CakeResponse))
+#11 C:\wamp\www\sonique\app\webroot\index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#12 {main}
+2013-06-04 08:05:07 Error: [MissingConnectionException] Database connection "Mysql" is missing, or could not be created.
+Exception Attributes: array (
+  'class' => 'Mysql',
+  'message' => 'SQLSTATE[HY000] [2002] Det gick inte att göra en anslutning eftersom måldatorn aktivt nekade det.
+',
+  'enabled' => true,
+)
+Request URL: /sonique/schedule/users/1/?week=23&year=2013
+Stack Trace:
+#0 C:\wamp\www\sonique\lib\Cake\Model\Datasource\DboSource.php(262): Mysql->connect()
+#1 C:\wamp\www\sonique\lib\Cake\Model\ConnectionManager.php(108): DboSource->__construct(Array)
+#2 C:\wamp\www\sonique\lib\Cake\Model\Model.php(3215): ConnectionManager::getDataSource('default')
+#3 C:\wamp\www\sonique\lib\Cake\Model\Model.php(1108): Model->setDataSource('default')
+#4 C:\wamp\www\sonique\lib\Cake\Model\Model.php(3237): Model->setSource('lessions')
+#5 C:\wamp\www\sonique\lib\Cake\Model\Model.php(3054): Model->getDataSource()
+#6 C:\wamp\www\sonique\app\Controller\ScheduleController.php(22): Model->query('SELECT * FROM l...')
+#7 [internal function]: ScheduleController->users('1')
+#8 C:\wamp\www\sonique\lib\Cake\Controller\Controller.php(486): ReflectionMethod->invokeArgs(Object(ScheduleController), Array)
+#9 C:\wamp\www\sonique\lib\Cake\Routing\Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#10 C:\wamp\www\sonique\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(ScheduleController), Object(CakeRequest), Object(CakeResponse))
+#11 C:\wamp\www\sonique\app\webroot\index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#12 {main}
+2013-06-04 09:33:39 Error: Fatal Error (4): syntax error, unexpected T_STRING, expecting ',' or ';' in [C:\wamp\www\sonique\app\View\Elements\schedule.ctp, line 117]
+2013-06-04 09:33:39 Error: [FatalErrorException] syntax error, unexpected T_STRING, expecting ',' or ';'
+Request URL: /sonique/schedule/users/1/?week=23&year=2013
+Stack Trace:
+#0 C:\wamp\www\sonique\lib\Cake\Error\ErrorHandler.php(184): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'C:\wamp\www\son...', 117)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'C:\wamp\www\son...', 117, Array)
+#2 C:\wamp\www\sonique\lib\Cake\Core\App.php(926): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'C:\wamp\www\son...', 117, Array)
+#3 C:\wamp\www\sonique\lib\Cake\Core\App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-06-04 09:53:15 Error: Fatal Error (4): syntax error, unexpected T_DOUBLE_ARROW in [C:\wamp\www\sonique\app\Controller\SchedulesController.php, line 40]
+2013-06-04 09:53:15 Error: [FatalErrorException] syntax error, unexpected T_DOUBLE_ARROW
+Request URL: /sonique/schedules
+Stack Trace:
+#0 C:\wamp\www\sonique\lib\Cake\Error\ErrorHandler.php(184): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'C:\wamp\www\son...', 40)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'C:\wamp\www\son...', 40, Array)
+#2 C:\wamp\www\sonique\lib\Cake\Core\App.php(926): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'C:\wamp\www\son...', 40, Array)
+#3 C:\wamp\www\sonique\lib\Cake\Core\App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-06-04 09:54:09 Error: Fatal Error (4): syntax error, unexpected ';' in [C:\wamp\www\sonique\app\Controller\SchedulesController.php, line 40]
+2013-06-04 09:54:09 Error: [FatalErrorException] syntax error, unexpected ';'
+Request URL: /sonique/schedules
+Stack Trace:
+#0 C:\wamp\www\sonique\lib\Cake\Error\ErrorHandler.php(184): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'C:\wamp\www\son...', 40)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'C:\wamp\www\son...', 40, Array)
+#2 C:\wamp\www\sonique\lib\Cake\Core\App.php(926): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'C:\wamp\www\son...', 40, Array)
+#3 C:\wamp\www\sonique\lib\Cake\Core\App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-06-04 09:54:10 Error: Fatal Error (4): syntax error, unexpected ';' in [C:\wamp\www\sonique\app\Controller\SchedulesController.php, line 40]
+2013-06-04 09:54:10 Error: [FatalErrorException] syntax error, unexpected ';'
+Request URL: /sonique/schedules
+Stack Trace:
+#0 C:\wamp\www\sonique\lib\Cake\Error\ErrorHandler.php(184): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'C:\wamp\www\son...', 40)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'C:\wamp\www\son...', 40, Array)
+#2 C:\wamp\www\sonique\lib\Cake\Core\App.php(926): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'C:\wamp\www\son...', 40, Array)
+#3 C:\wamp\www\sonique\lib\Cake\Core\App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-06-04 09:54:11 Error: Fatal Error (4): syntax error, unexpected ';' in [C:\wamp\www\sonique\app\Controller\SchedulesController.php, line 40]
+2013-06-04 09:54:11 Error: [FatalErrorException] syntax error, unexpected ';'
+Request URL: /sonique/schedules
+Stack Trace:
+#0 C:\wamp\www\sonique\lib\Cake\Error\ErrorHandler.php(184): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'C:\wamp\www\son...', 40)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'C:\wamp\www\son...', 40, Array)
+#2 C:\wamp\www\sonique\lib\Cake\Core\App.php(926): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'C:\wamp\www\son...', 40, Array)
+#3 C:\wamp\www\sonique\lib\Cake\Core\App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-06-04 09:54:15 Error: Fatal Error (1): Call to a member function find() on a non-object in [C:\wamp\www\sonique\app\Controller\SchedulesController.php, line 37]
+2013-06-04 09:54:15 Error: [FatalErrorException] Call to a member function find() on a non-object
+Request URL: /sonique/schedules
+Stack Trace:
+#0 C:\wamp\www\sonique\lib\Cake\Error\ErrorHandler.php(184): ErrorHandler::handleFatalError(1, 'Call to a membe...', 'C:\wamp\www\son...', 37)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', 'C:\wamp\www\son...', 37, Array)
+#2 C:\wamp\www\sonique\lib\Cake\Core\App.php(926): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', 'C:\wamp\www\son...', 37, Array)
+#3 C:\wamp\www\sonique\lib\Cake\Core\App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-06-04 09:54:16 Error: Fatal Error (1): Call to a member function find() on a non-object in [C:\wamp\www\sonique\app\Controller\SchedulesController.php, line 37]
+2013-06-04 09:54:16 Error: [FatalErrorException] Call to a member function find() on a non-object
+Request URL: /sonique/schedules
+Stack Trace:
+#0 C:\wamp\www\sonique\lib\Cake\Error\ErrorHandler.php(184): ErrorHandler::handleFatalError(1, 'Call to a membe...', 'C:\wamp\www\son...', 37)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', 'C:\wamp\www\son...', 37, Array)
+#2 C:\wamp\www\sonique\lib\Cake\Core\App.php(926): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', 'C:\wamp\www\son...', 37, Array)
+#3 C:\wamp\www\sonique\lib\Cake\Core\App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-06-04 09:54:30 Error: Fatal Error (1): Call to a member function find() on a non-object in [C:\wamp\www\sonique\app\Controller\SchedulesController.php, line 39]
+2013-06-04 09:54:30 Error: [FatalErrorException] Call to a member function find() on a non-object
+Request URL: /sonique/schedules
+Stack Trace:
+#0 C:\wamp\www\sonique\lib\Cake\Error\ErrorHandler.php(184): ErrorHandler::handleFatalError(1, 'Call to a membe...', 'C:\wamp\www\son...', 39)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', 'C:\wamp\www\son...', 39, Array)
+#2 C:\wamp\www\sonique\lib\Cake\Core\App.php(926): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', 'C:\wamp\www\son...', 39, Array)
+#3 C:\wamp\www\sonique\lib\Cake\Core\App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-06-04 09:54:31 Error: Fatal Error (1): Call to a member function find() on a non-object in [C:\wamp\www\sonique\app\Controller\SchedulesController.php, line 39]
+2013-06-04 09:54:31 Error: [FatalErrorException] Call to a member function find() on a non-object
+Request URL: /sonique/schedules
+Stack Trace:
+#0 C:\wamp\www\sonique\lib\Cake\Error\ErrorHandler.php(184): ErrorHandler::handleFatalError(1, 'Call to a membe...', 'C:\wamp\www\son...', 39)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', 'C:\wamp\www\son...', 39, Array)
+#2 C:\wamp\www\sonique\lib\Cake\Core\App.php(926): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', 'C:\wamp\www\son...', 39, Array)
+#3 C:\wamp\www\sonique\lib\Cake\Core\App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-06-04 10:03:09 Error: Fatal Error (4): syntax error, unexpected T_STRING in [C:\wamp\www\sonique\app\Controller\SchedulesController.php, line 38]
+2013-06-04 10:03:09 Error: [FatalErrorException] syntax error, unexpected T_STRING
+Request URL: /sonique/schedules?week=32&year=2013&userId=1
+Stack Trace:
+#0 C:\wamp\www\sonique\lib\Cake\Error\ErrorHandler.php(184): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'C:\wamp\www\son...', 38)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'C:\wamp\www\son...', 38, Array)
+#2 C:\wamp\www\sonique\lib\Cake\Core\App.php(926): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'C:\wamp\www\son...', 38, Array)
+#3 C:\wamp\www\sonique\lib\Cake\Core\App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-06-04 10:03:10 Error: Fatal Error (4): syntax error, unexpected T_STRING in [C:\wamp\www\sonique\app\Controller\SchedulesController.php, line 38]
+2013-06-04 10:03:10 Error: [FatalErrorException] syntax error, unexpected T_STRING
+Request URL: /sonique/schedules?week=32&year=2013&userId=1
+Stack Trace:
+#0 C:\wamp\www\sonique\lib\Cake\Error\ErrorHandler.php(184): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'C:\wamp\www\son...', 38)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'C:\wamp\www\son...', 38, Array)
+#2 C:\wamp\www\sonique\lib\Cake\Core\App.php(926): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'C:\wamp\www\son...', 38, Array)
+#3 C:\wamp\www\sonique\lib\Cake\Core\App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-06-04 10:21:09 Error: [MissingActionException] Action SchemesController::index() could not be found.
+Exception Attributes: array (
+  'controller' => 'SchemesController',
+  'action' => 'index',
+)
+Request URL: /sonique/schemes/
+Stack Trace:
+#0 C:\wamp\www\sonique\lib\Cake\Routing\Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#1 C:\wamp\www\sonique\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(SchemesController), Object(CakeRequest), Object(CakeResponse))
+#2 C:\wamp\www\sonique\app\webroot\index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2013-06-04 10:21:12 Error: [MissingActionException] Action SchemesController::index() could not be found.
+Exception Attributes: array (
+  'controller' => 'SchemesController',
+  'action' => 'index',
+)
+Request URL: /sonique/schemes/
+Stack Trace:
+#0 C:\wamp\www\sonique\lib\Cake\Routing\Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#1 C:\wamp\www\sonique\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(SchemesController), Object(CakeRequest), Object(CakeResponse))
+#2 C:\wamp\www\sonique\app\webroot\index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2013-06-04 10:23:45 Error: [MissingActionException] Action SchedulesController::courseId=1&week=22&year=2013() could not be found.
+Exception Attributes: array (
+  'controller' => 'SchedulesController',
+  'action' => 'courseId=1&week=22&year=2013',
+)
+Request URL: /sonique/schedules/courseId=1&week=22&year=2013
+Stack Trace:
+#0 C:\wamp\www\sonique\lib\Cake\Routing\Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#1 C:\wamp\www\sonique\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(SchedulesController), Object(CakeRequest), Object(CakeResponse))
+#2 C:\wamp\www\sonique\app\webroot\index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2013-06-04 11:21:57 Error: [MissingActionException] Action SchedulesController::courseId=5&week=23&year=2013() could not be found.
+Exception Attributes: array (
+  'controller' => 'SchedulesController',
+  'action' => 'courseId=5&week=23&year=2013',
+)
+Request URL: /sonique/schedules/courseId=5&week=23&year=2013
+Stack Trace:
+#0 C:\wamp\www\sonique\lib\Cake\Routing\Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#1 C:\wamp\www\sonique\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(SchedulesController), Object(CakeRequest), Object(CakeResponse))
+#2 C:\wamp\www\sonique\app\webroot\index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2013-06-04 11:34:18 Error: [MissingActionException] Action SchedulesController::courseId=4&week=24&year=2013() could not be found.
+Exception Attributes: array (
+  'controller' => 'SchedulesController',
+  'action' => 'courseId=4&week=24&year=2013',
+)
+Request URL: /sonique/schedules/courseId=4&week=24&year=2013
+Stack Trace:
+#0 C:\wamp\www\sonique\lib\Cake\Routing\Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#1 C:\wamp\www\sonique\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(SchedulesController), Object(CakeRequest), Object(CakeResponse))
+#2 C:\wamp\www\sonique\app\webroot\index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2013-06-04 11:38:29 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /sonique/img/joyify.png
+Stack Trace:
+#0 C:\wamp\www\sonique\app\webroot\index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-06-04 11:38:33 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /sonique/img/joyify.png
+Stack Trace:
+#0 C:\wamp\www\sonique\app\webroot\index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-06-04 11:39:05 Error: [MissingActionException] Action SchemesController::index() could not be found.
+Exception Attributes: array (
+  'controller' => 'SchemesController',
+  'action' => 'index',
+)
+Request URL: /sonique/schemes/
+Stack Trace:
+#0 C:\wamp\www\sonique\lib\Cake\Routing\Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#1 C:\wamp\www\sonique\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(SchemesController), Object(CakeRequest), Object(CakeResponse))
+#2 C:\wamp\www\sonique\app\webroot\index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2013-06-04 11:51:00 Error: Fatal Error (4): syntax error, unexpected '<' in [C:\wamp\www\sonique\app\View\Schedules\index.ctp, line 21]
+2013-06-04 11:51:00 Error: [FatalErrorException] syntax error, unexpected '<'
+Request URL: /sonique/schedules/?week=24&year=2013&userId=4
+Stack Trace:
+#0 C:\wamp\www\sonique\lib\Cake\Error\ErrorHandler.php(184): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'C:\wamp\www\son...', 21)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'C:\wamp\www\son...', 21, Array)
+#2 C:\wamp\www\sonique\lib\Cake\Core\App.php(926): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'C:\wamp\www\son...', 21, Array)
+#3 C:\wamp\www\sonique\lib\Cake\Core\App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-06-04 11:51:01 Error: Fatal Error (4): syntax error, unexpected '<' in [C:\wamp\www\sonique\app\View\Schedules\index.ctp, line 21]
+2013-06-04 11:51:01 Error: [FatalErrorException] syntax error, unexpected '<'
+Request URL: /sonique/schedules/?week=24&year=2013&userId=4
+Stack Trace:
+#0 C:\wamp\www\sonique\lib\Cake\Error\ErrorHandler.php(184): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'C:\wamp\www\son...', 21)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'C:\wamp\www\son...', 21, Array)
+#2 C:\wamp\www\sonique\lib\Cake\Core\App.php(926): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'C:\wamp\www\son...', 21, Array)
+#3 C:\wamp\www\sonique\lib\Cake\Core\App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-06-04 11:51:09 Error: [PDOException] SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '2013-01-01' + INTERVAL 23 WEEK - INTERVAL  1 DAY) AND (''2013-01-01' + INTERVAL ' at line 1
+Request URL: /sonique/schemes/users/3?week=24&year=%272013
+Stack Trace:
+#0 C:\wamp\www\sonique\lib\Cake\Model\Datasource\DboSource.php(460): PDOStatement->execute(Array)
+#1 C:\wamp\www\sonique\lib\Cake\Model\Datasource\DboSource.php(426): DboSource->_execute('SELECT * FROM l...', Array)
+#2 C:\wamp\www\sonique\lib\Cake\Model\Datasource\DboSource.php(670): DboSource->execute('SELECT * FROM l...', Array, Array)
+#3 C:\wamp\www\sonique\lib\Cake\Model\Datasource\DboSource.php(539): DboSource->fetchAll('SELECT * FROM l...')
+#4 [internal function]: DboSource->query('SELECT * FROM l...')
+#5 C:\wamp\www\sonique\lib\Cake\Model\Model.php(3055): call_user_func_array(Array, Array)
+#6 C:\wamp\www\sonique\app\Controller\SchemesController.php(25): Model->query('SELECT * FROM l...')
+#7 [internal function]: SchemesController->users('3')
+#8 C:\wamp\www\sonique\lib\Cake\Controller\Controller.php(486): ReflectionMethod->invokeArgs(Object(SchemesController), Array)
+#9 C:\wamp\www\sonique\lib\Cake\Routing\Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#10 C:\wamp\www\sonique\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(SchemesController), Object(CakeRequest), Object(CakeResponse))
+#11 C:\wamp\www\sonique\app\webroot\index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#12 {main}
+2013-06-04 11:51:22 Error: [PDOException] SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '2013-01-01' + INTERVAL 23 WEEK - INTERVAL  1 DAY) AND (''2013-01-01' + INTERVAL ' at line 1
+Request URL: /sonique/schemes/users/3?week=24&year=%272013
+Stack Trace:
+#0 C:\wamp\www\sonique\lib\Cake\Model\Datasource\DboSource.php(460): PDOStatement->execute(Array)
+#1 C:\wamp\www\sonique\lib\Cake\Model\Datasource\DboSource.php(426): DboSource->_execute('SELECT * FROM l...', Array)
+#2 C:\wamp\www\sonique\lib\Cake\Model\Datasource\DboSource.php(670): DboSource->execute('SELECT * FROM l...', Array, Array)
+#3 C:\wamp\www\sonique\lib\Cake\Model\Datasource\DboSource.php(539): DboSource->fetchAll('SELECT * FROM l...')
+#4 [internal function]: DboSource->query('SELECT * FROM l...')
+#5 C:\wamp\www\sonique\lib\Cake\Model\Model.php(3055): call_user_func_array(Array, Array)
+#6 C:\wamp\www\sonique\app\Controller\SchemesController.php(25): Model->query('SELECT * FROM l...')
+#7 [internal function]: SchemesController->users('3')
+#8 C:\wamp\www\sonique\lib\Cake\Controller\Controller.php(486): ReflectionMethod->invokeArgs(Object(SchemesController), Array)
+#9 C:\wamp\www\sonique\lib\Cake\Routing\Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#10 C:\wamp\www\sonique\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(SchemesController), Object(CakeRequest), Object(CakeResponse))
+#11 C:\wamp\www\sonique\app\webroot\index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#12 {main}
+2013-06-04 11:51:27 Error: [PDOException] SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '2013-01-01' + INTERVAL 23 WEEK - INTERVAL  1 DAY) AND (''2013-01-01' + INTERVAL ' at line 1
+Request URL: /sonique/schemes/users/3?week=24&year=%272013
+Stack Trace:
+#0 C:\wamp\www\sonique\lib\Cake\Model\Datasource\DboSource.php(460): PDOStatement->execute(Array)
+#1 C:\wamp\www\sonique\lib\Cake\Model\Datasource\DboSource.php(426): DboSource->_execute('SELECT * FROM l...', Array)
+#2 C:\wamp\www\sonique\lib\Cake\Model\Datasource\DboSource.php(670): DboSource->execute('SELECT * FROM l...', Array, Array)
+#3 C:\wamp\www\sonique\lib\Cake\Model\Datasource\DboSource.php(539): DboSource->fetchAll('SELECT * FROM l...')
+#4 [internal function]: DboSource->query('SELECT * FROM l...')
+#5 C:\wamp\www\sonique\lib\Cake\Model\Model.php(3055): call_user_func_array(Array, Array)
+#6 C:\wamp\www\sonique\app\Controller\SchemesController.php(25): Model->query('SELECT * FROM l...')
+#7 [internal function]: SchemesController->users('3')
+#8 C:\wamp\www\sonique\lib\Cake\Controller\Controller.php(486): ReflectionMethod->invokeArgs(Object(SchemesController), Array)
+#9 C:\wamp\www\sonique\lib\Cake\Routing\Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#10 C:\wamp\www\sonique\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(SchemesController), Object(CakeRequest), Object(CakeResponse))
+#11 C:\wamp\www\sonique\app\webroot\index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#12 {main}
+2013-06-04 11:51:29 Error: [PDOException] SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '2013-01-01' + INTERVAL 23 WEEK - INTERVAL  1 DAY) AND (''2013-01-01' + INTERVAL ' at line 1
+Request URL: /sonique/schemes/users/4?week=24&year=%272013
+Stack Trace:
+#0 C:\wamp\www\sonique\lib\Cake\Model\Datasource\DboSource.php(460): PDOStatement->execute(Array)
+#1 C:\wamp\www\sonique\lib\Cake\Model\Datasource\DboSource.php(426): DboSource->_execute('SELECT * FROM l...', Array)
+#2 C:\wamp\www\sonique\lib\Cake\Model\Datasource\DboSource.php(670): DboSource->execute('SELECT * FROM l...', Array, Array)
+#3 C:\wamp\www\sonique\lib\Cake\Model\Datasource\DboSource.php(539): DboSource->fetchAll('SELECT * FROM l...')
+#4 [internal function]: DboSource->query('SELECT * FROM l...')
+#5 C:\wamp\www\sonique\lib\Cake\Model\Model.php(3055): call_user_func_array(Array, Array)
+#6 C:\wamp\www\sonique\app\Controller\SchemesController.php(25): Model->query('SELECT * FROM l...')
+#7 [internal function]: SchemesController->users('4')
+#8 C:\wamp\www\sonique\lib\Cake\Controller\Controller.php(486): ReflectionMethod->invokeArgs(Object(SchemesController), Array)
+#9 C:\wamp\www\sonique\lib\Cake\Routing\Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#10 C:\wamp\www\sonique\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(SchemesController), Object(CakeRequest), Object(CakeResponse))
+#11 C:\wamp\www\sonique\app\webroot\index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#12 {main}
+2013-06-04 11:54:10 Error: [MissingActionException] Action SchedulesController::courseId=4&week=32&year=2013() could not be found.
+Exception Attributes: array (
+  'controller' => 'SchedulesController',
+  'action' => 'courseId=4&week=32&year=2013',
+)
+Request URL: /sonique/schedules/courseId=4&week=32&year=2013
+Stack Trace:
+#0 C:\wamp\www\sonique\lib\Cake\Routing\Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#1 C:\wamp\www\sonique\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(SchedulesController), Object(CakeRequest), Object(CakeResponse))
+#2 C:\wamp\www\sonique\app\webroot\index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2013-06-04 12:05:23 Error: Fatal Error (4): syntax error, unexpected ')' in [C:\wamp\www\sonique\app\View\Elements\schedule.ctp, line 108]
+2013-06-04 12:05:23 Error: [FatalErrorException] syntax error, unexpected ')'
+Request URL: /sonique/schemes/users/1/?week=28&year=2013
+Stack Trace:
+#0 C:\wamp\www\sonique\lib\Cake\Error\ErrorHandler.php(184): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'C:\wamp\www\son...', 108)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'C:\wamp\www\son...', 108, Array)
+#2 C:\wamp\www\sonique\lib\Cake\Core\App.php(926): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'C:\wamp\www\son...', 108, Array)
+#3 C:\wamp\www\sonique\lib\Cake\Core\App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-06-04 12:05:30 Error: Fatal Error (4): syntax error, unexpected ')' in [C:\wamp\www\sonique\app\View\Elements\schedule.ctp, line 108]
+2013-06-04 12:05:30 Error: [FatalErrorException] syntax error, unexpected ')'
+Request URL: /sonique/schemes/users/1/?week=28&year=2013
+Stack Trace:
+#0 C:\wamp\www\sonique\lib\Cake\Error\ErrorHandler.php(184): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'C:\wamp\www\son...', 108)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'C:\wamp\www\son...', 108, Array)
+#2 C:\wamp\www\sonique\lib\Cake\Core\App.php(926): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'C:\wamp\www\son...', 108, Array)
+#3 C:\wamp\www\sonique\lib\Cake\Core\App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-06-04 12:05:30 Error: Fatal Error (4): syntax error, unexpected ')' in [C:\wamp\www\sonique\app\View\Elements\schedule.ctp, line 108]
+2013-06-04 12:05:30 Error: [FatalErrorException] syntax error, unexpected ')'
+Request URL: /sonique/schemes/users/1/?week=28&year=2013
+Stack Trace:
+#0 C:\wamp\www\sonique\lib\Cake\Error\ErrorHandler.php(184): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'C:\wamp\www\son...', 108)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'C:\wamp\www\son...', 108, Array)
+#2 C:\wamp\www\sonique\lib\Cake\Core\App.php(926): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'C:\wamp\www\son...', 108, Array)
+#3 C:\wamp\www\sonique\lib\Cake\Core\App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-06-04 12:10:28 Error: Fatal Error (4): syntax error, unexpected T_ECHO in [C:\wamp\www\sonique\app\View\Elements\schedule.ctp, line 40]
+2013-06-04 12:10:28 Error: [FatalErrorException] syntax error, unexpected T_ECHO
+Request URL: /sonique/schemes/users/1/?week=28&year=2013
+Stack Trace:
+#0 C:\wamp\www\sonique\lib\Cake\Error\ErrorHandler.php(184): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'C:\wamp\www\son...', 40)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'C:\wamp\www\son...', 40, Array)
+#2 C:\wamp\www\sonique\lib\Cake\Core\App.php(926): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'C:\wamp\www\son...', 40, Array)
+#3 C:\wamp\www\sonique\lib\Cake\Core\App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-06-04 12:13:25 Error: Fatal Error (4): syntax error, unexpected ';' in [C:\wamp\www\sonique\app\View\Elements\schedule.ctp, line 96]
+2013-06-04 12:13:25 Error: [FatalErrorException] syntax error, unexpected ';'
+Request URL: /sonique/schemes/users/1/?week=28&year=2013
+Stack Trace:
+#0 C:\wamp\www\sonique\lib\Cake\Error\ErrorHandler.php(184): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'C:\wamp\www\son...', 96)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'C:\wamp\www\son...', 96, Array)
+#2 C:\wamp\www\sonique\lib\Cake\Core\App.php(926): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'C:\wamp\www\son...', 96, Array)
+#3 C:\wamp\www\sonique\lib\Cake\Core\App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-06-04 12:13:26 Error: Fatal Error (4): syntax error, unexpected ';' in [C:\wamp\www\sonique\app\View\Elements\schedule.ctp, line 96]
+2013-06-04 12:13:26 Error: [FatalErrorException] syntax error, unexpected ';'
+Request URL: /sonique/schemes/users/1/?week=28&year=2013
+Stack Trace:
+#0 C:\wamp\www\sonique\lib\Cake\Error\ErrorHandler.php(184): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'C:\wamp\www\son...', 96)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'C:\wamp\www\son...', 96, Array)
+#2 C:\wamp\www\sonique\lib\Cake\Core\App.php(926): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'C:\wamp\www\son...', 96, Array)
+#3 C:\wamp\www\sonique\lib\Cake\Core\App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}

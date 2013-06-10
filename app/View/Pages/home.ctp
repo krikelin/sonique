@@ -1,2 +1,2 @@
 <span><a href="?week=<?php echo $week-1?>&amp;year=<?php echo $year?>"><img src="<?php echo Router::Url('/img/b_prevpage.png')?>" /></a> Vecka <?php echo $week?> <?php echo $year?> <a href="?week=<?php echo $week+1?>&amp;year=<?php echo $year?>"><img src="<?php echo Router::Url('/img/b_nextpage.png')?>" /></a>
-<iframe src="<?php echo Router::Url('/schedule/users/'.$userid.'/?week='.$week.'&year='.$year)?>" id="schedule" width="100%" height="600" frameborder="0"></iframe>
+<iframe src="<?php echo Router::Url('/schemes/users/'.$userid.'/?week='.$week.'&year='.$year)?>" id="schedule" width="100%" height="600" frameborder="0"></iframe>
